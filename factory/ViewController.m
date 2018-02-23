@@ -16,6 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSDictionary *dict=@{@"userId":@"565178",@"userKey":@"9b1ff27436026555ad1bb7307fbf9243"};
+    [[HTTPClient defaultManager] postHttp:@"/v33/rank-list" parameters:dict completion:^(NSDictionary *response) {
+        
+    }];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
