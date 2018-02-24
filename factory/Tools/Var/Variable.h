@@ -13,4 +13,8 @@ extern NSString *kHttpHost;
 
 @interface Variable : NSObject
 
+#pragma mark 预计算
++(CGFloat)screenHeight;
++(CGFloat)screenWidth;
+
 @end

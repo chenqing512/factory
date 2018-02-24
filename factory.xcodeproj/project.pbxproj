@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		164DB7C42041431200B1798F /* WGTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 164DB7C32041431200B1798F /* WGTabBarVC.m */; };
+		164DB7C72041434700B1798F /* WGTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 164DB7C62041434700B1798F /* WGTabBarItem.m */; };
 		164F64E6203EA14000E14A68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 164F64E5203EA14000E14A68 /* AppDelegate.m */; };
 		164F64E9203EA14000E14A68 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 164F64E8203EA14000E14A68 /* ViewController.m */; };
 		164F64EC203EA14000E14A68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164F64EA203EA14000E14A68 /* Main.storyboard */; };
@@ -17,6 +19,7 @@
 		164F6509203EA14100E14A68 /* factoryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 164F6508203EA14100E14A68 /* factoryUITests.m */; };
 		164F6520203EB31500E14A68 /* Variable.m in Sources */ = {isa = PBXBuildFile; fileRef = 164F651F203EB31500E14A68 /* Variable.m */; };
 		16B22FB6203FDF3600F2037A /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 16B22FB5203FDF3600F2037A /* HTTPClient.m */; };
+		16C2494D204162FC000C4471 /* WGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C2494C204162FC000C4471 /* WGTabBar.m */; };
 		335E695D4CD7BE9BCF775C36 /* libPods-factory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EF45937BAA5233F3BB9028 /* libPods-factory.a */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		164DB7C22041431200B1798F /* WGTabBarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGTabBarVC.h; sourceTree = "<group>"; };
+		164DB7C32041431200B1798F /* WGTabBarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGTabBarVC.m; sourceTree = "<group>"; };
+		164DB7C52041434700B1798F /* WGTabBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGTabBarItem.h; sourceTree = "<group>"; };
+		164DB7C62041434700B1798F /* WGTabBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGTabBarItem.m; sourceTree = "<group>"; };
 		164F64E1203EA14000E14A68 /* factory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = factory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		164F64E4203EA14000E14A68 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		164F64E5203EA14000E14A68 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -60,6 +67,8 @@
 		164F651F203EB31500E14A68 /* Variable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Variable.m; sourceTree = "<group>"; };
 		16B22FB4203FDF3600F2037A /* HTTPClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
 		16B22FB5203FDF3600F2037A /* HTTPClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTPClient.m; sourceTree = "<group>"; };
+		16C2494B204162FC000C4471 /* WGTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGTabBar.h; sourceTree = "<group>"; };
+		16C2494C204162FC000C4471 /* WGTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGTabBar.m; sourceTree = "<group>"; };
 		2308DB06B4B3A64999742163 /* Pods-factory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-factory.release.xcconfig"; path = "Pods/Target Support Files/Pods-factory/Pods-factory.release.xcconfig"; sourceTree = "<group>"; };
 		7AC4E8AB7C837B229B019898 /* Pods-factory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-factory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-factory/Pods-factory.debug.xcconfig"; sourceTree = "<group>"; };
 		D1EF45937BAA5233F3BB9028 /* libPods-factory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-factory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +100,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		164DB7C1204142A800B1798F /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				164DB7C22041431200B1798F /* WGTabBarVC.h */,
+				164DB7C32041431200B1798F /* WGTabBarVC.m */,
+				16C2494B204162FC000C4471 /* WGTabBar.h */,
+				16C2494C204162FC000C4471 /* WGTabBar.m */,
+				164DB7C52041434700B1798F /* WGTabBarItem.h */,
+				164DB7C62041434700B1798F /* WGTabBarItem.m */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		164F64D8203EA14000E14A68 = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +186,8 @@
 		164F6517203EB02500E14A68 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				164F651D203EB2E800E14A68 /* var */,
+				164DB7C1204142A800B1798F /* TabBar */,
+				164F651D203EB2E800E14A68 /* Var */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -192,13 +215,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		164F651D203EB2E800E14A68 /* var */ = {
+		164F651D203EB2E800E14A68 /* Var */ = {
 			isa = PBXGroup;
 			children = (
 				164F651E203EB31500E14A68 /* Variable.h */,
 				164F651F203EB31500E14A68 /* Variable.m */,
 			);
-			path = var;
+			path = Var;
 			sourceTree = "<group>";
 		};
 		1CBD8C197BDE6523326566E7 /* Frameworks */ = {
@@ -410,10 +433,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				164F64E9203EA14000E14A68 /* ViewController.m in Sources */,
+				164DB7C72041434700B1798F /* WGTabBarItem.m in Sources */,
 				164F64F4203EA14000E14A68 /* main.m in Sources */,
 				164F64E6203EA14000E14A68 /* AppDelegate.m in Sources */,
 				16B22FB6203FDF3600F2037A /* HTTPClient.m in Sources */,
+				164DB7C42041431200B1798F /* WGTabBarVC.m in Sources */,
 				164F6520203EB31500E14A68 /* Variable.m in Sources */,
+				16C2494D204162FC000C4471 /* WGTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
