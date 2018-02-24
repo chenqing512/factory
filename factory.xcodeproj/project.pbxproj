@@ -358,6 +358,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-factory/Pods-factory-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (

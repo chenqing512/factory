@@ -7,4 +7,5 @@ pod 'Masonry'
 pod 'CRZXYCategory'
 pod 'AFNetworking'
 pod 'SDWebImage','~>4.0'
+pod 'SVProgressHUD'
 end

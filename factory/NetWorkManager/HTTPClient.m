@@ -21,6 +21,13 @@
 }
 
 -(void)postHttp:(NSString *)path parameters:(NSDictionary *)parameters completion:(ResponseData)response{
+    if ([parameters.allKeys containsObject:@"loading"]) {
+        if ([parameters[@"loading"] integerValue]==1) {
+            [SVProgressHUD dismiss];
+            [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
+            [SVProgressHUD showWithStatus:@"加载中..."];
+        }
+    }
     // 1.初始化单例类
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     // 2.设置非校验证书模式
@@ -34,9 +41,11 @@
     [manager.requestSerializer setValue: [[UIDevice currentDevice] systemVersion] forHTTPHeaderField:@"interfaceSystemVersion"];
     */
     [manager POST:[NSString stringWithFormat:@"%@%@",kHttpHost,path] parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [SVProgressHUD dismiss];
         NSLog(@"域名:%@\n路径:%@\n返回值:%@",kHttpHost,path,responseObject);
         response(responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [SVProgressHUD dismiss];
         NSLog(@"error");
     }];
 }
