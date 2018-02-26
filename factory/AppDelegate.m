@@ -7,8 +7,11 @@
 //
 
 #import "AppDelegate.h"
-
-@interface AppDelegate ()
+#import "AppDelegate+RegisterThirdParty.h"
+#import "RootViewController.h"
+@interface AppDelegate (){
+    RootViewController *rootVC;
+}
 
 @end
 
@@ -16,7 +19,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self registerThirdParty];
+    self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    rootVC=[RootViewController new];
+    [self.window setRootViewController:rootVC];
+    self.window.backgroundColor=[UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

@@ -24,12 +24,6 @@ const int kRightButtonTag = -1235;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    if ([[[UIDevice currentDevice] systemVersion] floatValue]>=7.0)
-    {
-        self.edgesForExtendedLayout=UIRectEdgeNone;
-        self.hidesBottomBarWhenPushed = YES;
-        [[UINavigationBar appearance] setShadowImage:[UIImage imageWithColor:[UIColor colorWithHexString:@"#cdcdcd"] size:CGSizeMake([Variable screenWidth], 0.5)]];
-    }
     //添加背景图
     //    self.view.backgroundColor=LOAD_COLOR(kColorBackground);
     _contentView=[[WGScrollView alloc]initWithFrame:CGRectMake(0, 0, [Variable screenWidth], [Variable screenHeight]-20-44)];
@@ -39,9 +33,7 @@ const int kRightButtonTag = -1235;
     [self.view sendSubviewToBack:_contentView];
     
     _tapImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-    
     _tapImageView.image = [UIImage imageNamed:@"jzsb"];
-    
     _tapImageView.tag = -1111;
     _tapImageView.userInteractionEnabled = YES;
     _tapImageView.hidden = YES;
@@ -60,6 +52,7 @@ const int kRightButtonTag = -1235;
 #pragma mark 后期待改进
     UIView *statusBarView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, [Variable screenWidth], 20)];
     statusBarView.backgroundColor=[UIColor colorWithHexString:@"#f2bf24"];
+    
 }
 
 - (void)hideTabBar
@@ -88,7 +81,6 @@ const int kRightButtonTag = -1235;
     self.leftButton=[UIButton buttonWithType:UIButtonTypeCustom];
     [self.leftButton addTarget:self action:@selector(backButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.leftButton setFrame:CGRectMake(0, 0, 45, 19)];
-    //[self.leftButton setTitle:@"返回" forState:UIControlStateNormal];
     [self.leftButton setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
     [self.leftButton setImage:[UIImage imageNamed:@"backSelect"] forState:UIControlStateSelected];
     self.leftButton.imageView.contentMode = UIViewContentModeLeft;
@@ -107,7 +99,6 @@ const int kRightButtonTag = -1235;
     [self.rightButton setFrame:CGRectMake(0, 2, 45, 25)];
     [self.rightButton setTitle:@"" forState:UIControlStateNormal];
     self.rightButton.contentHorizontalAlignment=UIControlContentHorizontalAlignmentRight;
-    //    [self.rightButton setTitleColor:LOAD_COLOR(KThemeColor) forState:UIControlStateNormal];
     [self.rightButton setTitleColor:[UIColor colorWithHexString:@"2b364e"] forState:UIControlStateNormal];
     self.rightButton.tag=kRightButtonTag;
     UIBarButtonItem *rightItem=[[UIBarButtonItem alloc]initWithCustomView:self.rightButton];

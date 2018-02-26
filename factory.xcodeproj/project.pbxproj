@@ -10,7 +10,6 @@
 		164DB7C42041431200B1798F /* WGTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 164DB7C32041431200B1798F /* WGTabBarVC.m */; };
 		164DB7C72041434700B1798F /* WGTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 164DB7C62041434700B1798F /* WGTabBarItem.m */; };
 		164F64E6203EA14000E14A68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 164F64E5203EA14000E14A68 /* AppDelegate.m */; };
-		164F64E9203EA14000E14A68 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 164F64E8203EA14000E14A68 /* ViewController.m */; };
 		164F64EC203EA14000E14A68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164F64EA203EA14000E14A68 /* Main.storyboard */; };
 		164F64EE203EA14000E14A68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 164F64ED203EA14000E14A68 /* Assets.xcassets */; };
 		164F64F1203EA14000E14A68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164F64EF203EA14000E14A68 /* LaunchScreen.storyboard */; };
@@ -25,6 +24,8 @@
 		16C249592043936B000C4471 /* UIColor+WGColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C249582043936B000C4471 /* UIColor+WGColor.m */; };
 		16C2495C2043944D000C4471 /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C2495B2043944D000C4471 /* UIImage+Common.m */; };
 		16C2495F2043961D000C4471 /* UIView+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C2495E2043961D000C4471 /* UIView+Common.m */; };
+		16C249622043E83A000C4471 /* AppDelegate+RegisterThirdParty.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C249612043E83A000C4471 /* AppDelegate+RegisterThirdParty.m */; };
+		16C249652043EB16000C4471 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C249642043EB16000C4471 /* RootViewController.m */; };
 		335E695D4CD7BE9BCF775C36 /* libPods-factory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EF45937BAA5233F3BB9028 /* libPods-factory.a */; };
 /* End PBXBuildFile section */
 
@@ -53,8 +54,6 @@
 		164F64E1203EA14000E14A68 /* factory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = factory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		164F64E4203EA14000E14A68 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		164F64E5203EA14000E14A68 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		164F64E7203EA14000E14A68 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		164F64E8203EA14000E14A68 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		164F64EB203EA14000E14A68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		164F64ED203EA14000E14A68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		164F64F0203EA14000E14A68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -84,6 +83,10 @@
 		16C2495B2043944D000C4471 /* UIImage+Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Common.m"; sourceTree = "<group>"; };
 		16C2495D2043961D000C4471 /* UIView+Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Common.h"; sourceTree = "<group>"; };
 		16C2495E2043961D000C4471 /* UIView+Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Common.m"; sourceTree = "<group>"; };
+		16C249602043E83A000C4471 /* AppDelegate+RegisterThirdParty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+RegisterThirdParty.h"; sourceTree = "<group>"; };
+		16C249612043E83A000C4471 /* AppDelegate+RegisterThirdParty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+RegisterThirdParty.m"; sourceTree = "<group>"; };
+		16C249632043EB16000C4471 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		16C249642043EB16000C4471 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		2308DB06B4B3A64999742163 /* Pods-factory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-factory.release.xcconfig"; path = "Pods/Target Support Files/Pods-factory/Pods-factory.release.xcconfig"; sourceTree = "<group>"; };
 		7AC4E8AB7C837B229B019898 /* Pods-factory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-factory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-factory/Pods-factory.debug.xcconfig"; sourceTree = "<group>"; };
 		D1EF45937BAA5233F3BB9028 /* libPods-factory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-factory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,13 +158,15 @@
 			children = (
 				164F64E4203EA14000E14A68 /* AppDelegate.h */,
 				164F64E5203EA14000E14A68 /* AppDelegate.m */,
+				16C249632043EB16000C4471 /* RootViewController.h */,
+				16C249642043EB16000C4471 /* RootViewController.m */,
+				16C249602043E83A000C4471 /* AppDelegate+RegisterThirdParty.h */,
+				16C249612043E83A000C4471 /* AppDelegate+RegisterThirdParty.m */,
 				164F651A203EB04900E14A68 /* Resources */,
 				164F6519203EB03C00E14A68 /* Modules */,
 				164F6518203EB03300E14A68 /* NetWorkManager */,
 				164F6517203EB02500E14A68 /* Tools */,
 				164F6516203EB01A00E14A68 /* Commons */,
-				164F64E7203EA14000E14A68 /* ViewController.h */,
-				164F64E8203EA14000E14A68 /* ViewController.m */,
 				164F64EA203EA14000E14A68 /* Main.storyboard */,
 				164F64ED203EA14000E14A68 /* Assets.xcassets */,
 				164F64EF203EA14000E14A68 /* LaunchScreen.storyboard */,
@@ -482,13 +487,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				16C2495520439144000C4471 /* WGViewController.m in Sources */,
-				164F64E9203EA14000E14A68 /* ViewController.m in Sources */,
 				164DB7C72041434700B1798F /* WGTabBarItem.m in Sources */,
 				16C249592043936B000C4471 /* UIColor+WGColor.m in Sources */,
 				16C2495C2043944D000C4471 /* UIImage+Common.m in Sources */,
 				164F64F4203EA14000E14A68 /* main.m in Sources */,
 				164F64E6203EA14000E14A68 /* AppDelegate.m in Sources */,
 				16C2495220439082000C4471 /* WGScrollView.m in Sources */,
+				16C249622043E83A000C4471 /* AppDelegate+RegisterThirdParty.m in Sources */,
+				16C249652043EB16000C4471 /* RootViewController.m in Sources */,
 				16C2495F2043961D000C4471 /* UIView+Common.m in Sources */,
 				16B22FB6203FDF3600F2037A /* HTTPClient.m in Sources */,
 				164DB7C42041431200B1798F /* WGTabBarVC.m in Sources */,
