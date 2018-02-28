@@ -10,7 +10,6 @@
 		16190B44204636DA00214999 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16190B43204636DA00214999 /* FirstViewController.m */; };
 		16190B47204636E700214999 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16190B46204636E700214999 /* SecondViewController.m */; };
 		16190B4A204636F700214999 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16190B49204636F700214999 /* ThirdViewController.m */; };
-		16190B4E2046377F00214999 /* TTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 16190B4C2046377F00214999 /* TTabBar.m */; };
 		16190B5C2046386E00214999 /* tabbar_me_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16190B502046386E00214999 /* tabbar_me_icon@2x.png */; };
 		16190B5D2046386E00214999 /* tabbar_discovery_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16190B512046386E00214999 /* tabbar_discovery_icon@2x.png */; };
 		16190B5E2046386E00214999 /* tabbar_discovery_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16190B522046386E00214999 /* tabbar_discovery_icon@3x.png */; };
@@ -69,8 +68,6 @@
 		16190B46204636E700214999 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		16190B48204636F700214999 /* ThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
 		16190B49204636F700214999 /* ThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
-		16190B4C2046377F00214999 /* TTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTabBar.m; sourceTree = "<group>"; };
-		16190B4D2046377F00214999 /* TTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTabBar.h; sourceTree = "<group>"; };
 		16190B502046386E00214999 /* tabbar_me_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_me_icon@2x.png"; sourceTree = "<group>"; };
 		16190B512046386E00214999 /* tabbar_discovery_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_discovery_icon@2x.png"; sourceTree = "<group>"; };
 		16190B522046386E00214999 /* tabbar_discovery_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_discovery_icon@3x.png"; sourceTree = "<group>"; };
@@ -178,8 +175,6 @@
 			children = (
 				164DB7C22041431200B1798F /* WGTabBarVC.h */,
 				164DB7C32041431200B1798F /* WGTabBarVC.m */,
-				16190B4D2046377F00214999 /* TTabBar.h */,
-				16190B4C2046377F00214999 /* TTabBar.m */,
 				16C2494B204162FC000C4471 /* WGTabBar.h */,
 				16C2494C204162FC000C4471 /* WGTabBar.m */,
 				164DB7C52041434700B1798F /* WGTabBarItem.h */,
@@ -566,7 +561,6 @@
 				164DB7C72041434700B1798F /* WGTabBarItem.m in Sources */,
 				16C249592043936B000C4471 /* UIColor+WGColor.m in Sources */,
 				16C2495C2043944D000C4471 /* UIImage+Common.m in Sources */,
-				16190B4E2046377F00214999 /* TTabBar.m in Sources */,
 				164F64F4203EA14000E14A68 /* main.m in Sources */,
 				164F64E6203EA14000E14A68 /* AppDelegate.m in Sources */,
 				16C2495220439082000C4471 /* WGScrollView.m in Sources */,

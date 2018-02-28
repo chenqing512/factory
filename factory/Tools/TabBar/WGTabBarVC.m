@@ -7,20 +7,21 @@
 //
 
 #import "WGTabBarVC.h"
-#import "TTabBar.h"
+#import "WGTabBar.h"
+#import "WGTabBarItem.h"
 #import "FirstViewController.h"
 #import "SecondViewController.h"
 #import "ThirdViewController.h"
 
-@interface WGTabBarVC ()<TTabBarDelegate>{
+@interface WGTabBarVC ()<WGTabBarDelegate>{
     NSMutableArray      *_vcList;
     NSMutableArray      *_itemsArray;
     
-    TTabBarItem         *_homepageItem;
-    TTabBarItem         *_discoveryItem;
-    TTabBarItem         *_meItem;
+    WGTabBarItem         *_homepageItem;
+    WGTabBarItem         *_discoveryItem;
+    WGTabBarItem         *_meItem;
     
-    TTabBar             *_tabbar;
+    WGTabBar             *_tabbar;
     BOOL                _shouldPresentPostMenu;
 }
 
@@ -32,7 +33,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     _vcList = [NSMutableArray new];
-//    [self observeNotification:XM_JUMP_TO_TAB];
+//    [self observeNotification:XM_JUMP_TO_TAB];  //跳转到制定的tabbar
     
     UIViewController *vc = [FirstViewController new];
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
@@ -50,19 +51,19 @@
     
     _itemsArray = [NSMutableArray new];
     
-    _discoveryItem = [[TTabBarItem alloc] initWithNomelImage:[UIImage imageNamed:@"tabbar_discovery_icon"] normalSettingImage:[UIImage imageNamed:@"tabbar_discovery_icon"] hightImage:[UIImage imageNamed:@"tabbar_discovery_icon_selected"]];
+    _discoveryItem = [[WGTabBarItem alloc] initWithNomelImage:[UIImage imageNamed:@"tabbar_discovery_icon"] normalSettingImage:[UIImage imageNamed:@"tabbar_discovery_icon"] hightImage:[UIImage imageNamed:@"tabbar_discovery_icon_selected"]];
     _discoveryItem.tag = 0;
     [_itemsArray addObject:_discoveryItem];
     
-    _homepageItem = [[TTabBarItem alloc] initWithNomelImage:[UIImage imageNamed:@"tabbar_homepage_icon"] normalSettingImage:[UIImage imageNamed:@"tabbar_homepage_icon"] hightImage:[UIImage imageNamed:@"tabbar_homepage_icon_selected"]];
+    _homepageItem = [[WGTabBarItem alloc] initWithNomelImage:[UIImage imageNamed:@"tabbar_homepage_icon"] normalSettingImage:[UIImage imageNamed:@"tabbar_homepage_icon"] hightImage:[UIImage imageNamed:@"tabbar_homepage_icon_selected"]];
     _homepageItem.tag = 1;
     [_itemsArray addObject:_homepageItem];
     
-    _meItem = [[TTabBarItem alloc] initWithNomelImage:[UIImage imageNamed:@"tabbar_me_icon"] normalSettingImage:[UIImage imageNamed:@"tabbar_me_icon"] hightImage:[UIImage imageNamed:@"tabbar_me_icon_selected"]];
+    _meItem = [[WGTabBarItem alloc] initWithNomelImage:[UIImage imageNamed:@"tabbar_me_icon"] normalSettingImage:[UIImage imageNamed:@"tabbar_me_icon"] hightImage:[UIImage imageNamed:@"tabbar_me_icon_selected"]];
     _meItem.tag = 2;
     [_itemsArray addObject:_meItem];
     
-    _tabbar = [[TTabBar alloc] init];
+    _tabbar = [[WGTabBar alloc] init];
     _tabbar.delegate = self;
     _tabbar.itemsArray = _itemsArray;
     _tabbar.selectedIndex = 0;
@@ -103,11 +104,11 @@
 }
 
 #pragma mark -- TTabBarDelegate
--(void)tabBar:(TTabBar *)tabBar didSelectItemAtIndex:(NSInteger)index{
+-(void)tabBar:(WGTabBar *)tabBar didSelectItemAtIndex:(NSInteger)index{
     self.selectedIndex = index;
 }
 
--(void)tabBar:(TTabBar *)tabBar popNavigation:(NSInteger)index{
+-(void)tabBar:(WGTabBar *)tabBar popNavigation:(NSInteger)index{
     UIViewController *vc = self.viewControllers[index];
     if ([vc isKindOfClass:[UINavigationController class]]) {
         [((UINavigationController *)vc) popViewControllerAnimated:YES];
