@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "AppDelegate+RegisterThirdParty.h"
 #import "RootViewController.h"
+#import "WGTabBarVC.h"
 @interface AppDelegate (){
     RootViewController *rootVC;
 }
@@ -21,8 +22,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self registerThirdParty];
     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    rootVC=[RootViewController new];
-    [self.window setRootViewController:rootVC];
+    //rootVC=[RootViewController new];
+    //[self.window setRootViewController:rootVC];
+    WGTabBarVC *tabbarVC=[[WGTabBarVC alloc]init];
+    UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:tabbarVC];
+    [self.window setRootViewController:nav];
     self.window.backgroundColor=[UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
