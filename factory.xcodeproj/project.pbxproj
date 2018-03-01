@@ -22,8 +22,7 @@
 		16190B652046386E00214999 /* tabbar_homepage_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16190B592046386E00214999 /* tabbar_homepage_icon@3x.png */; };
 		16190B662046386E00214999 /* tabbar_homepage_icon_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16190B5A2046386E00214999 /* tabbar_homepage_icon_selected@2x.png */; };
 		16190B672046386E00214999 /* tabbar_homepage_icon_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16190B5B2046386E00214999 /* tabbar_homepage_icon_selected@3x.png */; };
-		164DB7C42041431200B1798F /* WGTabBarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 164DB7C32041431200B1798F /* WGTabBarVC.m */; };
-		164DB7C72041434700B1798F /* WGTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 164DB7C62041434700B1798F /* WGTabBarItem.m */; };
+		16190B6E204787E800214999 /* me_manage_account_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16190B6D204787E800214999 /* me_manage_account_bg@3x.png */; };
 		164F64E6203EA14000E14A68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 164F64E5203EA14000E14A68 /* AppDelegate.m */; };
 		164F64EC203EA14000E14A68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164F64EA203EA14000E14A68 /* Main.storyboard */; };
 		164F64EE203EA14000E14A68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 164F64ED203EA14000E14A68 /* Assets.xcassets */; };
@@ -33,14 +32,12 @@
 		164F6509203EA14100E14A68 /* factoryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 164F6508203EA14100E14A68 /* factoryUITests.m */; };
 		164F6520203EB31500E14A68 /* Variable.m in Sources */ = {isa = PBXBuildFile; fileRef = 164F651F203EB31500E14A68 /* Variable.m */; };
 		16B22FB6203FDF3600F2037A /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 16B22FB5203FDF3600F2037A /* HTTPClient.m */; };
-		16C2494D204162FC000C4471 /* WGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C2494C204162FC000C4471 /* WGTabBar.m */; };
 		16C2495220439082000C4471 /* WGScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C2495120439082000C4471 /* WGScrollView.m */; };
 		16C2495520439144000C4471 /* WGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C2495420439144000C4471 /* WGViewController.m */; };
 		16C249592043936B000C4471 /* UIColor+WGColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C249582043936B000C4471 /* UIColor+WGColor.m */; };
 		16C2495C2043944D000C4471 /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C2495B2043944D000C4471 /* UIImage+Common.m */; };
 		16C2495F2043961D000C4471 /* UIView+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C2495E2043961D000C4471 /* UIView+Common.m */; };
 		16C249622043E83A000C4471 /* AppDelegate+RegisterThirdParty.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C249612043E83A000C4471 /* AppDelegate+RegisterThirdParty.m */; };
-		16C249652043EB16000C4471 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C249642043EB16000C4471 /* RootViewController.m */; };
 		335E695D4CD7BE9BCF775C36 /* libPods-factory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EF45937BAA5233F3BB9028 /* libPods-factory.a */; };
 /* End PBXBuildFile section */
 
@@ -80,10 +77,7 @@
 		16190B592046386E00214999 /* tabbar_homepage_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_homepage_icon@3x.png"; sourceTree = "<group>"; };
 		16190B5A2046386E00214999 /* tabbar_homepage_icon_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_homepage_icon_selected@2x.png"; sourceTree = "<group>"; };
 		16190B5B2046386E00214999 /* tabbar_homepage_icon_selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_homepage_icon_selected@3x.png"; sourceTree = "<group>"; };
-		164DB7C22041431200B1798F /* WGTabBarVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGTabBarVC.h; sourceTree = "<group>"; };
-		164DB7C32041431200B1798F /* WGTabBarVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGTabBarVC.m; sourceTree = "<group>"; };
-		164DB7C52041434700B1798F /* WGTabBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGTabBarItem.h; sourceTree = "<group>"; };
-		164DB7C62041434700B1798F /* WGTabBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGTabBarItem.m; sourceTree = "<group>"; };
+		16190B6D204787E800214999 /* me_manage_account_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "me_manage_account_bg@3x.png"; sourceTree = "<group>"; };
 		164F64E1203EA14000E14A68 /* factory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = factory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		164F64E4203EA14000E14A68 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		164F64E5203EA14000E14A68 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -104,8 +98,6 @@
 		164F651F203EB31500E14A68 /* Variable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Variable.m; sourceTree = "<group>"; };
 		16B22FB4203FDF3600F2037A /* HTTPClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
 		16B22FB5203FDF3600F2037A /* HTTPClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTPClient.m; sourceTree = "<group>"; };
-		16C2494B204162FC000C4471 /* WGTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGTabBar.h; sourceTree = "<group>"; };
-		16C2494C204162FC000C4471 /* WGTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGTabBar.m; sourceTree = "<group>"; };
 		16C2495020439082000C4471 /* WGScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGScrollView.h; sourceTree = "<group>"; };
 		16C2495120439082000C4471 /* WGScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGScrollView.m; sourceTree = "<group>"; };
 		16C2495320439144000C4471 /* WGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGViewController.h; sourceTree = "<group>"; };
@@ -118,8 +110,6 @@
 		16C2495E2043961D000C4471 /* UIView+Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Common.m"; sourceTree = "<group>"; };
 		16C249602043E83A000C4471 /* AppDelegate+RegisterThirdParty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+RegisterThirdParty.h"; sourceTree = "<group>"; };
 		16C249612043E83A000C4471 /* AppDelegate+RegisterThirdParty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+RegisterThirdParty.m"; sourceTree = "<group>"; };
-		16C249632043EB16000C4471 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		16C249642043EB16000C4471 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		2308DB06B4B3A64999742163 /* Pods-factory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-factory.release.xcconfig"; path = "Pods/Target Support Files/Pods-factory/Pods-factory.release.xcconfig"; sourceTree = "<group>"; };
 		7AC4E8AB7C837B229B019898 /* Pods-factory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-factory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-factory/Pods-factory.debug.xcconfig"; sourceTree = "<group>"; };
 		D1EF45937BAA5233F3BB9028 /* libPods-factory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-factory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				16190B502046386E00214999 /* tabbar_me_icon@2x.png */,
+				16190B6D204787E800214999 /* me_manage_account_bg@3x.png */,
 				16190B512046386E00214999 /* tabbar_discovery_icon@2x.png */,
 				16190B522046386E00214999 /* tabbar_discovery_icon@3x.png */,
 				16190B532046386E00214999 /* tabbar_me_icon@3x.png */,
@@ -168,19 +159,6 @@
 				16190B5B2046386E00214999 /* tabbar_homepage_icon_selected@3x.png */,
 			);
 			path = MainImgs;
-			sourceTree = "<group>";
-		};
-		164DB7C1204142A800B1798F /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				164DB7C22041431200B1798F /* WGTabBarVC.h */,
-				164DB7C32041431200B1798F /* WGTabBarVC.m */,
-				16C2494B204162FC000C4471 /* WGTabBar.h */,
-				16C2494C204162FC000C4471 /* WGTabBar.m */,
-				164DB7C52041434700B1798F /* WGTabBarItem.h */,
-				164DB7C62041434700B1798F /* WGTabBarItem.m */,
-			);
-			path = TabBar;
 			sourceTree = "<group>";
 		};
 		164F64D8203EA14000E14A68 = {
@@ -210,8 +188,6 @@
 			children = (
 				164F64E4203EA14000E14A68 /* AppDelegate.h */,
 				164F64E5203EA14000E14A68 /* AppDelegate.m */,
-				16C249632043EB16000C4471 /* RootViewController.h */,
-				16C249642043EB16000C4471 /* RootViewController.m */,
 				16C249602043E83A000C4471 /* AppDelegate+RegisterThirdParty.h */,
 				16C249612043E83A000C4471 /* AppDelegate+RegisterThirdParty.m */,
 				164F651A203EB04900E14A68 /* Resources */,
@@ -261,7 +237,6 @@
 				16C2495620439343000C4471 /* Categorys */,
 				16C2494F20439062000C4471 /* WGScrollView */,
 				16C2494E20439062000C4471 /* WGViewController */,
-				164DB7C1204142A800B1798F /* TabBar */,
 				164F651D203EB2E800E14A68 /* Var */,
 			);
 			path = Tools;
@@ -470,6 +445,7 @@
 				16190B5D2046386E00214999 /* tabbar_discovery_icon@2x.png in Resources */,
 				16190B5F2046386E00214999 /* tabbar_me_icon@3x.png in Resources */,
 				164F64EE203EA14000E14A68 /* Assets.xcassets in Resources */,
+				16190B6E204787E800214999 /* me_manage_account_bg@3x.png in Resources */,
 				16190B5E2046386E00214999 /* tabbar_discovery_icon@3x.png in Resources */,
 				164F64EC203EA14000E14A68 /* Main.storyboard in Resources */,
 				16190B642046386E00214999 /* tabbar_me_icon_selected@2x.png in Resources */,
@@ -558,7 +534,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				16C2495520439144000C4471 /* WGViewController.m in Sources */,
-				164DB7C72041434700B1798F /* WGTabBarItem.m in Sources */,
 				16C249592043936B000C4471 /* UIColor+WGColor.m in Sources */,
 				16C2495C2043944D000C4471 /* UIImage+Common.m in Sources */,
 				164F64F4203EA14000E14A68 /* main.m in Sources */,
@@ -567,13 +542,10 @@
 				16190B4A204636F700214999 /* ThirdViewController.m in Sources */,
 				16190B44204636DA00214999 /* FirstViewController.m in Sources */,
 				16C249622043E83A000C4471 /* AppDelegate+RegisterThirdParty.m in Sources */,
-				16C249652043EB16000C4471 /* RootViewController.m in Sources */,
 				16C2495F2043961D000C4471 /* UIView+Common.m in Sources */,
 				16B22FB6203FDF3600F2037A /* HTTPClient.m in Sources */,
 				16190B47204636E700214999 /* SecondViewController.m in Sources */,
-				164DB7C42041431200B1798F /* WGTabBarVC.m in Sources */,
 				164F6520203EB31500E14A68 /* Variable.m in Sources */,
-				16C2494D204162FC000C4471 /* WGTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,11 +8,10 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+RegisterThirdParty.h"
-#import "RootViewController.h"
-#import "WGTabBarVC.h"
-@interface AppDelegate (){
-    RootViewController *rootVC;
-}
+#import "FirstViewController.h"
+#import "SecondViewController.h"
+#import "ThirdViewController.h"
+@interface AppDelegate ()
 
 @end
 
@@ -21,15 +20,69 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self registerThirdParty];
+    
     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    //rootVC=[RootViewController new];
-    //[self.window setRootViewController:rootVC];
-    WGTabBarVC *tabbarVC=[[WGTabBarVC alloc]init];
-    UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:tabbarVC];
-    [self.window setRootViewController:nav];
+    
+    [self setupViewControllers];
+    [self.window setRootViewController:self.tabBarController];
     self.window.backgroundColor=[UIColor whiteColor];
+    UITabBar *tabbar=[UITabBar appearance];
+//    tabbar.backgroundColor=[UIColor redColor];
+    [tabbar setBackgroundImage:[UIImage imageNamed:@"me_manage_account_bg"]];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)setupViewControllers {
+    FirstViewController *firstViewController = [[FirstViewController alloc] init];
+    UIViewController *firstNavigationController = [[UINavigationController alloc]
+                                                   initWithRootViewController:firstViewController];
+    
+    SecondViewController *secondViewController = [[SecondViewController alloc] init];
+    UIViewController *secondNavigationController = [[UINavigationController alloc]
+                                                    initWithRootViewController:secondViewController];
+    
+    ThirdViewController *thirdViewController = [[ThirdViewController alloc] init];
+    UIViewController *thirdNavigationController = [[UINavigationController alloc]
+                                                    initWithRootViewController:thirdViewController];
+    
+    
+    CYLTabBarController *tabBarController = [[CYLTabBarController alloc] init];
+    [self customizeTabBarForController:tabBarController];
+    
+    [tabBarController setViewControllers:@[
+                                           firstNavigationController,
+                                           secondNavigationController,
+                                           thirdNavigationController
+                                           ]];
+    
+    tabBarController.tabBar.backgroundColor=[UIColor blackColor];
+    self.tabBarController = tabBarController;
+}
+
+/*
+ *
+ 在`-setViewControllers:`之前设置TabBar的属性，
+ *
+ */
+- (void)customizeTabBarForController:(CYLTabBarController *)tabBarController {
+    
+    NSDictionary *dict1 = @{
+                            CYLTabBarItemImage : @"tabbar_discovery_icon",
+                            CYLTabBarItemSelectedImage : @"tabbar_discovery_icon_selected",
+                            };
+    NSDictionary *dict2 = @{
+                            CYLTabBarItemImage : @"tabbar_homepage_icon",
+                            CYLTabBarItemSelectedImage : @"tabbar_homepage_icon_selected",
+                            };
+    
+    NSDictionary *dict3 = @{
+                            CYLTabBarItemImage : @"tabbar_me_icon",
+                            CYLTabBarItemSelectedImage : @"tabbar_me_icon_selected",
+                            };
+    
+    NSArray *tabBarItemsAttributes = @[ dict1, dict2,dict3];
+    tabBarController.tabBarItemsAttributes = tabBarItemsAttributes;
 }
 
 
