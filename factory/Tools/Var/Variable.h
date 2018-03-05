@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#define kNavigationHeight self.navigationController.navigationBar.frame.size.height
+#define kStatusHeight [[UIApplication sharedApplication] statusBarFrame].size.height;
+#define ktabBarHeight [UITabBar appearance].frame.size.height
+
 extern NSString *kHttpHost;
 
 @interface Variable : NSObject
@@ -16,5 +20,6 @@ extern NSString *kHttpHost;
 #pragma mark 预计算
 +(CGFloat)screenHeight;
 +(CGFloat)screenWidth;
+
 
 @end

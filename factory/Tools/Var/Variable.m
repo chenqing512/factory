@@ -23,4 +23,5 @@ NSString *kHttpHost = @"http://testapp.vliao2.com";//正式环境
     return [UIScreen mainScreen].bounds.size.width;
 }
 
+
 @end
