@@ -38,6 +38,7 @@
 		16C2495C2043944D000C4471 /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C2495B2043944D000C4471 /* UIImage+Common.m */; };
 		16C2495F2043961D000C4471 /* UIView+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C2495E2043961D000C4471 /* UIView+Common.m */; };
 		16C249622043E83A000C4471 /* AppDelegate+RegisterThirdParty.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C249612043E83A000C4471 /* AppDelegate+RegisterThirdParty.m */; };
+		16CB4EE6204D413B00D01328 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16CB4EE4204D413A00D01328 /* FirstViewController.m */; };
 		335E695D4CD7BE9BCF775C36 /* libPods-factory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EF45937BAA5233F3BB9028 /* libPods-factory.a */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +111,8 @@
 		16C2495E2043961D000C4471 /* UIView+Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Common.m"; sourceTree = "<group>"; };
 		16C249602043E83A000C4471 /* AppDelegate+RegisterThirdParty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+RegisterThirdParty.h"; sourceTree = "<group>"; };
 		16C249612043E83A000C4471 /* AppDelegate+RegisterThirdParty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+RegisterThirdParty.m"; sourceTree = "<group>"; };
+		16CB4EE3204D413A00D01328 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		16CB4EE4204D413A00D01328 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		2308DB06B4B3A64999742163 /* Pods-factory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-factory.release.xcconfig"; path = "Pods/Target Support Files/Pods-factory/Pods-factory.release.xcconfig"; sourceTree = "<group>"; };
 		7AC4E8AB7C837B229B019898 /* Pods-factory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-factory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-factory/Pods-factory.debug.xcconfig"; sourceTree = "<group>"; };
 		D1EF45937BAA5233F3BB9028 /* libPods-factory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-factory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,6 +257,10 @@
 		164F6519203EB03C00E14A68 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				16CB4EE7204D417000D01328 /* LoginModule */,
+				16CB4EE5204D413B00D01328 /* ConcernModule */,
+				16CB4EE2204D413A00D01328 /* DiscoveryModule */,
+				16CB4EE1204D413A00D01328 /* MineModule */,
 				16190B42204636DA00214999 /* FirstViewController.h */,
 				16190B43204636DA00214999 /* FirstViewController.m */,
 				16190B45204636E700214999 /* SecondViewController.h */,
@@ -310,6 +317,36 @@
 				16C2495E2043961D000C4471 /* UIView+Common.m */,
 			);
 			path = Categorys;
+			sourceTree = "<group>";
+		};
+		16CB4EE1204D413A00D01328 /* MineModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MineModule;
+			sourceTree = "<group>";
+		};
+		16CB4EE2204D413A00D01328 /* DiscoveryModule */ = {
+			isa = PBXGroup;
+			children = (
+				16CB4EE3204D413A00D01328 /* FirstViewController.h */,
+				16CB4EE4204D413A00D01328 /* FirstViewController.m */,
+			);
+			path = DiscoveryModule;
+			sourceTree = "<group>";
+		};
+		16CB4EE5204D413B00D01328 /* ConcernModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ConcernModule;
+			sourceTree = "<group>";
+		};
+		16CB4EE7204D417000D01328 /* LoginModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginModule;
 			sourceTree = "<group>";
 		};
 		1CBD8C197BDE6523326566E7 /* Frameworks */ = {
@@ -542,6 +579,7 @@
 				16190B4A204636F700214999 /* ThirdViewController.m in Sources */,
 				16190B44204636DA00214999 /* FirstViewController.m in Sources */,
 				16C249622043E83A000C4471 /* AppDelegate+RegisterThirdParty.m in Sources */,
+				16CB4EE6204D413B00D01328 /* FirstViewController.m in Sources */,
 				16C2495F2043961D000C4471 /* UIView+Common.m in Sources */,
 				16B22FB6203FDF3600F2037A /* HTTPClient.m in Sources */,
 				16190B47204636E700214999 /* SecondViewController.m in Sources */,
