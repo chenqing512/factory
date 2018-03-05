@@ -42,8 +42,10 @@
     */
     [manager POST:[NSString stringWithFormat:@"%@%@",kHttpHost,path] parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [SVProgressHUD dismiss];
-        NSLog(@"域名:%@\n路径:%@\n返回值:%@",kHttpHost,path,responseObject);
-        response(responseObject);
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+
+        NSLog(@"域名:%@\n路径:%@\n返回值:%@",kHttpHost,path,dict);
+        response(dict);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
         NSLog(@"error");

@@ -27,7 +27,6 @@
     [self.window setRootViewController:self.tabBarController];
     self.window.backgroundColor=[UIColor whiteColor];
     UITabBar *tabbar=[UITabBar appearance];
-//    tabbar.backgroundColor=[UIColor redColor];
     [tabbar setBackgroundImage:[UIImage imageNamed:@"me_manage_account_bg"]];
     [self.window makeKeyAndVisible];
     return YES;
