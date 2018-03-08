@@ -1,25 +1,32 @@
 //
-//  SecondViewController.m
+//  WGNavigationController.m
 //  factory
 //
-//  Created by chenqing on 2018/2/28.
+//  Created by chenqing on 2018/3/8.
 //  Copyright © 2018年 weiguo. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "WGNavigationController.h"
 
-@interface SecondViewController ()
+@interface WGNavigationController ()<UIGestureRecognizerDelegate>
 
 @end
 
-@implementation SecondViewController
+@implementation WGNavigationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title=@"second";
-    
-    // Do any additional setup after loading the view.
+    self.interactivePopGestureRecognizer.delegate=self;
 }
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
+    if (self.viewControllers.count > 1) {
+        return YES;
+    }else
+        return NO;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

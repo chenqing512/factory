@@ -24,6 +24,8 @@ const int kRightButtonTag = -1235;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets=NO;
+    [self hideTabBar];
     //添加背景图
     //    self.view.backgroundColor=LOAD_COLOR(kColorBackground);
     _contentView=[[WGScrollView alloc]initWithFrame:CGRectMake(0, 0, [Variable screenWidth], [Variable screenHeight]-20-44)];
@@ -52,9 +54,9 @@ const int kRightButtonTag = -1235;
 #pragma mark 后期待改进
     UIView *statusBarView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, [Variable screenWidth], 20)];
     statusBarView.backgroundColor=[UIColor colorWithHexString:@"#f2bf24"];
+    self.navigationController.interactivePopGestureRecognizer.enabled=YES;
     
 }
-
 - (void)hideTabBar
 {
     self.tabBarController.tabBar.hidden = YES;
@@ -141,8 +143,6 @@ const int kRightButtonTag = -1235;
 #pragma mark 视图即将出现
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
-    [self hideTabBar];  // 暂时不用
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillHiden:) name:UIKeyboardWillHideNotification object:nil];
 }
