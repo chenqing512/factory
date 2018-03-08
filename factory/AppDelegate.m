@@ -34,15 +34,15 @@
 
 - (void)setupViewControllers {
     FirstViewController *firstViewController = [[FirstViewController alloc] init];
-    UIViewController *firstNavigationController = [[UINavigationController alloc]
+    UIViewController *firstNavigationController = [[WGNavigationController alloc]
                                                    initWithRootViewController:firstViewController];
     
     SecondViewController *secondViewController = [[SecondViewController alloc] init];
-    UIViewController *secondNavigationController = [[UINavigationController alloc]
+    UIViewController *secondNavigationController = [[WGNavigationController alloc]
                                                     initWithRootViewController:secondViewController];
     
     ThirdViewController *thirdViewController = [[ThirdViewController alloc] init];
-    UIViewController *thirdNavigationController = [[UINavigationController alloc]
+    UIViewController *thirdNavigationController = [[WGNavigationController alloc]
                                                     initWithRootViewController:thirdViewController];
     
     

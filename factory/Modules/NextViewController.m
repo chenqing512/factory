@@ -1,22 +1,24 @@
 //
-//  FirstViewController.m
+//  NextViewController.m
 //  factory
 //
-//  Created by chenqing on 2018/2/28.
+//  Created by chenqing on 2018/3/8.
 //  Copyright © 2018年 weiguo. All rights reserved.
 //
 
-#import "FirstViewController.h"
 #import "NextViewController.h"
-@interface FirstViewController ()
+
+@interface NextViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation NextViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title=@"first";
+    self.view.backgroundColor=[UIColor whiteColor];
+    self.leftButton.hidden=NO;
+    self.labelTitle.text=@"next";
     [self layoutView];
     // Do any additional setup after loading the view.
 }
@@ -28,16 +30,14 @@
     [self.view addSubview:button];
     [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     [button mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(50+64);
+        make.bottom.mas_equalTo(self.view.mas_bottom).mas_offset(-40);
         make.centerX.mas_equalTo(self.view);
         make.size.mas_equalTo(CGSizeMake(50, 30));
     }];
 }
 
 -(void)buttonClick:(UIButton *)btn{
-    NextViewController *vc=[[NextViewController alloc]init];
-    vc.hidesBottomBarWhenPushed=YES;
-    [self.navigationController pushViewController:vc animated:YES];
+    NSLog(@"123");
 }
 
 - (void)didReceiveMemoryWarning {
