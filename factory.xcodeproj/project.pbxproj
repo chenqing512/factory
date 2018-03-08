@@ -25,6 +25,8 @@
 		16190B6E204787E800214999 /* me_manage_account_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 16190B6D204787E800214999 /* me_manage_account_bg@3x.png */; };
 		1646D6FE20511B61009B2A09 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1646D6FD20511B61009B2A09 /* NextViewController.m */; };
 		1646D7012051270F009B2A09 /* WGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1646D7002051270F009B2A09 /* WGNavigationController.m */; };
+		1646D70720512F20009B2A09 /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1646D70620512F20009B2A09 /* KeyboardViewController.m */; };
+		1646D70920512FDE009B2A09 /* KeyboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1646D70820512FDE009B2A09 /* KeyboardViewController.xib */; };
 		164F64E6203EA14000E14A68 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 164F64E5203EA14000E14A68 /* AppDelegate.m */; };
 		164F64EC203EA14000E14A68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164F64EA203EA14000E14A68 /* Main.storyboard */; };
 		164F64EE203EA14000E14A68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 164F64ED203EA14000E14A68 /* Assets.xcassets */; };
@@ -84,6 +86,9 @@
 		1646D6FD20511B61009B2A09 /* NextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 		1646D6FF2051270F009B2A09 /* WGNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGNavigationController.h; sourceTree = "<group>"; };
 		1646D7002051270F009B2A09 /* WGNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGNavigationController.m; sourceTree = "<group>"; };
+		1646D70520512F20009B2A09 /* KeyboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardViewController.h; sourceTree = "<group>"; };
+		1646D70620512F20009B2A09 /* KeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardViewController.m; sourceTree = "<group>"; };
+		1646D70820512FDE009B2A09 /* KeyboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardViewController.xib; sourceTree = "<group>"; };
 		164F64E1203EA14000E14A68 /* factory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = factory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		164F64E4203EA14000E14A68 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		164F64E5203EA14000E14A68 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -268,6 +273,9 @@
 				16190B43204636DA00214999 /* FirstViewController.m */,
 				1646D6FC20511B61009B2A09 /* NextViewController.h */,
 				1646D6FD20511B61009B2A09 /* NextViewController.m */,
+				1646D70520512F20009B2A09 /* KeyboardViewController.h */,
+				1646D70620512F20009B2A09 /* KeyboardViewController.m */,
+				1646D70820512FDE009B2A09 /* KeyboardViewController.xib */,
 				16190B45204636E700214999 /* SecondViewController.h */,
 				16190B46204636E700214999 /* SecondViewController.m */,
 				16190B48204636F700214999 /* ThirdViewController.h */,
@@ -483,6 +491,7 @@
 				16190B612046386E00214999 /* tabbar_discovery_icon_selected@2x.png in Resources */,
 				16190B632046386E00214999 /* tabbar_me_icon_selected@3x.png in Resources */,
 				16190B662046386E00214999 /* tabbar_homepage_icon_selected@2x.png in Resources */,
+				1646D70920512FDE009B2A09 /* KeyboardViewController.xib in Resources */,
 				164F64F1203EA14000E14A68 /* LaunchScreen.storyboard in Resources */,
 				16190B5D2046386E00214999 /* tabbar_discovery_icon@2x.png in Resources */,
 				16190B5F2046386E00214999 /* tabbar_me_icon@3x.png in Resources */,
@@ -523,6 +532,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-factory/Pods-factory-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
@@ -578,6 +588,7 @@
 				16C2495520439144000C4471 /* WGViewController.m in Sources */,
 				16C249592043936B000C4471 /* UIColor+WGColor.m in Sources */,
 				16C2495C2043944D000C4471 /* UIImage+Common.m in Sources */,
+				1646D70720512F20009B2A09 /* KeyboardViewController.m in Sources */,
 				164F64F4203EA14000E14A68 /* main.m in Sources */,
 				164F64E6203EA14000E14A68 /* AppDelegate.m in Sources */,
 				16C2495220439082000C4471 /* WGScrollView.m in Sources */,

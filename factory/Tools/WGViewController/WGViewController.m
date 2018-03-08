@@ -9,7 +9,7 @@
 #import "WGViewController.h"
 #import "UIColor+WGColor.h"
 #import "UIImage+Common.h"
-#import "UIView+Common.h"
+
 
 const int kLeftButtonTag = -1234;
 const int kRightButtonTag = -1235;

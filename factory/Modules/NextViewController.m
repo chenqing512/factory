@@ -7,7 +7,7 @@
 //
 
 #import "NextViewController.h"
-
+#import "KeyboardViewController.h"
 @interface NextViewController ()
 
 @end
@@ -38,6 +38,8 @@
 
 -(void)buttonClick:(UIButton *)btn{
     NSLog(@"123");
+    KeyboardViewController *vc=[[KeyboardViewController alloc]initWithNibName:@"KeyboardViewController" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
