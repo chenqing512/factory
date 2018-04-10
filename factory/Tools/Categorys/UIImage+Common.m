@@ -289,15 +289,15 @@
     CGSize newSize;
     CGImageRef imageRef = nil;
     
-    if ((image.size.width / image.size.height) < ([Variable screenWidth] / [Variable screenHeight])) {
+    if ((image.size.width / image.size.height) < ([WGUtil screenWidth] / [WGUtil screenHeight])) {
         newSize.width = image.size.width;
-        newSize.height = image.size.width * [Variable screenHeight] / [Variable screenWidth];
+        newSize.height = image.size.width * [WGUtil screenHeight] / [WGUtil screenWidth];
         
         imageRef = CGImageCreateWithImageInRect([image CGImage], CGRectMake(0, fabs(image.size.height - newSize.height) / 2, newSize.width, newSize.height));
         
     } else {
         newSize.height = image.size.height;
-        newSize.width = image.size.height * [Variable screenWidth] / [Variable screenHeight];
+        newSize.width = image.size.height * [WGUtil screenWidth] / [WGUtil screenHeight];
         
         imageRef = CGImageCreateWithImageInRect([image CGImage], CGRectMake(fabs(image.size.width - newSize.width) / 2, 0, newSize.width, newSize.height));
         

@@ -10,4 +10,5 @@ pod 'SDWebImage','~>4.0'
 pod 'SVProgressHUD'
 pod 'CYLTabBarController', '~> 1.17.4'
 pod 'IQKeyboardManager'
+pod 'AliyunOSSiOS'
 end

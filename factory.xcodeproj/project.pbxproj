@@ -34,7 +34,6 @@
 		164F64F4203EA14000E14A68 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 164F64F3203EA14000E14A68 /* main.m */; };
 		164F64FE203EA14100E14A68 /* factoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 164F64FD203EA14100E14A68 /* factoryTests.m */; };
 		164F6509203EA14100E14A68 /* factoryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 164F6508203EA14100E14A68 /* factoryUITests.m */; };
-		164F6520203EB31500E14A68 /* Variable.m in Sources */ = {isa = PBXBuildFile; fileRef = 164F651F203EB31500E14A68 /* Variable.m */; };
 		16B22FB6203FDF3600F2037A /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 16B22FB5203FDF3600F2037A /* HTTPClient.m */; };
 		16C2495220439082000C4471 /* WGScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C2495120439082000C4471 /* WGScrollView.m */; };
 		16C2495520439144000C4471 /* WGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C2495420439144000C4471 /* WGViewController.m */; };
@@ -43,6 +42,14 @@
 		16C2495F2043961D000C4471 /* UIView+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C2495E2043961D000C4471 /* UIView+Common.m */; };
 		16C249622043E83A000C4471 /* AppDelegate+RegisterThirdParty.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C249612043E83A000C4471 /* AppDelegate+RegisterThirdParty.m */; };
 		335E695D4CD7BE9BCF775C36 /* libPods-factory.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1EF45937BAA5233F3BB9028 /* libPods-factory.a */; };
+		610612902079F553006D333D /* WGResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6106128F2079F553006D333D /* WGResponse.m */; };
+		610612932079FC01006D333D /* NSObject+Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 610612922079FC01006D333D /* NSObject+Notification.m */; };
+		610612962079FF3B006D333D /* WGEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 610612952079FF3B006D333D /* WGEnum.m */; };
+		6106129E207A0296006D333D /* TAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6106129D207A0296006D333D /* TAlertView.m */; };
+		610612A1207A0408006D333D /* WGUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 610612A0207A0408006D333D /* WGUtil.m */; };
+		6148F722207C5453002816A0 /* WGSharedData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6148F721207C5453002816A0 /* WGSharedData.m */; };
+		6148F725207C54AC002816A0 /* WGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6148F724207C54AC002816A0 /* WGUser.m */; };
+		6148F728207C56B7002816A0 /* WGSharedMacr.m in Sources */ = {isa = PBXBuildFile; fileRef = 6148F727207C56B7002816A0 /* WGSharedMacr.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,8 +112,6 @@
 		164F650A203EA14100E14A68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		164F651B203EB08200E14A68 /* define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = define.h; sourceTree = "<group>"; };
 		164F651C203EB0E700E14A68 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		164F651E203EB31500E14A68 /* Variable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Variable.h; sourceTree = "<group>"; };
-		164F651F203EB31500E14A68 /* Variable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Variable.m; sourceTree = "<group>"; };
 		16B22FB4203FDF3600F2037A /* HTTPClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
 		16B22FB5203FDF3600F2037A /* HTTPClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTPClient.m; sourceTree = "<group>"; };
 		16C2495020439082000C4471 /* WGScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGScrollView.h; sourceTree = "<group>"; };
@@ -122,6 +127,22 @@
 		16C249602043E83A000C4471 /* AppDelegate+RegisterThirdParty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+RegisterThirdParty.h"; sourceTree = "<group>"; };
 		16C249612043E83A000C4471 /* AppDelegate+RegisterThirdParty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+RegisterThirdParty.m"; sourceTree = "<group>"; };
 		2308DB06B4B3A64999742163 /* Pods-factory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-factory.release.xcconfig"; path = "Pods/Target Support Files/Pods-factory/Pods-factory.release.xcconfig"; sourceTree = "<group>"; };
+		6106128E2079F553006D333D /* WGResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGResponse.h; sourceTree = "<group>"; };
+		6106128F2079F553006D333D /* WGResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGResponse.m; sourceTree = "<group>"; };
+		610612912079FC01006D333D /* NSObject+Notification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Notification.h"; sourceTree = "<group>"; };
+		610612922079FC01006D333D /* NSObject+Notification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Notification.m"; sourceTree = "<group>"; };
+		610612942079FF3B006D333D /* WGEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGEnum.h; sourceTree = "<group>"; };
+		610612952079FF3B006D333D /* WGEnum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGEnum.m; sourceTree = "<group>"; };
+		6106129C207A0296006D333D /* TAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAlertView.h; sourceTree = "<group>"; };
+		6106129D207A0296006D333D /* TAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAlertView.m; sourceTree = "<group>"; };
+		6106129F207A0408006D333D /* WGUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGUtil.h; sourceTree = "<group>"; };
+		610612A0207A0408006D333D /* WGUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGUtil.m; sourceTree = "<group>"; };
+		6148F720207C5453002816A0 /* WGSharedData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGSharedData.h; sourceTree = "<group>"; };
+		6148F721207C5453002816A0 /* WGSharedData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGSharedData.m; sourceTree = "<group>"; };
+		6148F723207C54AC002816A0 /* WGUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGUser.h; sourceTree = "<group>"; };
+		6148F724207C54AC002816A0 /* WGUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGUser.m; sourceTree = "<group>"; };
+		6148F726207C56B7002816A0 /* WGSharedMacr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGSharedMacr.h; sourceTree = "<group>"; };
+		6148F727207C56B7002816A0 /* WGSharedMacr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGSharedMacr.m; sourceTree = "<group>"; };
 		7AC4E8AB7C837B229B019898 /* Pods-factory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-factory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-factory/Pods-factory.debug.xcconfig"; sourceTree = "<group>"; };
 		D1EF45937BAA5233F3BB9028 /* libPods-factory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-factory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -245,10 +266,11 @@
 		164F6517203EB02500E14A68 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				6106129B207A0296006D333D /* AlertView */,
 				16C2495620439343000C4471 /* Categorys */,
 				16C2494F20439062000C4471 /* WGScrollView */,
 				16C2494E20439062000C4471 /* WGViewController */,
-				164F651D203EB2E800E14A68 /* Var */,
+				164F651D203EB2E800E14A68 /* Utility */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -258,6 +280,8 @@
 			children = (
 				16B22FB4203FDF3600F2037A /* HTTPClient.h */,
 				16B22FB5203FDF3600F2037A /* HTTPClient.m */,
+				6106128E2079F553006D333D /* WGResponse.h */,
+				6106128F2079F553006D333D /* WGResponse.m */,
 			);
 			path = NetWorkManager;
 			sourceTree = "<group>";
@@ -292,13 +316,21 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		164F651D203EB2E800E14A68 /* Var */ = {
+		164F651D203EB2E800E14A68 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				164F651E203EB31500E14A68 /* Variable.h */,
-				164F651F203EB31500E14A68 /* Variable.m */,
+				6106129F207A0408006D333D /* WGUtil.h */,
+				610612A0207A0408006D333D /* WGUtil.m */,
+				610612942079FF3B006D333D /* WGEnum.h */,
+				610612952079FF3B006D333D /* WGEnum.m */,
+				6148F720207C5453002816A0 /* WGSharedData.h */,
+				6148F721207C5453002816A0 /* WGSharedData.m */,
+				6148F726207C56B7002816A0 /* WGSharedMacr.h */,
+				6148F727207C56B7002816A0 /* WGSharedMacr.m */,
+				6148F723207C54AC002816A0 /* WGUser.h */,
+				6148F724207C54AC002816A0 /* WGUser.m */,
 			);
-			path = Var;
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		16C2494E20439062000C4471 /* WGViewController */ = {
@@ -330,6 +362,8 @@
 				16C2495B2043944D000C4471 /* UIImage+Common.m */,
 				16C2495D2043961D000C4471 /* UIView+Common.h */,
 				16C2495E2043961D000C4471 /* UIView+Common.m */,
+				610612912079FC01006D333D /* NSObject+Notification.h */,
+				610612922079FC01006D333D /* NSObject+Notification.m */,
 			);
 			path = Categorys;
 			sourceTree = "<group>";
@@ -370,6 +404,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6106129B207A0296006D333D /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				6106129C207A0296006D333D /* TAlertView.h */,
+				6106129D207A0296006D333D /* TAlertView.m */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
 		AFD249354252DB012FBF2AE6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,7 +433,6 @@
 				164F64DD203EA14000E14A68 /* Sources */,
 				164F64DE203EA14000E14A68 /* Frameworks */,
 				164F64DF203EA14000E14A68 /* Resources */,
-				DEBAD8149B376F7A9742D61C /* [CP] Embed Pods Frameworks */,
 				1C91F30B6172A6A7F5DB8908 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -538,26 +580,13 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-factory/Pods-factory-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DEBAD8149B376F7A9742D61C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-factory/Pods-factory-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FC19A0A7BBB4405079D8566E /* [CP] Check Pods Manifest.lock */ = {
@@ -589,18 +618,25 @@
 				16C249592043936B000C4471 /* UIColor+WGColor.m in Sources */,
 				16C2495C2043944D000C4471 /* UIImage+Common.m in Sources */,
 				1646D70720512F20009B2A09 /* KeyboardViewController.m in Sources */,
+				610612932079FC01006D333D /* NSObject+Notification.m in Sources */,
 				164F64F4203EA14000E14A68 /* main.m in Sources */,
+				6148F725207C54AC002816A0 /* WGUser.m in Sources */,
+				610612902079F553006D333D /* WGResponse.m in Sources */,
+				610612962079FF3B006D333D /* WGEnum.m in Sources */,
 				164F64E6203EA14000E14A68 /* AppDelegate.m in Sources */,
 				16C2495220439082000C4471 /* WGScrollView.m in Sources */,
+				6106129E207A0296006D333D /* TAlertView.m in Sources */,
 				16190B4A204636F700214999 /* ThirdViewController.m in Sources */,
 				16190B44204636DA00214999 /* FirstViewController.m in Sources */,
 				16C249622043E83A000C4471 /* AppDelegate+RegisterThirdParty.m in Sources */,
+				610612A1207A0408006D333D /* WGUtil.m in Sources */,
 				16C2495F2043961D000C4471 /* UIView+Common.m in Sources */,
+				6148F728207C56B7002816A0 /* WGSharedMacr.m in Sources */,
+				6148F722207C5453002816A0 /* WGSharedData.m in Sources */,
 				16B22FB6203FDF3600F2037A /* HTTPClient.m in Sources */,
 				1646D6FE20511B61009B2A09 /* NextViewController.m in Sources */,
 				16190B47204636E700214999 /* SecondViewController.m in Sources */,
 				1646D7012051270F009B2A09 /* WGNavigationController.m in Sources */,
-				164F6520203EB31500E14A68 /* Variable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

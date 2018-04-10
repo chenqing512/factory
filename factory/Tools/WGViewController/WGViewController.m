@@ -28,7 +28,7 @@ const int kRightButtonTag = -1235;
     [self hideTabBar];
     //添加背景图
     //    self.view.backgroundColor=LOAD_COLOR(kColorBackground);
-    _contentView=[[WGScrollView alloc]initWithFrame:CGRectMake(0, 0, [Variable screenWidth], [Variable screenHeight]-20-44)];
+    _contentView=[[WGScrollView alloc]initWithFrame:CGRectMake(0, 0, [WGUtil screenWidth], [WGUtil screenHeight]-20-44)];
     _contentView.tag=-1112;
     _contentView.clipsToBounds = YES;
     [self.view addSubview:_contentView];
@@ -52,7 +52,7 @@ const int kRightButtonTag = -1235;
     self.leftButton.hidden=YES;
     self.rightButton.hidden=YES;
 #pragma mark 后期待改进
-    UIView *statusBarView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, [Variable screenWidth], 20)];
+    UIView *statusBarView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, [WGUtil screenWidth], 20)];
     statusBarView.backgroundColor=[UIColor colorWithHexString:@"#f2bf24"];
     self.navigationController.interactivePopGestureRecognizer.enabled=YES;
     
@@ -74,7 +74,7 @@ const int kRightButtonTag = -1235;
     self.labelTitle.backgroundColor=[UIColor clearColor];
     //    self.labelTitle.textColor=[UIColor whiteColor];
     self.labelTitle.textColor=[UIColor colorWithHexString:@"48c8c2"];
-    self.navigationItem.titleView.frame=CGRectMake(0, 0, [Variable screenWidth], 44);
+    self.navigationItem.titleView.frame=CGRectMake(0, 0, [WGUtil screenWidth], 44);
     self.navigationItem.titleView=self.labelTitle;
     
 }
@@ -131,7 +131,7 @@ const int kRightButtonTag = -1235;
         UIImageView *imageView=(UIImageView *)[navBar viewWithTag:10];
         if (imageView==nil) {
             //            imageView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"navBar"]];
-            imageView.frame=CGRectMake(0, 0, [Variable screenWidth], 44);
+            imageView.frame=CGRectMake(0, 0, [WGUtil screenWidth], 44);
             imageView.backgroundColor = [UIColor whiteColor];
             imageView.tag=10;
             [navBar insertSubview:imageView atIndex:0];

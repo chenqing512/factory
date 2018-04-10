@@ -10,11 +10,18 @@
 #define PrefixHeader_pch
 
 #import "WGNavigationController.h"
-#import "Variable.h"
+#import "WGUtil.h"
 #import "HTTPClient.h"
 #import "SVProgressHUD.h"
 #import "Masonry.h"
 #import "UIView+Common.h"
+#import "MJExtension.h"
+#import "NSObject+Notification.h"
+#import "define.h"
+#import "WGEnum.h"
+#import "TAlertView.h"
+#import "WGSharedData.h"
+#import "WGSharedMacr.h"
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
