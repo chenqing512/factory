@@ -50,6 +50,8 @@
 		6148F722207C5453002816A0 /* WGSharedData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6148F721207C5453002816A0 /* WGSharedData.m */; };
 		6148F725207C54AC002816A0 /* WGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6148F724207C54AC002816A0 /* WGUser.m */; };
 		6148F728207C56B7002816A0 /* WGSharedMacr.m in Sources */ = {isa = PBXBuildFile; fileRef = 6148F727207C56B7002816A0 /* WGSharedMacr.m */; };
+		614D2E8A207D9C920049412D /* nav_back_btn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 614D2E88207D9C910049412D /* nav_back_btn@3x.png */; };
+		614D2E8B207D9C920049412D /* nav_back_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 614D2E89207D9C910049412D /* nav_back_btn@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +145,8 @@
 		6148F724207C54AC002816A0 /* WGUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGUser.m; sourceTree = "<group>"; };
 		6148F726207C56B7002816A0 /* WGSharedMacr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGSharedMacr.h; sourceTree = "<group>"; };
 		6148F727207C56B7002816A0 /* WGSharedMacr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGSharedMacr.m; sourceTree = "<group>"; };
+		614D2E88207D9C910049412D /* nav_back_btn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_back_btn@3x.png"; sourceTree = "<group>"; };
+		614D2E89207D9C910049412D /* nav_back_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_back_btn@2x.png"; sourceTree = "<group>"; };
 		7AC4E8AB7C837B229B019898 /* Pods-factory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-factory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-factory/Pods-factory.debug.xcconfig"; sourceTree = "<group>"; };
 		D1EF45937BAA5233F3BB9028 /* libPods-factory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-factory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -189,6 +193,8 @@
 				16190B592046386E00214999 /* tabbar_homepage_icon@3x.png */,
 				16190B5A2046386E00214999 /* tabbar_homepage_icon_selected@2x.png */,
 				16190B5B2046386E00214999 /* tabbar_homepage_icon_selected@3x.png */,
+				614D2E89207D9C910049412D /* nav_back_btn@2x.png */,
+				614D2E88207D9C910049412D /* nav_back_btn@3x.png */,
 			);
 			path = MainImgs;
 			sourceTree = "<group>";
@@ -532,6 +538,7 @@
 			files = (
 				16190B612046386E00214999 /* tabbar_discovery_icon_selected@2x.png in Resources */,
 				16190B632046386E00214999 /* tabbar_me_icon_selected@3x.png in Resources */,
+				614D2E8B207D9C920049412D /* nav_back_btn@2x.png in Resources */,
 				16190B662046386E00214999 /* tabbar_homepage_icon_selected@2x.png in Resources */,
 				1646D70920512FDE009B2A09 /* KeyboardViewController.xib in Resources */,
 				164F64F1203EA14000E14A68 /* LaunchScreen.storyboard in Resources */,
@@ -547,6 +554,7 @@
 				16190B622046386E00214999 /* tabbar_homepage_icon@2x.png in Resources */,
 				16190B652046386E00214999 /* tabbar_homepage_icon@3x.png in Resources */,
 				16190B672046386E00214999 /* tabbar_homepage_icon_selected@3x.png in Resources */,
+				614D2E8A207D9C920049412D /* nav_back_btn@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

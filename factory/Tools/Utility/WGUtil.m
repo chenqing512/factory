@@ -9,9 +9,9 @@
 #import "WGUtil.h"
 
 #ifdef DEBUG
-NSString *kHttpHost = @"http://testapp.vliao2.com";//测试环境
+NSString *kHttpHost = @"http://www.pairui9.com/";//测试环境
 #else
-NSString *kHttpHost = @"http://testapp.vliao2.com";//正式环境
+NSString *kHttpHost = @"http://www.pairui9.com/";//正式环境
 #endif
 
 @implementation WGUtil

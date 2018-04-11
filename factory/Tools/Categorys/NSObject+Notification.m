@@ -15,10 +15,20 @@
     return [NSString stringWithFormat:@"notify.%@.", [self description]];
 }
 
+/**
+ 接受通知实现方法
+
+ @param notification noti
+ */
 - (void)handleNotification:(NSNotification *)notification
 {
 }
 
+/**
+ 添加通知
+
+ @param name 通知名称
+ */
 - (void)observeNotification:(NSString *)name
 {
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -27,6 +37,11 @@
                                                object:nil];
 }
 
+/**
+ 移除通知
+
+ @param name 通知名称
+ */
 - (void)unobserveNotification:(NSString *)name
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self
@@ -34,11 +49,20 @@
                                                   object:nil];
 }
 
+/**
+ 移除所有通知
+ */
 - (void)unobserveAllNotifications
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+/**
+ 发送通知
+
+ @param name 通知名称
+ @return 返回值 bool
+ */
 - (BOOL)postNotification:(NSString *)name
 {
     [[NSNotificationCenter defaultCenter] postNotificationName:name object:nil];

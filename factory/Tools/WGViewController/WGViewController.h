@@ -17,11 +17,19 @@
 
 @property (nonatomic,retain) WGScrollView *contentView;
 
-@property (strong, nonatomic) UIImageView *tapImageView;
+
 
 - (void)backButtonClick:(UIButton *)btn;
 - (void)otherButtonClick:(UIButton *)btn;
 - (void)keyBoardWillShow:(NSNotification *)noti;
 - (void)keyBoardWillHiden:(NSNotification *)noti;
+
+
+/**
+ tabbar height
+
+ @return 高度
+ */
+-(CGFloat)tabBarHeight;
 
 @end

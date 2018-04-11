@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.leftButton.hidden=NO;
+    self.labelTitle.text=@"键盘";
     // Do any additional setup after loading the view.
 }
 

@@ -28,33 +28,24 @@ const int kRightButtonTag = -1235;
     [self hideTabBar];
     //添加背景图
     //    self.view.backgroundColor=LOAD_COLOR(kColorBackground);
-    _contentView=[[WGScrollView alloc]initWithFrame:CGRectMake(0, 0, [WGUtil screenWidth], [WGUtil screenHeight]-20-44)];
+    _contentView=[[WGScrollView alloc]initWithFrame:CGRectMake(0, 0, [WGUtil screenWidth], [WGUtil screenHeight]-kStatusHeight-kNavigationHeight)];
     _contentView.tag=-1112;
     _contentView.clipsToBounds = YES;
     [self.view addSubview:_contentView];
     [self.view sendSubviewToBack:_contentView];
     
-    _tapImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-    _tapImageView.image = [UIImage imageNamed:@"jzsb"];
-    _tapImageView.tag = -1111;
-    _tapImageView.userInteractionEnabled = YES;
-    _tapImageView.hidden = YES;
-    [_contentView addSubview:_tapImageView];
-    
-    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(textResignFirstResponder:)];
-    [_tapImageView addGestureRecognizer:tapGestureRecognizer];
     
     _rect = _contentView.frame;
     
     [self updateLabel];
-    [self updateButton_];
+    [self updateButton];
     [self updateBackgroundView];
     self.leftButton.hidden=YES;
     self.rightButton.hidden=YES;
 #pragma mark 后期待改进
-    UIView *statusBarView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, [WGUtil screenWidth], 20)];
-    statusBarView.backgroundColor=[UIColor colorWithHexString:@"#f2bf24"];
-    self.navigationController.interactivePopGestureRecognizer.enabled=YES;
+//    UIView *statusBarView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, [WGUtil screenWidth], 20)];
+//    statusBarView.backgroundColor=[UIColor colorWithHexString:@"#f2bf24"];
+//    self.navigationController.interactivePopGestureRecognizer.enabled=YES;
     
 }
 - (void)hideTabBar
@@ -63,7 +54,11 @@ const int kRightButtonTag = -1235;
 }
 
 
-#pragma mark 设置导航栏标题框
+#pragma mark 设置导航栏UIView
+
+/**
+ 导航栏标题
+ */
 - (void)updateLabel{
     self.labelTitle=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 130, 44)];
     self.labelTitle.text=@"";
@@ -78,13 +73,16 @@ const int kRightButtonTag = -1235;
     self.navigationItem.titleView=self.labelTitle;
     
 }
-#pragma mark 添加左右按钮
-- (void)updateButton_{
+
+/**
+ 添加导航栏左右按钮
+ */
+- (void)updateButton{
     self.leftButton=[UIButton buttonWithType:UIButtonTypeCustom];
     [self.leftButton addTarget:self action:@selector(backButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.leftButton setFrame:CGRectMake(0, 0, 45, 19)];
-    [self.leftButton setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
-    [self.leftButton setImage:[UIImage imageNamed:@"backSelect"] forState:UIControlStateSelected];
+    [self.leftButton setImage:[UIImage imageNamed:@"nav_back_btn"] forState:UIControlStateNormal];
+    [self.leftButton setImage:[UIImage imageNamed:@"nav_back_btn"] forState:UIControlStateSelected];
     self.leftButton.imageView.contentMode = UIViewContentModeLeft;
     self.leftButton.tag=kLeftButtonTag;
     self.leftButton.titleLabel.textColor=[UIColor colorWithHexString:@"2b364e"];
@@ -107,14 +105,10 @@ const int kRightButtonTag = -1235;
     self.navigationItem.rightBarButtonItem=rightItem;
     
 }
-- (void)backButtonClick:(UIButton *)btn{
-    [SVProgressHUD dismiss];
-    [self.navigationController popViewControllerAnimated:YES];
-}
-- (void)otherButtonClick:(UIButton *)btn{
-    
-}
-#pragma mark 设置导航栏背景图片
+
+/**
+ 导航栏背景
+ */
 - (void)updateBackgroundView{
     UINavigationBar *navBar=self.navigationController.navigationBar;
     navBar.backgroundColor = [UIColor clearColor];
@@ -131,7 +125,7 @@ const int kRightButtonTag = -1235;
         UIImageView *imageView=(UIImageView *)[navBar viewWithTag:10];
         if (imageView==nil) {
             //            imageView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"navBar"]];
-            imageView.frame=CGRectMake(0, 0, [WGUtil screenWidth], 44);
+            imageView.frame=CGRectMake(0, 0, [WGUtil screenWidth], kNavigationHeight);
             imageView.backgroundColor = [UIColor whiteColor];
             imageView.tag=10;
             [navBar insertSubview:imageView atIndex:0];
@@ -139,14 +133,23 @@ const int kRightButtonTag = -1235;
         }
     }
 }
+#pragma mark 左右按钮点击事件
+- (void)backButtonClick:(UIButton *)btn{
+    [SVProgressHUD dismiss];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+- (void)otherButtonClick:(UIButton *)btn{
+    
+}
 
-#pragma mark 视图即将出现
+
+#pragma mark 视图生命周期方法
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillHiden:) name:UIKeyboardWillHideNotification object:nil];
 }
-#pragma mark 视图将要消失
+
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
@@ -160,6 +163,26 @@ const int kRightButtonTag = -1235;
                                                     name:UIKeyboardWillHideNotification
                                                   object:nil];
 }
+- (void)viewDidLayoutSubviews{
+    //    [super viewDidLayoutSubviews];
+    
+    for (UIView *view in self.view.subviews) {
+        if ([view isKindOfClass:[UIScrollView class]]) {
+            UIScrollView *scrollView = (UIScrollView *)view;
+            scrollView.scrollsToTop = NO;
+        }
+        if ([view isKindOfClass:[UITableView class]]){
+            UITableView *tableView = (UITableView *)view;
+            tableView.scrollsToTop = YES;
+            
+        }
+    }
+    
+}
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+}
+#pragma mark 键盘监听方法
 - (void)keyBoardWillShow:(NSNotification *)noti{
     CGSize size = [[noti.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
     CGFloat time=[[noti.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
@@ -187,16 +210,9 @@ const int kRightButtonTag = -1235;
         
     }];
 }
-- (void)textResignFirstResponder:(UITapGestureRecognizer *)tap {
-    UIView *tapView=tap.view;
-    UIView *responder=[self.view findFirstResponder];
-    if (![tapView isKindOfClass:[UITextField class]]) {
-        if ([responder isKindOfClass:[UITextField class]]||[responder isKindOfClass:[UITextView class]]) {
-            [responder resignFirstResponder];
-        }
-    }
-    
-}
+
+#pragma mark  other method
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [super touchesBegan:touches withEvent:event];
     UIView *responder=[self.view findFirstResponder];
@@ -206,24 +222,15 @@ const int kRightButtonTag = -1235;
     
 }
 
-- (void)viewDidLayoutSubviews{
-    //    [super viewDidLayoutSubviews];
-    
-    for (UIView *view in self.view.subviews) {
-        if ([view isKindOfClass:[UIScrollView class]]) {
-            UIScrollView *scrollView = (UIScrollView *)view;
-            scrollView.scrollsToTop = NO;
-        }
-        if ([view isKindOfClass:[UITableView class]]){
-            UITableView *tableView = (UITableView *)view;
-            tableView.scrollsToTop = YES;
-            
-        }
-    }
-    
-}
-- (void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
+
+
+/**
+ tabbar 高度
+
+ @return 高度
+ */
+-(CGFloat)tabBarHeight{
+    return self.tabBarController.tabBar.frame.size.height;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -35,9 +35,19 @@
 }
 
 -(void)buttonClick:(UIButton *)btn{
+//    [[HTTPClient defaultManager] postHttp:@"showmay/discover" parameters:@{@"count":@10,
+//                                                                           @"isIOS":@0,
+//                                                                           @"tailID":@0,
+//                                                                           @"userID":@516458,
+//                                                                           @"userKey":@"UQrnFOlgd3mhzoPZhz2f2mPTWbzVx8hZ"
+//                                                                           } completion:^(NSURLSessionDataTask *task, WGResponse *aResponse, NSError *anError) {
+//
+//                                                                           }];
+    
     NextViewController *vc=[[NextViewController alloc]init];
     vc.hidesBottomBarWhenPushed=YES;
     [self.navigationController pushViewController:vc animated:YES];
+     
 }
 
 - (void)didReceiveMemoryWarning {
