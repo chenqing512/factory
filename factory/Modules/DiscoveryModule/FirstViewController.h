@@ -8,6 +8,6 @@
 
 #import "WGViewController.h"
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : WGViewController
 
 @end

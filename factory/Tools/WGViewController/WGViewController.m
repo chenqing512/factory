@@ -25,7 +25,6 @@ const int kRightButtonTag = -1235;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets=NO;
-    [self hideTabBar];
     //添加背景图
     //    self.view.backgroundColor=LOAD_COLOR(kColorBackground);
     _contentView=[[WGScrollView alloc]initWithFrame:CGRectMake(0, 0, [WGUtil screenWidth], [WGUtil screenHeight]-kStatusHeight-kNavigationHeight)];
@@ -33,10 +32,7 @@ const int kRightButtonTag = -1235;
     _contentView.clipsToBounds = YES;
     [self.view addSubview:_contentView];
     [self.view sendSubviewToBack:_contentView];
-    
-    
     _rect = _contentView.frame;
-    
     [self updateLabel];
     [self updateButton];
     [self updateBackgroundView];
@@ -48,11 +44,6 @@ const int kRightButtonTag = -1235;
 //    self.navigationController.interactivePopGestureRecognizer.enabled=YES;
     
 }
-- (void)hideTabBar
-{
-    self.tabBarController.tabBar.hidden = YES;
-}
-
 
 #pragma mark 设置导航栏UIView
 
@@ -112,26 +103,7 @@ const int kRightButtonTag = -1235;
 - (void)updateBackgroundView{
     UINavigationBar *navBar=self.navigationController.navigationBar;
     navBar.backgroundColor = [UIColor clearColor];
-    if ([navBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)]) {
-        // ios5 and later
-        if ([[[UIDevice currentDevice] systemVersion] floatValue]>=7.0) {
-#pragma mark ios 7需要 640*128的导航栏背景图  ios7以下的需要 640*88的背景图
-            [navBar setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forBarMetrics:UIBarMetricsDefault];
-        } else {
-            [navBar setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forBarMetrics:UIBarMetricsDefault];
-        }
-        
-    } else {
-        UIImageView *imageView=(UIImageView *)[navBar viewWithTag:10];
-        if (imageView==nil) {
-            //            imageView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"navBar"]];
-            imageView.frame=CGRectMake(0, 0, [WGUtil screenWidth], kNavigationHeight);
-            imageView.backgroundColor = [UIColor whiteColor];
-            imageView.tag=10;
-            [navBar insertSubview:imageView atIndex:0];
-            
-        }
-    }
+     [navBar setBackgroundImage:[UIImage imageWithColor:[UIColor redColor]] forBarMetrics:UIBarMetricsDefault];
 }
 #pragma mark 左右按钮点击事件
 - (void)backButtonClick:(UIButton *)btn{
