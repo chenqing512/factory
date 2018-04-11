@@ -14,7 +14,7 @@
 const int kLeftButtonTag = -1234;
 const int kRightButtonTag = -1235;
 
-@interface WGViewController ()<UIGestureRecognizerDelegate> 
+@interface WGViewController ()<UIGestureRecognizerDelegate>
 
 @end
 

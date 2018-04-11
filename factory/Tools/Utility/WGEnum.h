@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
+typedef NS_ENUM(NSInteger,WGGender) {
     kGenderMale = 1
     , kGenderFemale = 2
-}KLGender;
+};
 
 typedef NS_ENUM(NSInteger, TCommonLoginType){//公共账号类型
     TLoginByPhone                       = 0,
@@ -30,7 +30,7 @@ typedef NS_ENUM(NSInteger, ZZShareType){//分享类型
 };
 
 //上传文件的类型
-typedef NS_ENUM(NSInteger, KLUploadFileType){
+typedef NS_ENUM(NSInteger, WGUploadFileType){
     KLUpload_File_Image       = 1,
     KLUpload_File_Voice,
     KLUpload_File_Video
@@ -43,7 +43,7 @@ typedef NS_ENUM(NSInteger, TUploadImageUse){
     TUploadImageUseForVideo        = 3,
 };
 //支付类型
-typedef NS_ENUM(NSInteger, XMPayType){//公共账号类型
+typedef NS_ENUM(NSInteger, WGPayType){//公共账号类型
     XMPayTypeWeixin                           = 1,//微信支付
     XMPayTypeAlipay                           = 2,//支付宝支付
 };
@@ -106,12 +106,12 @@ typedef NS_ENUM(NSInteger,ZZChatConditionType){
 };
 
 //聊天cell边角变圆
-typedef enum{
+typedef NS_ENUM(NSInteger,WGChatCellRoundType){
     KLChatCellRoundTypeTop       = 0,    //上圆角
     KLChatCellRoundTypeMiddle,          //无圆角
     KLChatCellRoundTypeBottom,           //下圆角
     KLChatCellRoundTypeBoth             //两边圆角
-}KLChatCellRoundType;
+};
 
 @interface WGEnum : NSObject
 

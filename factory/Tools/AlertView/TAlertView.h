@@ -1,9 +1,9 @@
 //
 //  TAlertView.h
-//  timingapp
+//  factory
 //
-//  Created by Kelu iOS on 16/8/8.
-//  Copyright © 2016年 huiian. All rights reserved.
+//  Created by chenqing on 2018/2/26.
+//  Copyright © 2018年 weiguo. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
