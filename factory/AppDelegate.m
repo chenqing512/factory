@@ -12,6 +12,7 @@
 #import "SecondViewController.h"
 #import "ThirdViewController.h"
 #import <IQKeyboardManager/IQKeyboardManager.h>
+#import "UIImage+Common.h"
 @interface AppDelegate ()
 
 @end
@@ -27,7 +28,7 @@
     [self setupViewControllers];
     [self.window setRootViewController:self.tabBarController];
     UITabBar *tabbar=[UITabBar appearance];
-    [tabbar setBackgroundImage:[UIImage imageNamed:@"me_manage_account_bg"]];
+    [tabbar setBackgroundImage:[UIImage imageWithColor:[UIColor blackColor]]];
     
     [self setKeyboardProperty];//设置键盘属性
     self.window.backgroundColor=[UIColor whiteColor];
@@ -94,7 +95,7 @@
     keyboardManager.shouldToolbarUsesTextFieldTintColor = YES; // 控制键盘上的工具条文字颜色是否用户自定义
     keyboardManager.toolbarManageBehaviour = IQAutoToolbarBySubviews; // 有多个输入框时，可以通过点击Toolbar 上的“前一个”“后一个”按钮来实现移动到不同的输入框
     keyboardManager.enableAutoToolbar = YES; // 控制是否显示键盘上的工具条
-    keyboardManager.shouldShowTextFieldPlaceholder = YES; // 是否显示占位文字
+    keyboardManager.shouldShowToolbarPlaceholder = YES; // 是否显示占位文字
     keyboardManager.placeholderFont = [UIFont boldSystemFontOfSize:17]; // 设置占位文字的字体
     keyboardManager.keyboardDistanceFromTextField = 10.0f; // 输入框距离键盘的距离
     
