@@ -21,28 +21,16 @@ const int kRightButtonTag = -1235;
 @end
 
 @implementation WGViewController
-
+#pragma mark 视图生命周期方法
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets=NO;
     //添加背景图
-    //    self.view.backgroundColor=LOAD_COLOR(kColorBackground);
-    _contentView=[[WGScrollView alloc]initWithFrame:CGRectMake(0, 0, [WGUtil screenWidth], [WGUtil screenHeight]-kStatusHeight-kNavigationHeight)];
-    _contentView.tag=-1112;
-    _contentView.clipsToBounds = YES;
-    [self.view addSubview:_contentView];
-    [self.view sendSubviewToBack:_contentView];
-    _rect = _contentView.frame;
     [self updateLabel];
     [self updateButton];
     [self updateBackgroundView];
     self.leftButton.hidden=YES;
     self.rightButton.hidden=YES;
-#pragma mark 后期待改进
-//    UIView *statusBarView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, [WGUtil screenWidth], 20)];
-//    statusBarView.backgroundColor=[UIColor colorWithHexString:@"#f2bf24"];
-//    self.navigationController.interactivePopGestureRecognizer.enabled=YES;
-    
 }
 
 #pragma mark 设置导航栏UIView
@@ -53,12 +41,9 @@ const int kRightButtonTag = -1235;
 - (void)updateLabel{
     self.labelTitle=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 130, 44)];
     self.labelTitle.text=@"";
-    //    self.labelTitle.font=[UIFont systemFontOfSize:20];
     self.labelTitle.font=[UIFont systemFontOfSize:18];
-    //    self.labelTitle.font=LOAD_FONT_LantingZhonghei(20);
     self.labelTitle.textAlignment=NSTextAlignmentCenter;
     self.labelTitle.backgroundColor=[UIColor clearColor];
-    //    self.labelTitle.textColor=[UIColor whiteColor];
     self.labelTitle.textColor=[UIColor colorWithHexString:@"48c8c2"];
     self.navigationItem.titleView.frame=CGRectMake(0, 0, [WGUtil screenWidth], 44);
     self.navigationItem.titleView=self.labelTitle;
@@ -113,76 +98,6 @@ const int kRightButtonTag = -1235;
 - (void)otherButtonClick:(UIButton *)btn{
     
 }
-
-
-#pragma mark 视图生命周期方法
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillShow:) name:UIKeyboardWillShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillHiden:) name:UIKeyboardWillHideNotification object:nil];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
-    
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:UIKeyboardWillShowNotification
-                                                  object:nil];
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:UIKeyboardWillHideNotification
-                                                  object:nil];
-}
-- (void)viewDidLayoutSubviews{
-    //    [super viewDidLayoutSubviews];
-    
-    for (UIView *view in self.view.subviews) {
-        if ([view isKindOfClass:[UIScrollView class]]) {
-            UIScrollView *scrollView = (UIScrollView *)view;
-            scrollView.scrollsToTop = NO;
-        }
-        if ([view isKindOfClass:[UITableView class]]){
-            UITableView *tableView = (UITableView *)view;
-            tableView.scrollsToTop = YES;
-            
-        }
-    }
-    
-}
-- (void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-}
-#pragma mark 键盘监听方法
-- (void)keyBoardWillShow:(NSNotification *)noti{
-    CGSize size = [[noti.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
-    CGFloat time=[[noti.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
-    UIView *responder=[self.view findFirstResponder];
-    
-    CGRect rect = [responder.superview convertRect:responder.frame toView:self.contentView];
-    
-    CGFloat _y=self.view.frame.size.height-size.height-responder.frame.size.height;
-    if ([responder isKindOfClass:[UITextField class]]||[responder isKindOfClass:[UITextView class]]) {
-        if (_y<rect.origin.y) {
-            [UIView animateWithDuration:time animations:^{
-                
-                self.contentView.frame=CGRectMake(0, _y-rect.origin.y-10, self.contentView.frame.size.width, self.contentView.frame.size.height);
-            }];
-        }
-        
-    }
-    
-}
-- (void)keyBoardWillHiden:(NSNotification *)noti{
-    CGFloat time=[[noti.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] floatValue];
-    
-    [UIView animateWithDuration:time animations:^{
-        _contentView.frame=_rect;
-        
-    }];
-}
-
 #pragma mark  other method
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{

@@ -30,7 +30,7 @@
     [self.view addSubview:button];
     [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     [button mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo(self.view.mas_bottom).mas_offset(-40);
+        make.bottom.mas_equalTo(self.view.mas_bottom).mas_offset(-10);
         make.centerX.mas_equalTo(self.view);
         make.size.mas_equalTo(CGSizeMake(50, 30));
     }];
@@ -40,6 +40,16 @@
     NSLog(@"123");
     KeyboardViewController *vc=[[KeyboardViewController alloc]initWithNibName:@"KeyboardViewController" bundle:nil];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

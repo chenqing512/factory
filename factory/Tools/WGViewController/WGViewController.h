@@ -19,10 +19,19 @@
 
 
 
+/**
+ 返回按钮点击事件
+
+ @param btn btn
+ */
 - (void)backButtonClick:(UIButton *)btn;
+
+/**
+ 右导航按钮点击事件
+
+ @param btn btn
+ */
 - (void)otherButtonClick:(UIButton *)btn;
-- (void)keyBoardWillShow:(NSNotification *)noti;
-- (void)keyBoardWillHiden:(NSNotification *)noti;
 
 
 /**
