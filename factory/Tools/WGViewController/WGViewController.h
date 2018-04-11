@@ -15,10 +15,6 @@
 @property (strong, nonatomic) UIButton *leftButton;//左按钮
 @property (strong, nonatomic) UIButton *rightButton;//右按钮
 
-@property (nonatomic,retain) WGScrollView *contentView;
-
-
-
 /**
  返回按钮点击事件
 
