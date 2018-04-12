@@ -15,6 +15,9 @@
 #import "UIImage+Common.h"
 #import <Bugly/Bugly.h>
 #import <UserNotifications/UserNotifications.h>
+#import "WXApi.h"
+#import <TencentOpenAPI/TencentOAuth.h>
+#import "WGWeiXinCaller.h"
 
 @interface AppDelegate ()
 
@@ -91,16 +94,17 @@
     tabBarController.tabBarItemsAttributes = tabBarItemsAttributes;
 }
 
-#pragma mark register third party
+#pragma mark 第三方统计  微信 微博
 -(void)registerThirdParty:(UIApplication *)application options:(NSDictionary *)launchOptions{
     // 点击通知将App从关闭状态启动时，将通知打开回执上报
     [self initCloudPush];
     [CloudPushSDK handleLaunching:launchOptions];
     [CloudPushSDK turnOnDebug];
     [self registerAPNS:application];
-    /*
+    
     //微信SDK注册
-    [WXApi registerApp:WEIXIN_LOGIN_APP_ID withDescription:@"私密空间时代"];
+    [WXApi registerApp:WEIXIN_LOGIN_APP_ID];
+    /*
     //微博SDK注册
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:WEIBO_APPKEY];
@@ -187,6 +191,48 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    if([url.absoluteString hasPrefix:@"wb"]){
+       // return [WeiboSDK handleOpenURL:url delegate:[KLWeiBoCaller sharedInstance]];
+    }else if([url.absoluteString hasPrefix:@"tencent"]){
+        return [TencentOAuth HandleOpenURL:url];
+    }else if([url.absoluteString hasPrefix:@"wx"]){
+        return [WXApi handleOpenURL:url delegate:[WGWeiXinCaller sharedInstance]];
+    }else if ([url.absoluteString hasPrefix:@"xmay"]){
+//        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+//            NSLog(@"result = %@",resultDic);//返回的支付结果
+//            if ([[resultDic objectForKey:@"resultStatus"] integerValue] == 9000) {
+//                [[XMAlipayCaller sharedInstance].delegate alipayFinishPay];
+//            }else if ([[resultDic objectForKey:@"resultStatus"] integerValue] == 6001){
+//                [[XMAlipayCaller sharedInstance].delegate alipayCancelPay];
+//                DLog(@"memo = %@",[resultDic objectForKey:@"memo"]);//返回的支付结果
+//            }
+//        }];
+    }
+    return YES;
+}
+
+-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
+    if([url.absoluteString hasPrefix:@"wb"]){
+       // return [WeiboSDK handleOpenURL:url delegate:[KLWeiBoCaller sharedInstance]];
+    }else if([url.absoluteString hasPrefix:@"tencent"]){
+        return [TencentOAuth HandleOpenURL:url];
+    }else if([url.absoluteString hasPrefix:@"wx"]){
+        return [WXApi handleOpenURL:url delegate:[WGWeiXinCaller sharedInstance]];
+    }else if ([url.absoluteString hasPrefix:@"xmay"]){
+//        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+//            NSLog(@"result = %@",resultDic);//返回的支付结果
+//            if ([[resultDic objectForKey:@"resultStatus"] integerValue] == 9000) {
+//                [[XMAlipayCaller sharedInstance].delegate alipayFinishPay];
+//            }else if ([[resultDic objectForKey:@"resultStatus"] integerValue] == 6001){
+//                [[XMAlipayCaller sharedInstance].delegate alipayCancelPay];
+//                DLog(@"memo = %@",[resultDic objectForKey:@"memo"]);//返回的支付结果
+//            }
+//        }];
+    }
+    return YES;
 }
 
 

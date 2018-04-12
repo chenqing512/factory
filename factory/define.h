@@ -45,6 +45,12 @@ return __singleton__; \
 //aliyun推送
 #define PUSH_APP_KEY            @"23652209"
 #define PUSH_APP_SECRET         @"6cc20b452caf9b61ca2ac90e0a328287"
+//微信
+#define WEIXIN_LOGIN_APP_ID         @"wx8e2ed1492b025220"
+#define WEIXIN_LOGIN_APP_KEY        @"34c45e4bd4675210523c389e17e75631"
+//qq
+#define QQ_LOGIN_APP_ID         @"101377355"
+#define QQ_LOGIN_APP_KEY        @"3f5b613ab3a683916891d505ed3a1b9e"
 
 
 #endif /* define_h */

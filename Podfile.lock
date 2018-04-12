@@ -34,6 +34,7 @@ PODS:
     - SDWebImage/Core (= 4.2.3)
   - SDWebImage/Core (4.2.3)
   - SVProgressHUD (2.2.2)
+  - WechatOpenSDK (1.8.2)
 
 DEPENDENCIES:
   - AFNetworking
@@ -48,6 +49,7 @@ DEPENDENCIES:
   - MJRefresh
   - SDWebImage (~> 4.0)
   - SVProgressHUD
+  - WechatOpenSDK
 
 SPEC REPOS:
   https://github.com/aliyun/aliyun-specs.git:
@@ -67,6 +69,7 @@ SPEC REPOS:
     - MJRefresh
     - SDWebImage
     - SVProgressHUD
+    - WechatOpenSDK
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -84,7 +87,8 @@ SPEC CHECKSUMS:
   MJRefresh: 5f8552bc25ca8751c010f621c1098dbdaacbccd6
   SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  WechatOpenSDK: 676feec516a11173eafd1fe64b10d27babf28701
 
-PODFILE CHECKSUM: a9e4c86e27453dfe3d1868e64701c5945db261c2
+PODFILE CHECKSUM: dc319cec5bff4573918d0779a1a8b99efeb685c0
 
 COCOAPODS: 1.5.0

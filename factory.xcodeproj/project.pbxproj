@@ -52,6 +52,12 @@
 		6148F728207C56B7002816A0 /* WGSharedMacr.m in Sources */ = {isa = PBXBuildFile; fileRef = 6148F727207C56B7002816A0 /* WGSharedMacr.m */; };
 		614D2E8A207D9C920049412D /* nav_back_btn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 614D2E88207D9C910049412D /* nav_back_btn@3x.png */; };
 		614D2E8B207D9C920049412D /* nav_back_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 614D2E89207D9C910049412D /* nav_back_btn@2x.png */; };
+		616E86B4207F3C9E0042B7AD /* WGWeiXiner.m in Sources */ = {isa = PBXBuildFile; fileRef = 616E86B3207F3C9E0042B7AD /* WGWeiXiner.m */; };
+		616E86B7207F3CE90042B7AD /* WGWeiXinPay.m in Sources */ = {isa = PBXBuildFile; fileRef = 616E86B6207F3CE90042B7AD /* WGWeiXinPay.m */; };
+		616E86BA207F3D250042B7AD /* WGWeiXinCaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 616E86B9207F3D250042B7AD /* WGWeiXinCaller.m */; };
+		616E86C4207F42830042B7AD /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 616E86C2207F42830042B7AD /* TencentOpenApi_IOS_Bundle.bundle */; };
+		616E86C5207F42830042B7AD /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616E86C3207F42830042B7AD /* TencentOpenAPI.framework */; };
+		616E86C8207F43140042B7AD /* WGQQCaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 616E86C7207F43140042B7AD /* WGQQCaller.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +153,16 @@
 		6148F727207C56B7002816A0 /* WGSharedMacr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGSharedMacr.m; sourceTree = "<group>"; };
 		614D2E88207D9C910049412D /* nav_back_btn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_back_btn@3x.png"; sourceTree = "<group>"; };
 		614D2E89207D9C910049412D /* nav_back_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_back_btn@2x.png"; sourceTree = "<group>"; };
+		616E86B2207F3C9E0042B7AD /* WGWeiXiner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGWeiXiner.h; sourceTree = "<group>"; };
+		616E86B3207F3C9E0042B7AD /* WGWeiXiner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGWeiXiner.m; sourceTree = "<group>"; };
+		616E86B5207F3CE90042B7AD /* WGWeiXinPay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGWeiXinPay.h; sourceTree = "<group>"; };
+		616E86B6207F3CE90042B7AD /* WGWeiXinPay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGWeiXinPay.m; sourceTree = "<group>"; };
+		616E86B8207F3D250042B7AD /* WGWeiXinCaller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGWeiXinCaller.h; sourceTree = "<group>"; };
+		616E86B9207F3D250042B7AD /* WGWeiXinCaller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGWeiXinCaller.m; sourceTree = "<group>"; };
+		616E86C2207F42830042B7AD /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		616E86C3207F42830042B7AD /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		616E86C6207F43140042B7AD /* WGQQCaller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGQQCaller.h; sourceTree = "<group>"; };
+		616E86C7207F43140042B7AD /* WGQQCaller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGQQCaller.m; sourceTree = "<group>"; };
 		7AC4E8AB7C837B229B019898 /* Pods-factory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-factory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-factory/Pods-factory.debug.xcconfig"; sourceTree = "<group>"; };
 		D1EF45937BAA5233F3BB9028 /* libPods-factory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-factory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -157,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				335E695D4CD7BE9BCF775C36 /* libPods-factory.a in Frameworks */,
+				616E86C5207F42830042B7AD /* TencentOpenAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +245,7 @@
 				164F64E5203EA14000E14A68 /* AppDelegate.m */,
 				16C249602043E83A000C4471 /* AppDelegate+RegisterThirdParty.h */,
 				16C249612043E83A000C4471 /* AppDelegate+RegisterThirdParty.m */,
+				616E86B1207F3C7B0042B7AD /* BaseModel */,
 				164F651A203EB04900E14A68 /* Resources */,
 				164F6519203EB03C00E14A68 /* Modules */,
 				164F6518203EB03300E14A68 /* NetWorkManager */,
@@ -272,6 +290,7 @@
 		164F6517203EB02500E14A68 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				616E86BB207F422C0042B7AD /* ThirdSDK */,
 				6106129B207A0296006D333D /* AlertView */,
 				16C2495620439343000C4471 /* Categorys */,
 				16C2494F20439062000C4471 /* WGScrollView */,
@@ -419,6 +438,38 @@
 			path = AlertView;
 			sourceTree = "<group>";
 		};
+		616E86B1207F3C7B0042B7AD /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				616E86B2207F3C9E0042B7AD /* WGWeiXiner.h */,
+				616E86B3207F3C9E0042B7AD /* WGWeiXiner.m */,
+				616E86B5207F3CE90042B7AD /* WGWeiXinPay.h */,
+				616E86B6207F3CE90042B7AD /* WGWeiXinPay.m */,
+				616E86B8207F3D250042B7AD /* WGWeiXinCaller.h */,
+				616E86B9207F3D250042B7AD /* WGWeiXinCaller.m */,
+				616E86C6207F43140042B7AD /* WGQQCaller.h */,
+				616E86C7207F43140042B7AD /* WGQQCaller.m */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
+		616E86BB207F422C0042B7AD /* ThirdSDK */ = {
+			isa = PBXGroup;
+			children = (
+				616E86BC207F422C0042B7AD /* QQSdk */,
+			);
+			path = ThirdSDK;
+			sourceTree = "<group>";
+		};
+		616E86BC207F422C0042B7AD /* QQSdk */ = {
+			isa = PBXGroup;
+			children = (
+				616E86C2207F42830042B7AD /* TencentOpenApi_IOS_Bundle.bundle */,
+				616E86C3207F42830042B7AD /* TencentOpenAPI.framework */,
+			);
+			path = QQSdk;
+			sourceTree = "<group>";
+		};
 		AFD249354252DB012FBF2AE6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -544,6 +595,7 @@
 				164F64F1203EA14000E14A68 /* LaunchScreen.storyboard in Resources */,
 				16190B5D2046386E00214999 /* tabbar_discovery_icon@2x.png in Resources */,
 				16190B5F2046386E00214999 /* tabbar_me_icon@3x.png in Resources */,
+				616E86C4207F42830042B7AD /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				164F64EE203EA14000E14A68 /* Assets.xcassets in Resources */,
 				16190B6E204787E800214999 /* me_manage_account_bg@3x.png in Resources */,
 				16190B5E2046386E00214999 /* tabbar_discovery_icon@3x.png in Resources */,
@@ -630,7 +682,9 @@
 				164F64F4203EA14000E14A68 /* main.m in Sources */,
 				6148F725207C54AC002816A0 /* WGUser.m in Sources */,
 				610612902079F553006D333D /* WGResponse.m in Sources */,
+				616E86B4207F3C9E0042B7AD /* WGWeiXiner.m in Sources */,
 				610612962079FF3B006D333D /* WGEnum.m in Sources */,
+				616E86B7207F3CE90042B7AD /* WGWeiXinPay.m in Sources */,
 				164F64E6203EA14000E14A68 /* AppDelegate.m in Sources */,
 				16C2495220439082000C4471 /* WGScrollView.m in Sources */,
 				6106129E207A0296006D333D /* TAlertView.m in Sources */,
@@ -642,7 +696,9 @@
 				6148F728207C56B7002816A0 /* WGSharedMacr.m in Sources */,
 				6148F722207C5453002816A0 /* WGSharedData.m in Sources */,
 				16B22FB6203FDF3600F2037A /* HTTPClient.m in Sources */,
+				616E86BA207F3D250042B7AD /* WGWeiXinCaller.m in Sources */,
 				1646D6FE20511B61009B2A09 /* NextViewController.m in Sources */,
+				616E86C8207F43140042B7AD /* WGQQCaller.m in Sources */,
 				16190B47204636E700214999 /* SecondViewController.m in Sources */,
 				1646D7012051270F009B2A09 /* WGNavigationController.m in Sources */,
 			);
@@ -810,6 +866,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KG4MGNCQRA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/factory/Tools/ThirdSDK/QQSdk",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/factory/PrefixHeader.pch";
 				INFOPLIST_FILE = factory/Info.plist;
@@ -828,6 +888,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KG4MGNCQRA;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/factory/Tools/ThirdSDK/QQSdk",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/factory/PrefixHeader.pch";
 				INFOPLIST_FILE = factory/Info.plist;
