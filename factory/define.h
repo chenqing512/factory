@@ -40,5 +40,11 @@ return __singleton__; \
 #define WG_NOTIFICATION_ACCOUNT_LOGIN_SUCCESS   @"WG_NOTIFICATION_ACCOUNT_LOGIN_SUCCESS"    //登录成功
 #define WG_NOTIFICATION_ACCOUNT_DISABLE      @"WG_NOTIFICATION_ACCOUNT_DISABLE"             //不允许登录
 
+#pragma mark 第三方登录 统计
+#define Bugly_APPID             @"a89afa7ff2"   // bugly
+//aliyun推送
+#define PUSH_APP_KEY            @"23652209"
+#define PUSH_APP_SECRET         @"6cc20b452caf9b61ca2ac90e0a328287"
+
 
 #endif /* define_h */

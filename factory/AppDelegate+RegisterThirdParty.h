@@ -10,6 +10,6 @@
 
 @interface AppDelegate (RegisterThirdParty)
 
--(void)registerThirdParty;
+-(void)registerMsg;
 
 @end
