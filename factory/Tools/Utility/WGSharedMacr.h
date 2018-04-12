@@ -16,26 +16,14 @@
 
 AS_SINGLETON(WGSharedMacr)
 
-/**当前服务器url*/
-@property (nonatomic, copy)NSString *currentServerUrl;
 
-/**osss上传路径*/
-@property (nonatomic, copy)NSString *upLoadFilePath;
-
-/**阿里云推送账号*/
-@property (nonatomic, copy)NSString *pushAccount;
-
-/**云信用户名前缀*/
-@property (nonatomic, copy)NSString *nimServiceUserId;
-
-/**oss回调*/
-@property(nonatomic, copy) NSString *ossCallback;
-
-/**oss网址*/
-@property(nonatomic, copy) NSString *ossDomain;
-
-@property(nonatomic, copy) NSString *ossBucket;
-
+@property (nonatomic, copy)NSString *currentServerUrl; //当前服务器url
+@property (nonatomic, copy)NSString *upLoadFilePath;//osss上传路径
+@property (nonatomic, copy)NSString *pushAccount;//阿里云推送账号
+@property (nonatomic, copy)NSString *nimServiceUserId;//云信用户名前缀
+@property(nonatomic, copy) NSString *ossCallback;//oss回调
+@property(nonatomic, copy) NSString *ossDomain;//oss网址
+@property(nonatomic, copy) NSString *ossBucket;//市场
 @property (nonatomic,copy) NSString *OnlineServer;
 
 
