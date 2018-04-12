@@ -8,7 +8,9 @@
 
 #import "AppDelegate+RegisterThirdParty.h"
 #import <IQKeyboardManager/IQKeyboardManager.h>
-
+#import "FirstViewController.h"
+#import "SecondViewController.h"
+#import "ThirdViewController.h"
 @implementation AppDelegate (RegisterThirdParty)
 
 -(void)registerMsg{
@@ -29,6 +31,59 @@
     keyboardManager.shouldShowToolbarPlaceholder = YES; // 是否显示占位文字
     keyboardManager.placeholderFont = [UIFont boldSystemFontOfSize:17]; // 设置占位文字的字体
     keyboardManager.keyboardDistanceFromTextField = 10.0f; // 输入框距离键盘的距离
+}
+
+#pragma mark 创建视图
+- (void)setupViewControllers {
+    FirstViewController *firstViewController = [[FirstViewController alloc] init];
+    UIViewController *firstNavigationController = [[WGNavigationController alloc]
+                                                   initWithRootViewController:firstViewController];
+    
+    SecondViewController *secondViewController = [[SecondViewController alloc] init];
+    UIViewController *secondNavigationController = [[WGNavigationController alloc]
+                                                    initWithRootViewController:secondViewController];
+    
+    ThirdViewController *thirdViewController = [[ThirdViewController alloc] init];
+    UIViewController *thirdNavigationController = [[WGNavigationController alloc]
+                                                   initWithRootViewController:thirdViewController];
+    
+    
+    CYLTabBarController *tabBarController = [[CYLTabBarController alloc] init];
+    [self customizeTabBarForController:tabBarController];
+    
+    [tabBarController setViewControllers:@[
+                                           firstNavigationController,
+                                           secondNavigationController,
+                                           thirdNavigationController
+                                           ]];
+    
+    tabBarController.tabBar.backgroundColor=[UIColor blackColor];
+    self.tabBarController = tabBarController;
+}
+
+/*
+ *
+ 在`-setViewControllers:`之前设置TabBar的属性，
+ *
+ */
+- (void)customizeTabBarForController:(CYLTabBarController *)tabBarController {
+    
+    NSDictionary *dict1 = @{
+                            CYLTabBarItemImage : @"tabbar_discovery_icon",
+                            CYLTabBarItemSelectedImage : @"tabbar_discovery_icon_selected",
+                            };
+    NSDictionary *dict2 = @{
+                            CYLTabBarItemImage : @"tabbar_homepage_icon",
+                            CYLTabBarItemSelectedImage : @"tabbar_homepage_icon_selected",
+                            };
+    
+    NSDictionary *dict3 = @{
+                            CYLTabBarItemImage : @"tabbar_me_icon",
+                            CYLTabBarItemSelectedImage : @"tabbar_me_icon_selected",
+                            };
+    
+    NSArray *tabBarItemsAttributes = @[ dict1, dict2,dict3];
+    tabBarController.tabBarItemsAttributes = tabBarItemsAttributes;
 }
 
 @end

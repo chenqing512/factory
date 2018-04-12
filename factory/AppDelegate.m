@@ -8,9 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+RegisterThirdParty.h"
-#import "FirstViewController.h"
-#import "SecondViewController.h"
-#import "ThirdViewController.h"
+
 #import <CloudPushSDK/CloudPushSDK.h>
 #import "UIImage+Common.h"
 #import <Bugly/Bugly.h>
@@ -18,8 +16,9 @@
 #import "WXApi.h"
 #import <TencentOpenAPI/TencentOAuth.h>
 #import "WGWeiXinCaller.h"
+#import "WGAlipayCaller.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
 @end
 
@@ -30,75 +29,21 @@
     [self registerThirdParty:application options:launchOptions];
     [self registerMsg];
     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    
-    [self setupViewControllers];
+    [self setupViewControllers];//创建tabbarController
     [self.window setRootViewController:self.tabBarController];
     UITabBar *tabbar=[UITabBar appearance];
     [tabbar setBackgroundImage:[UIImage imageWithColor:[UIColor blackColor]]];
-    
-    
     self.window.backgroundColor=[UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
-#pragma mark 创建视图
-- (void)setupViewControllers {
-    FirstViewController *firstViewController = [[FirstViewController alloc] init];
-    UIViewController *firstNavigationController = [[WGNavigationController alloc]
-                                                   initWithRootViewController:firstViewController];
-    
-    SecondViewController *secondViewController = [[SecondViewController alloc] init];
-    UIViewController *secondNavigationController = [[WGNavigationController alloc]
-                                                    initWithRootViewController:secondViewController];
-    
-    ThirdViewController *thirdViewController = [[ThirdViewController alloc] init];
-    UIViewController *thirdNavigationController = [[WGNavigationController alloc]
-                                                    initWithRootViewController:thirdViewController];
-    
-    
-    CYLTabBarController *tabBarController = [[CYLTabBarController alloc] init];
-    [self customizeTabBarForController:tabBarController];
-    
-    [tabBarController setViewControllers:@[
-                                           firstNavigationController,
-                                           secondNavigationController,
-                                           thirdNavigationController
-                                           ]];
-    
-    tabBarController.tabBar.backgroundColor=[UIColor blackColor];
-    self.tabBarController = tabBarController;
-}
 
-/*
- *
- 在`-setViewControllers:`之前设置TabBar的属性，
- *
- */
-- (void)customizeTabBarForController:(CYLTabBarController *)tabBarController {
-    
-    NSDictionary *dict1 = @{
-                            CYLTabBarItemImage : @"tabbar_discovery_icon",
-                            CYLTabBarItemSelectedImage : @"tabbar_discovery_icon_selected",
-                            };
-    NSDictionary *dict2 = @{
-                            CYLTabBarItemImage : @"tabbar_homepage_icon",
-                            CYLTabBarItemSelectedImage : @"tabbar_homepage_icon_selected",
-                            };
-    
-    NSDictionary *dict3 = @{
-                            CYLTabBarItemImage : @"tabbar_me_icon",
-                            CYLTabBarItemSelectedImage : @"tabbar_me_icon_selected",
-                            };
-    
-    NSArray *tabBarItemsAttributes = @[ dict1, dict2,dict3];
-    tabBarController.tabBarItemsAttributes = tabBarItemsAttributes;
-}
 
 #pragma mark 第三方统计  微信 微博
 -(void)registerThirdParty:(UIApplication *)application options:(NSDictionary *)launchOptions{
     // 点击通知将App从关闭状态启动时，将通知打开回执上报
     [self initCloudPush];
-    [CloudPushSDK handleLaunching:launchOptions];
+    [CloudPushSDK sendNotificationAck:launchOptions];
     [CloudPushSDK turnOnDebug];
     [self registerAPNS:application];
     
@@ -133,7 +78,7 @@
 }
 
 - (void)registerAPNS:(UIApplication *)application {
-    if ([[UIDevice currentDevice].systemVersion floatValue] >= 10.0) {
+    if (@available(iOS 10.0, *)) {
         UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
         center.delegate = self;
         [center requestAuthorizationWithOptions:(UNAuthorizationOptionBadge | UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionCarPlay) completionHandler:^(BOOL granted, NSError *_Nullable error) {
@@ -201,15 +146,15 @@
     }else if([url.absoluteString hasPrefix:@"wx"]){
         return [WXApi handleOpenURL:url delegate:[WGWeiXinCaller sharedInstance]];
     }else if ([url.absoluteString hasPrefix:@"xmay"]){
-//        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
-//            NSLog(@"result = %@",resultDic);//返回的支付结果
-//            if ([[resultDic objectForKey:@"resultStatus"] integerValue] == 9000) {
-//                [[XMAlipayCaller sharedInstance].delegate alipayFinishPay];
-//            }else if ([[resultDic objectForKey:@"resultStatus"] integerValue] == 6001){
-//                [[XMAlipayCaller sharedInstance].delegate alipayCancelPay];
-//                DLog(@"memo = %@",[resultDic objectForKey:@"memo"]);//返回的支付结果
-//            }
-//        }];
+        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"result = %@",resultDic);//返回的支付结果
+            if ([[resultDic objectForKey:@"resultStatus"] integerValue] == 9000) {
+                [[WGAlipayCaller sharedInstance].delegate alipayFinishPay];
+            }else if ([[resultDic objectForKey:@"resultStatus"] integerValue] == 6001){
+                [[WGAlipayCaller sharedInstance].delegate alipayCancelPay];
+                DLog(@"memo = %@",[resultDic objectForKey:@"memo"]);//返回的支付结果
+            }
+        }];
     }
     return YES;
 }
@@ -222,15 +167,15 @@
     }else if([url.absoluteString hasPrefix:@"wx"]){
         return [WXApi handleOpenURL:url delegate:[WGWeiXinCaller sharedInstance]];
     }else if ([url.absoluteString hasPrefix:@"xmay"]){
-//        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
-//            NSLog(@"result = %@",resultDic);//返回的支付结果
-//            if ([[resultDic objectForKey:@"resultStatus"] integerValue] == 9000) {
-//                [[XMAlipayCaller sharedInstance].delegate alipayFinishPay];
-//            }else if ([[resultDic objectForKey:@"resultStatus"] integerValue] == 6001){
-//                [[XMAlipayCaller sharedInstance].delegate alipayCancelPay];
-//                DLog(@"memo = %@",[resultDic objectForKey:@"memo"]);//返回的支付结果
-//            }
-//        }];
+        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"result = %@",resultDic);//返回的支付结果
+            if ([[resultDic objectForKey:@"resultStatus"] integerValue] == 9000) {
+                [[WGAlipayCaller sharedInstance].delegate alipayFinishPay];
+            }else if ([[resultDic objectForKey:@"resultStatus"] integerValue] == 6001){
+                [[WGAlipayCaller sharedInstance].delegate alipayCancelPay];
+                DLog(@"memo = %@",[resultDic objectForKey:@"memo"]);//返回的支付结果
+            }
+        }];
     }
     return YES;
 }

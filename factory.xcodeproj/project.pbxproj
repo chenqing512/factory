@@ -58,6 +58,20 @@
 		616E86C4207F42830042B7AD /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 616E86C2207F42830042B7AD /* TencentOpenApi_IOS_Bundle.bundle */; };
 		616E86C5207F42830042B7AD /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616E86C3207F42830042B7AD /* TencentOpenAPI.framework */; };
 		616E86C8207F43140042B7AD /* WGQQCaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 616E86C7207F43140042B7AD /* WGQQCaller.m */; };
+		616E86CC207F4AE60042B7AD /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 616E86CA207F4AE60042B7AD /* AlipaySDK.bundle */; };
+		616E86CD207F4AE60042B7AD /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616E86CB207F4AE60042B7AD /* AlipaySDK.framework */; };
+		616E86D0207F4B390042B7AD /* WGAlipayCaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 616E86CF207F4B390042B7AD /* WGAlipayCaller.m */; };
+		616E86D2207F4E3B0042B7AD /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 616E86D1207F4E3B0042B7AD /* libc++.tbd */; };
+		616E86D4207F4E460042B7AD /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 616E86D3207F4E460042B7AD /* libz.tbd */; };
+		616E86D6207F4E4F0042B7AD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616E86D5207F4E4F0042B7AD /* SystemConfiguration.framework */; };
+		616E86D8207F4E560042B7AD /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616E86D7207F4E560042B7AD /* CoreTelephony.framework */; };
+		616E86DA207F4E5D0042B7AD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616E86D9207F4E5D0042B7AD /* QuartzCore.framework */; };
+		616E86DC207F4E670042B7AD /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616E86DB207F4E670042B7AD /* CoreText.framework */; };
+		616E86DE207F4E710042B7AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616E86DD207F4E710042B7AD /* CoreGraphics.framework */; };
+		616E86E0207F4E770042B7AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616E86DF207F4E770042B7AD /* UIKit.framework */; };
+		616E86E2207F4E850042B7AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616E86E1207F4E850042B7AD /* Foundation.framework */; };
+		616E86E4207F4E8D0042B7AD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616E86E3207F4E8D0042B7AD /* CFNetwork.framework */; };
+		616E86E6207F4E9A0042B7AD /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616E86E5207F4E9A0042B7AD /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +177,21 @@
 		616E86C3207F42830042B7AD /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
 		616E86C6207F43140042B7AD /* WGQQCaller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGQQCaller.h; sourceTree = "<group>"; };
 		616E86C7207F43140042B7AD /* WGQQCaller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGQQCaller.m; sourceTree = "<group>"; };
+		616E86CA207F4AE60042B7AD /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
+		616E86CB207F4AE60042B7AD /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
+		616E86CE207F4B390042B7AD /* WGAlipayCaller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGAlipayCaller.h; sourceTree = "<group>"; };
+		616E86CF207F4B390042B7AD /* WGAlipayCaller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGAlipayCaller.m; sourceTree = "<group>"; };
+		616E86D1207F4E3B0042B7AD /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		616E86D3207F4E460042B7AD /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		616E86D5207F4E4F0042B7AD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		616E86D7207F4E560042B7AD /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		616E86D9207F4E5D0042B7AD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		616E86DB207F4E670042B7AD /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		616E86DD207F4E710042B7AD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		616E86DF207F4E770042B7AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		616E86E1207F4E850042B7AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		616E86E3207F4E8D0042B7AD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		616E86E5207F4E9A0042B7AD /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		7AC4E8AB7C837B229B019898 /* Pods-factory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-factory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-factory/Pods-factory.debug.xcconfig"; sourceTree = "<group>"; };
 		D1EF45937BAA5233F3BB9028 /* libPods-factory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-factory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -172,8 +201,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				616E86E6207F4E9A0042B7AD /* CoreMotion.framework in Frameworks */,
+				616E86E4207F4E8D0042B7AD /* CFNetwork.framework in Frameworks */,
+				616E86E2207F4E850042B7AD /* Foundation.framework in Frameworks */,
+				616E86E0207F4E770042B7AD /* UIKit.framework in Frameworks */,
+				616E86DE207F4E710042B7AD /* CoreGraphics.framework in Frameworks */,
+				616E86DC207F4E670042B7AD /* CoreText.framework in Frameworks */,
+				616E86DA207F4E5D0042B7AD /* QuartzCore.framework in Frameworks */,
+				616E86D8207F4E560042B7AD /* CoreTelephony.framework in Frameworks */,
+				616E86D6207F4E4F0042B7AD /* SystemConfiguration.framework in Frameworks */,
+				616E86D4207F4E460042B7AD /* libz.tbd in Frameworks */,
+				616E86D2207F4E3B0042B7AD /* libc++.tbd in Frameworks */,
 				335E695D4CD7BE9BCF775C36 /* libPods-factory.a in Frameworks */,
 				616E86C5207F42830042B7AD /* TencentOpenAPI.framework in Frameworks */,
+				616E86CD207F4AE60042B7AD /* AlipaySDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +465,17 @@
 		1CBD8C197BDE6523326566E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				616E86E5207F4E9A0042B7AD /* CoreMotion.framework */,
+				616E86E3207F4E8D0042B7AD /* CFNetwork.framework */,
+				616E86E1207F4E850042B7AD /* Foundation.framework */,
+				616E86DF207F4E770042B7AD /* UIKit.framework */,
+				616E86DD207F4E710042B7AD /* CoreGraphics.framework */,
+				616E86DB207F4E670042B7AD /* CoreText.framework */,
+				616E86D9207F4E5D0042B7AD /* QuartzCore.framework */,
+				616E86D7207F4E560042B7AD /* CoreTelephony.framework */,
+				616E86D5207F4E4F0042B7AD /* SystemConfiguration.framework */,
+				616E86D3207F4E460042B7AD /* libz.tbd */,
+				616E86D1207F4E3B0042B7AD /* libc++.tbd */,
 				D1EF45937BAA5233F3BB9028 /* libPods-factory.a */,
 			);
 			name = Frameworks;
@@ -449,6 +501,8 @@
 				616E86B9207F3D250042B7AD /* WGWeiXinCaller.m */,
 				616E86C6207F43140042B7AD /* WGQQCaller.h */,
 				616E86C7207F43140042B7AD /* WGQQCaller.m */,
+				616E86CE207F4B390042B7AD /* WGAlipayCaller.h */,
+				616E86CF207F4B390042B7AD /* WGAlipayCaller.m */,
 			);
 			path = BaseModel;
 			sourceTree = "<group>";
@@ -456,6 +510,7 @@
 		616E86BB207F422C0042B7AD /* ThirdSDK */ = {
 			isa = PBXGroup;
 			children = (
+				616E86C9207F4AE60042B7AD /* AliSdk */,
 				616E86BC207F422C0042B7AD /* QQSdk */,
 			);
 			path = ThirdSDK;
@@ -468,6 +523,15 @@
 				616E86C3207F42830042B7AD /* TencentOpenAPI.framework */,
 			);
 			path = QQSdk;
+			sourceTree = "<group>";
+		};
+		616E86C9207F4AE60042B7AD /* AliSdk */ = {
+			isa = PBXGroup;
+			children = (
+				616E86CA207F4AE60042B7AD /* AlipaySDK.bundle */,
+				616E86CB207F4AE60042B7AD /* AlipaySDK.framework */,
+			);
+			path = AliSdk;
 			sourceTree = "<group>";
 		};
 		AFD249354252DB012FBF2AE6 /* Pods */ = {
@@ -596,6 +660,7 @@
 				16190B5D2046386E00214999 /* tabbar_discovery_icon@2x.png in Resources */,
 				16190B5F2046386E00214999 /* tabbar_me_icon@3x.png in Resources */,
 				616E86C4207F42830042B7AD /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				616E86CC207F4AE60042B7AD /* AlipaySDK.bundle in Resources */,
 				164F64EE203EA14000E14A68 /* Assets.xcassets in Resources */,
 				16190B6E204787E800214999 /* me_manage_account_bg@3x.png in Resources */,
 				16190B5E2046386E00214999 /* tabbar_discovery_icon@3x.png in Resources */,
@@ -682,6 +747,7 @@
 				164F64F4203EA14000E14A68 /* main.m in Sources */,
 				6148F725207C54AC002816A0 /* WGUser.m in Sources */,
 				610612902079F553006D333D /* WGResponse.m in Sources */,
+				616E86D0207F4B390042B7AD /* WGAlipayCaller.m in Sources */,
 				616E86B4207F3C9E0042B7AD /* WGWeiXiner.m in Sources */,
 				610612962079FF3B006D333D /* WGEnum.m in Sources */,
 				616E86B7207F3CE90042B7AD /* WGWeiXinPay.m in Sources */,
@@ -869,6 +935,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/factory/Tools/ThirdSDK/QQSdk",
+					"$(PROJECT_DIR)/factory/Tools/ThirdSDK/AliSdk",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/factory/PrefixHeader.pch";
@@ -891,6 +958,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/factory/Tools/ThirdSDK/QQSdk",
+					"$(PROJECT_DIR)/factory/Tools/ThirdSDK/AliSdk",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/factory/PrefixHeader.pch";
