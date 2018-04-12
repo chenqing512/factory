@@ -14,6 +14,8 @@
 
 extern NSString *kHttpHost;
 
+extern NSString *kPUSH_ACCOUNT;
+
 @interface WGUtil : NSObject
 
 #pragma mark 预计算

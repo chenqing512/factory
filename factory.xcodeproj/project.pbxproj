@@ -72,6 +72,7 @@
 		616E86E2207F4E850042B7AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616E86E1207F4E850042B7AD /* Foundation.framework */; };
 		616E86E4207F4E8D0042B7AD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616E86E3207F4E8D0042B7AD /* CFNetwork.framework */; };
 		616E86E6207F4E9A0042B7AD /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616E86E5207F4E9A0042B7AD /* CoreMotion.framework */; };
+		616E86EA207F5DD70042B7AD /* WGWeiBoCaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 616E86E9207F5DD70042B7AD /* WGWeiBoCaller.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,6 +193,8 @@
 		616E86E1207F4E850042B7AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		616E86E3207F4E8D0042B7AD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		616E86E5207F4E9A0042B7AD /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		616E86E8207F5DD70042B7AD /* WGWeiBoCaller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGWeiBoCaller.h; sourceTree = "<group>"; };
+		616E86E9207F5DD70042B7AD /* WGWeiBoCaller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGWeiBoCaller.m; sourceTree = "<group>"; };
 		7AC4E8AB7C837B229B019898 /* Pods-factory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-factory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-factory/Pods-factory.debug.xcconfig"; sourceTree = "<group>"; };
 		D1EF45937BAA5233F3BB9028 /* libPods-factory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-factory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -503,6 +506,8 @@
 				616E86C7207F43140042B7AD /* WGQQCaller.m */,
 				616E86CE207F4B390042B7AD /* WGAlipayCaller.h */,
 				616E86CF207F4B390042B7AD /* WGAlipayCaller.m */,
+				616E86E8207F5DD70042B7AD /* WGWeiBoCaller.h */,
+				616E86E9207F5DD70042B7AD /* WGWeiBoCaller.m */,
 			);
 			path = BaseModel;
 			sourceTree = "<group>";
@@ -702,12 +707,14 @@
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+				"${PODS_ROOT}/WeiboSDK/libWeiboSDK/WeiboSDK.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -746,6 +753,7 @@
 				610612932079FC01006D333D /* NSObject+Notification.m in Sources */,
 				164F64F4203EA14000E14A68 /* main.m in Sources */,
 				6148F725207C54AC002816A0 /* WGUser.m in Sources */,
+				616E86EA207F5DD70042B7AD /* WGWeiBoCaller.m in Sources */,
 				610612902079F553006D333D /* WGResponse.m in Sources */,
 				616E86D0207F4B390042B7AD /* WGAlipayCaller.m in Sources */,
 				616E86B4207F3C9E0042B7AD /* WGWeiXiner.m in Sources */,

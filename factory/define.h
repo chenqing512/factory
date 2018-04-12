@@ -39,7 +39,8 @@ return __singleton__; \
 #define WG_NOTIFICATION_ACCOUNT_LOGOUT       @"WG_NOTIFICATION_ACCOUNT_LOGOUT"      //退出登录
 #define WG_NOTIFICATION_ACCOUNT_LOGIN_SUCCESS   @"WG_NOTIFICATION_ACCOUNT_LOGIN_SUCCESS"    //登录成功
 #define WG_NOTIFICATION_ACCOUNT_DISABLE      @"WG_NOTIFICATION_ACCOUNT_DISABLE"             //不允许登录
-
+#define ZZ_BIND_ACCOUNT                     @"ZZ_BIND_ACCOUNT"                              //绑定阿里云
+#define ZZ_UNBIND_ACCOUNT                   @"ZZ_UNBIND_ACCOUNT"                            //解绑阿里云
 #pragma mark 第三方登录 统计
 #define Bugly_APPID             @"a89afa7ff2"   // bugly
 //aliyun推送
@@ -51,6 +52,11 @@ return __singleton__; \
 //qq
 #define QQ_LOGIN_APP_ID         @"101377355"
 #define QQ_LOGIN_APP_KEY        @"3f5b613ab3a683916891d505ed3a1b9e"
+
+//新浪微博AppKey  回调
+#define WEIBO_APPKEY            @"4290341919"
+#define WEIBO_APPSECRET         @"9ab55786f9002475f26e05a6cfab1429"
+#define WEIBO_REDRIRECT_URL     @"http://sns.whalecloud.com/sina2/callback"
 
 
 #endif /* define_h */
