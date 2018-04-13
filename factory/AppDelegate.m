@@ -144,15 +144,11 @@
 #pragma mark -- notification
 -(void)handleNotification:(NSNotification *)notification{
     [super handleNotification:notification];
-    if ([notification.name isEqualToString:ZZ_BIND_ACCOUNT]) {
-        [CloudPushSDK bindAccount:[NSString stringWithFormat:@"%@_%ld",kPUSH_ACCOUNT,(long)SharedData.user.userId] withCallback:^(CloudPushCallbackResult *res) {
-            DLog(@"res:%@",res);
-            [self registerMessageReceive];
-        }];
-    }else if ([notification.name isEqualToString:ZZ_UNBIND_ACCOUNT]){
-        [CloudPushSDK unbindAccount:^(CloudPushCallbackResult *res) {
-            DLog(@"%@",res);
-        }];
+    if ([notification.name isEqualToString:WG_NOTIFICATION_ACCOUNT_LOGOUT]) {//退出登录
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self logout];
+        });
+        
     }else if ([notification.name isEqualToString:WG_NOTIFICATION_ACCOUNT_LOGIN_OTHER]){
         [[[TAlertView alloc] initWithErrorMsg:@"您的账号在其它地方登录，您被挤下线"] showStatusWithDuration:1.5];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -169,7 +165,10 @@
             [self logout];
         });
     }else if([notification.name isEqualToString:WG_NOTIFICATION_ACCOUNT_LOGIN_SUCCESS]){
-        
+        [CloudPushSDK bindAccount:[NSString stringWithFormat:@"%@_%ld",kPUSH_ACCOUNT,(long)SharedData.user.userId] withCallback:^(CloudPushCallbackResult *res) {
+            DLog(@"res:%@",res);
+            [self registerMessageReceive];
+        }];
 #pragma mark -- bugly添加用户ID
         NSString *userPhoneName = [[UIDevice currentDevice] name];
         NSString *userIdentifier = [NSString stringWithFormat:@"%@:%ld",userPhoneName,SharedData.user.userId];
@@ -181,7 +180,9 @@
 
 -(void)logout{
     SharedData.user = nil;
-    [self postNotification:ZZ_UNBIND_ACCOUNT];
+    [CloudPushSDK unbindAccount:^(CloudPushCallbackResult *res) {
+        DLog(@"%@",res);
+    }];
     /*  未登录主页面
     XMWelcomeVC *vc = [XMWelcomeVC new];
     KLNavigationController *nc =[[KLNavigationController alloc] initWithRootViewController:vc];
