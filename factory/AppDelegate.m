@@ -57,7 +57,8 @@
     if (SharedData.isLogin) {
         [self.window setRootViewController:self.tabBarController];
     }else{
-        [self.window setRootViewController:[WelcomeViewController new]];
+        WGNavigationController *nav=[[WGNavigationController alloc]initWithRootViewController:[WelcomeViewController new]];
+        [self.window setRootViewController:nav];
     }
 }
 
@@ -183,11 +184,11 @@
     [CloudPushSDK unbindAccount:^(CloudPushCallbackResult *res) {
         DLog(@"%@",res);
     }];
-    /*  未登录主页面
-    XMWelcomeVC *vc = [XMWelcomeVC new];
-    KLNavigationController *nc =[[KLNavigationController alloc] initWithRootViewController:vc];
-    [KLUtil setWindowRootVC:nc animated:YES];
-     */
+    // 未登录主页面
+    WelcomeViewController *vc = [WelcomeViewController new];
+    WGNavigationController *nc =[[WGNavigationController alloc] initWithRootViewController:vc];
+    [WGUtil setWindowRootVC:nc animated:YES];
+     
 }
 
 - (void)registerMessageReceive {
