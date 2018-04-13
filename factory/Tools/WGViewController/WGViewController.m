@@ -9,7 +9,8 @@
 #import "WGViewController.h"
 #import "UIColor+WGColor.h"
 #import "UIImage+Common.h"
-
+#import <UMMobClick/MobClick.h>
+#import <BaiduMobStat/BaiduMobStat.h>
 
 const int kLeftButtonTag = -1234;
 const int kRightButtonTag = -1235;
@@ -29,6 +30,18 @@ const int kRightButtonTag = -1235;
     [self updateBackgroundView];
     self.leftButton.hidden=YES;
     self.rightButton.hidden=YES;
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+  //  [[BaiduMobStat defaultStat] pageviewStartWithName:_pageTitle.length > 0 ? _pageTitle : @"未知页面"];
+    [MobClick beginLogPageView:_labelTitle.text.length > 0 ? _labelTitle.text : @"未知页面"];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+  //  [[BaiduMobStat defaultStat] pageviewEndWithName:_labelTitle.text.length > 0 ? _labelTitle.text : @"未知页面"];
+    [MobClick endLogPageView:_labelTitle.text.length > 0 ? _labelTitle.text : @"未知页面"];
 }
 
 #pragma mark 设置导航栏UIView

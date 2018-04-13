@@ -58,5 +58,8 @@ return __singleton__; \
 #define WEIBO_APPSECRET         @"9ab55786f9002475f26e05a6cfab1429"
 #define WEIBO_REDRIRECT_URL     @"http://sns.whalecloud.com/sina2/callback"
 
+//baidu统计
+#define BAIDU_APPID           @"530d9e1fe1"
+
 
 #endif /* define_h */

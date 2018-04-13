@@ -15,9 +15,11 @@
 #import "WXApi.h"
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <WeiboSDK/WeiboSDK.h>
+#import <UMMobClick/MobClick.h>
 #import "WGWeiXinCaller.h"
 #import "WGAlipayCaller.h"
 #import "WGWeiBoCaller.h"
+#import <BaiduMobStat/BaiduMobStat.h>
 
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
@@ -32,6 +34,7 @@
     [self registerNotification];//注册通知
     [self setupViewControllers];//创建tabbarController
     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    // [self configDetail];
     [self.window setRootViewController:self.tabBarController];
     UITabBar *tabbar=[UITabBar appearance];
     [tabbar setBackgroundImage:[UIImage imageWithColor:[UIColor blackColor]]];
@@ -64,15 +67,21 @@
     //微博SDK注册
     [WeiboSDK enableDebugMode:YES];
     [WeiboSDK registerApp:WEIBO_APPKEY];
-    /*
+    
     //Baidu统计注册
     BaiduMobStat *statTracker = [BaiduMobStat defaultStat];
     statTracker.shortAppVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
-    [statTracker startWithAppId:BAIDU_APP_KEY];
-    //    [self checkPayType];
-    [self configDetail];
-     */
+    [statTracker startWithAppId:BAIDU_APPID];
+   
     
+#ifdef DEBUG
+    [MobClick setLogEnabled:YES];
+#endif
+    UMConfigInstance.appKey = @"59a8bc3bf29d98412d002b19";
+    UMConfigInstance.channelId = @"App Store";
+    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    [MobClick setAppVersion:version];
+    [MobClick startWithConfigure:UMConfigInstance];
     // 处理远程通知启动APP
     [self receiveNotificationByLaunchingOptions:launchOptions];
     

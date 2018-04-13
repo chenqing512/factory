@@ -41,6 +41,10 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 
+## BaiduMobStat
+
+Copyright 2018 Baidu. All rights reserved.
+
 ## Bugly
 
 Copyright (C) 2017 Tencent Bugly, Inc. All rights reserved.

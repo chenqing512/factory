@@ -23,6 +23,7 @@ PODS:
     - AlicloudUT
     - AlicloudUTDID
   - AliyunOSSiOS (2.10.0)
+  - BaiduMobStat (4.7.0)
   - Bugly (2.5.0)
   - CRZXYCategory (1.0.0)
   - CYLTabBarController (1.17.6)
@@ -41,6 +42,7 @@ DEPENDENCIES:
   - AFNetworking
   - AlicloudPush (~> 1.9.8)
   - AliyunOSSiOS
+  - BaiduMobStat
   - Bugly
   - CRZXYCategory
   - CYLTabBarController (~> 1.17.4)
@@ -62,6 +64,7 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - AliyunOSSiOS
+    - BaiduMobStat
     - Bugly
     - CRZXYCategory
     - CYLTabBarController
@@ -81,6 +84,7 @@ SPEC CHECKSUMS:
   AlicloudUTDID: f5a7bc1420c5f83e3bd40296e5ab2e5a804a12f8
   AlicloudUtils: 4f7e5d5214ed1b831e677fb739f1ec691aa53ff5
   AliyunOSSiOS: 1f42c7b1542f22b75a81127bdb0b0798122a2f1f
+  BaiduMobStat: 529d096c0db041edb1ddd01c8e873f746469785b
   Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
   CRZXYCategory: 42629940a3c415254e9738cc34b58a9165b02886
   CYLTabBarController: c374643dea6dadece8bdff9c70f7387f8ffd7d08
@@ -93,6 +97,6 @@ SPEC CHECKSUMS:
   WechatOpenSDK: 676feec516a11173eafd1fe64b10d27babf28701
   WeiboSDK: acb067053668102cf07d01aa7604350162c2e466
 
-PODFILE CHECKSUM: c3d8a3a71f8324d84b4c116f1edc692a0e4d1522
+PODFILE CHECKSUM: c100102195959d32b0d3e4faf3953b98228e2b98
 
 COCOAPODS: 1.5.0

@@ -73,6 +73,7 @@
 		616E86E4207F4E8D0042B7AD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616E86E3207F4E8D0042B7AD /* CFNetwork.framework */; };
 		616E86E6207F4E9A0042B7AD /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616E86E5207F4E9A0042B7AD /* CoreMotion.framework */; };
 		616E86EA207F5DD70042B7AD /* WGWeiBoCaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 616E86E9207F5DD70042B7AD /* WGWeiBoCaller.m */; };
+		617C43402080444C0046615A /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 617C433F2080444C0046615A /* UMMobClick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,6 +196,7 @@
 		616E86E5207F4E9A0042B7AD /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		616E86E8207F5DD70042B7AD /* WGWeiBoCaller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGWeiBoCaller.h; sourceTree = "<group>"; };
 		616E86E9207F5DD70042B7AD /* WGWeiBoCaller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGWeiBoCaller.m; sourceTree = "<group>"; };
+		617C433F2080444C0046615A /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMMobClick.framework; sourceTree = "<group>"; };
 		7AC4E8AB7C837B229B019898 /* Pods-factory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-factory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-factory/Pods-factory.debug.xcconfig"; sourceTree = "<group>"; };
 		D1EF45937BAA5233F3BB9028 /* libPods-factory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-factory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -216,6 +218,7 @@
 				616E86D4207F4E460042B7AD /* libz.tbd in Frameworks */,
 				616E86D2207F4E3B0042B7AD /* libc++.tbd in Frameworks */,
 				335E695D4CD7BE9BCF775C36 /* libPods-factory.a in Frameworks */,
+				617C43402080444C0046615A /* UMMobClick.framework in Frameworks */,
 				616E86C5207F42830042B7AD /* TencentOpenAPI.framework in Frameworks */,
 				616E86CD207F4AE60042B7AD /* AlipaySDK.framework in Frameworks */,
 			);
@@ -515,6 +518,7 @@
 		616E86BB207F422C0042B7AD /* ThirdSDK */ = {
 			isa = PBXGroup;
 			children = (
+				617C433F2080444C0046615A /* UMMobClick.framework */,
 				616E86C9207F4AE60042B7AD /* AliSdk */,
 				616E86BC207F422C0042B7AD /* QQSdk */,
 			);
@@ -944,6 +948,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/factory/Tools/ThirdSDK/QQSdk",
 					"$(PROJECT_DIR)/factory/Tools/ThirdSDK/AliSdk",
+					"$(PROJECT_DIR)/factory/Tools/ThirdSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/factory/PrefixHeader.pch";
@@ -967,6 +972,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/factory/Tools/ThirdSDK/QQSdk",
 					"$(PROJECT_DIR)/factory/Tools/ThirdSDK/AliSdk",
+					"$(PROJECT_DIR)/factory/Tools/ThirdSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/factory/PrefixHeader.pch";
