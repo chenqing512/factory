@@ -18,4 +18,5 @@ pod 'AlicloudPush', '~> 1.9.8'
 pod 'WechatOpenSDK' 
 pod 'WeiboSDK'
 pod 'BaiduMobStat'
+pod 'SocketRocket'
 end

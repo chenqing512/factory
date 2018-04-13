@@ -21,6 +21,7 @@
 #import "WGWeiBoCaller.h"
 #import <BaiduMobStat/BaiduMobStat.h>
 #import "WelcomeViewController.h"
+#import "SocketRocketUtility.h"
 
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
@@ -34,6 +35,7 @@
     [self registerMsg];
     [self registerNotification];//注册通知
     [self setupViewControllers];//创建tabbarController
+    [[SocketRocketUtility instance] SRWebSocketOpenWithURLString:kHttpHost];// websocket长连
     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [self configDetail];
    // [self.window setRootViewController:self.tabBarController];
@@ -51,6 +53,8 @@
     [self observeNotification:WG_NOTIFICATION_ACCOUNT_NOT_LOGIN];
     [self observeNotification:WG_NOTIFICATION_ACCOUNT_DISABLE];
     [self observeNotification:WG_NOTIFICATION_ACCOUNT_LOGIN_SUCCESS];
+    [self observeNotification:kWebSocketDidOpenNote];
+    [self observeNotification:kWebSocketdidReceiveMessageNote];
 }
 
 -(void)configDetail{
@@ -176,6 +180,13 @@
         [Bugly setUserIdentifier:userIdentifier];
         self.window.rootViewController = self.tabBarController;
         [self.window makeKeyAndVisible];
+    }else if ([notification.name isEqualToString:kWebSocketdidReceiveMessageNote]){//收到消息
+        //收到服务端发送过来的消息
+        NSString * message = notification.object;
+        NSLog(@"%@",message);
+    }else if ([notification.name isEqualToString:kWebSocketDidOpenNote]){//socket建立连接
+        NSLog(@"开启成功");
+        //在成功后需要做的操作。。。
     }
 }
 

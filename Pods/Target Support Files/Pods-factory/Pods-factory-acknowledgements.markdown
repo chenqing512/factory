@@ -228,6 +228,25 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 A different license may apply to other resources included in this package, including Freepik Icons. Please consult their respective headers for the terms of their individual licenses.
 
 
+## SocketRocket
+
+
+   Copyright 2012 Square Inc.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+
+
 ## WechatOpenSDK
 
 Copyright 2018 tencent.com. All rights reserved.
