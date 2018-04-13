@@ -41,7 +41,9 @@ return __singleton__; \
 #define WG_NOTIFICATION_ACCOUNT_DISABLE      @"WG_NOTIFICATION_ACCOUNT_DISABLE"             //不允许登录
 
 #define ZZ_BIND_ACCOUNT                     @"ZZ_BIND_ACCOUNT"                              //绑定阿里云
-#define ZZ_UNBIND_ACCOUNT                   @"ZZ_UNBIND_ACCOUNT"                            //解绑阿里云
+#define ZZ_UNBIND_ACCOUNT                   @"ZZ_UNBIND_ACCOUNT"
+
+//解绑阿里云
 #pragma mark 第三方登录 统计
 #define Bugly_APPID             @"a89afa7ff2"   // bugly
 //aliyun推送
@@ -61,6 +63,10 @@ return __singleton__; \
 
 //baidu统计
 #define BAIDU_APPID           @"530d9e1fe1"
+
+#define kNavigationHeight self.navigationController.navigationBar.frame.size.height
+#define kStatusHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+#define kTabBarHeight [UITabBar appearance].frame.size.height
 
 
 #endif /* define_h */

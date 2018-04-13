@@ -8,9 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define kNavigationHeight self.navigationController.navigationBar.frame.size.height
-#define kStatusHeight [[UIApplication sharedApplication] statusBarFrame].size.height
-#define kTabBarHeight [UITabBar appearance].frame.size.height
+
 
 extern NSString *kHttpHost;
 

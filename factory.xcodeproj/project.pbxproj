@@ -48,7 +48,6 @@
 		6106129E207A0296006D333D /* TAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6106129D207A0296006D333D /* TAlertView.m */; };
 		610612A1207A0408006D333D /* WGUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 610612A0207A0408006D333D /* WGUtil.m */; };
 		6148F722207C5453002816A0 /* WGSharedData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6148F721207C5453002816A0 /* WGSharedData.m */; };
-		6148F725207C54AC002816A0 /* WGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6148F724207C54AC002816A0 /* WGUser.m */; };
 		6148F728207C56B7002816A0 /* WGSharedMacr.m in Sources */ = {isa = PBXBuildFile; fileRef = 6148F727207C56B7002816A0 /* WGSharedMacr.m */; };
 		614D2E8A207D9C920049412D /* nav_back_btn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 614D2E88207D9C910049412D /* nav_back_btn@3x.png */; };
 		614D2E8B207D9C920049412D /* nav_back_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 614D2E89207D9C910049412D /* nav_back_btn@2x.png */; };
@@ -74,8 +73,9 @@
 		616E86E6207F4E9A0042B7AD /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616E86E5207F4E9A0042B7AD /* CoreMotion.framework */; };
 		616E86EA207F5DD70042B7AD /* WGWeiBoCaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 616E86E9207F5DD70042B7AD /* WGWeiBoCaller.m */; };
 		617C43402080444C0046615A /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 617C433F2080444C0046615A /* UMMobClick.framework */; };
-		617C43472080497C0046615A /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 617C43452080497C0046615A /* WelcomeViewController.m */; };
-		617C43482080497C0046615A /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 617C43462080497C0046615A /* WelcomeViewController.xib */; };
+		617C434B20804FC50046615A /* WGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 617C434A20804FC50046615A /* WGUser.m */; };
+		617C43502080504D0046615A /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 617C434E2080504C0046615A /* WelcomeViewController.m */; };
+		617C43512080504D0046615A /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 617C434F2080504C0046615A /* WelcomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,8 +165,6 @@
 		610612A0207A0408006D333D /* WGUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGUtil.m; sourceTree = "<group>"; };
 		6148F720207C5453002816A0 /* WGSharedData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGSharedData.h; sourceTree = "<group>"; };
 		6148F721207C5453002816A0 /* WGSharedData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGSharedData.m; sourceTree = "<group>"; };
-		6148F723207C54AC002816A0 /* WGUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGUser.h; sourceTree = "<group>"; };
-		6148F724207C54AC002816A0 /* WGUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGUser.m; sourceTree = "<group>"; };
 		6148F726207C56B7002816A0 /* WGSharedMacr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGSharedMacr.h; sourceTree = "<group>"; };
 		6148F727207C56B7002816A0 /* WGSharedMacr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGSharedMacr.m; sourceTree = "<group>"; };
 		614D2E88207D9C910049412D /* nav_back_btn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_back_btn@3x.png"; sourceTree = "<group>"; };
@@ -199,9 +197,11 @@
 		616E86E8207F5DD70042B7AD /* WGWeiBoCaller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGWeiBoCaller.h; sourceTree = "<group>"; };
 		616E86E9207F5DD70042B7AD /* WGWeiBoCaller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGWeiBoCaller.m; sourceTree = "<group>"; };
 		617C433F2080444C0046615A /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMMobClick.framework; sourceTree = "<group>"; };
-		617C43442080497C0046615A /* WelcomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
-		617C43452080497C0046615A /* WelcomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
-		617C43462080497C0046615A /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		617C434920804FC50046615A /* WGUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGUser.h; sourceTree = "<group>"; };
+		617C434A20804FC50046615A /* WGUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGUser.m; sourceTree = "<group>"; };
+		617C434D2080504C0046615A /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		617C434E2080504C0046615A /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		617C434F2080504C0046615A /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		7AC4E8AB7C837B229B019898 /* Pods-factory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-factory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-factory/Pods-factory.debug.xcconfig"; sourceTree = "<group>"; };
 		D1EF45937BAA5233F3BB9028 /* libPods-factory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-factory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -366,7 +366,7 @@
 		164F6519203EB03C00E14A68 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				16CB4EE7204D417000D01328 /* LoginModule */,
+				617C434C2080504C0046615A /* LoginModule */,
 				16CB4EE5204D413B00D01328 /* ConcernModule */,
 				16CB4EE2204D413A00D01328 /* DiscoveryModule */,
 				16CB4EE1204D413A00D01328 /* MineModule */,
@@ -381,9 +381,6 @@
 				16190B46204636E700214999 /* SecondViewController.m */,
 				16190B48204636F700214999 /* ThirdViewController.h */,
 				16190B49204636F700214999 /* ThirdViewController.m */,
-				617C43442080497C0046615A /* WelcomeViewController.h */,
-				617C43452080497C0046615A /* WelcomeViewController.m */,
-				617C43462080497C0046615A /* WelcomeViewController.xib */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -407,8 +404,6 @@
 				6148F721207C5453002816A0 /* WGSharedData.m */,
 				6148F726207C56B7002816A0 /* WGSharedMacr.h */,
 				6148F727207C56B7002816A0 /* WGSharedMacr.m */,
-				6148F723207C54AC002816A0 /* WGUser.h */,
-				6148F724207C54AC002816A0 /* WGUser.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -469,13 +464,6 @@
 			path = ConcernModule;
 			sourceTree = "<group>";
 		};
-		16CB4EE7204D417000D01328 /* LoginModule */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LoginModule;
-			sourceTree = "<group>";
-		};
 		1CBD8C197BDE6523326566E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -517,8 +505,10 @@
 				616E86C7207F43140042B7AD /* WGQQCaller.m */,
 				616E86CE207F4B390042B7AD /* WGAlipayCaller.h */,
 				616E86CF207F4B390042B7AD /* WGAlipayCaller.m */,
+				617C434A20804FC50046615A /* WGUser.m */,
 				616E86E8207F5DD70042B7AD /* WGWeiBoCaller.h */,
 				616E86E9207F5DD70042B7AD /* WGWeiBoCaller.m */,
+				617C434920804FC50046615A /* WGUser.h */,
 			);
 			path = BaseModel;
 			sourceTree = "<group>";
@@ -549,6 +539,16 @@
 				616E86CB207F4AE60042B7AD /* AlipaySDK.framework */,
 			);
 			path = AliSdk;
+			sourceTree = "<group>";
+		};
+		617C434C2080504C0046615A /* LoginModule */ = {
+			isa = PBXGroup;
+			children = (
+				617C434D2080504C0046615A /* WelcomeViewController.h */,
+				617C434E2080504C0046615A /* WelcomeViewController.m */,
+				617C434F2080504C0046615A /* WelcomeViewController.xib */,
+			);
+			path = LoginModule;
 			sourceTree = "<group>";
 		};
 		AFD249354252DB012FBF2AE6 /* Pods */ = {
@@ -673,7 +673,6 @@
 				614D2E8B207D9C920049412D /* nav_back_btn@2x.png in Resources */,
 				16190B662046386E00214999 /* tabbar_homepage_icon_selected@2x.png in Resources */,
 				1646D70920512FDE009B2A09 /* KeyboardViewController.xib in Resources */,
-				617C43482080497C0046615A /* WelcomeViewController.xib in Resources */,
 				164F64F1203EA14000E14A68 /* LaunchScreen.storyboard in Resources */,
 				16190B5D2046386E00214999 /* tabbar_discovery_icon@2x.png in Resources */,
 				16190B5F2046386E00214999 /* tabbar_me_icon@3x.png in Resources */,
@@ -685,6 +684,7 @@
 				164F64EC203EA14000E14A68 /* Main.storyboard in Resources */,
 				16190B642046386E00214999 /* tabbar_me_icon_selected@2x.png in Resources */,
 				16190B602046386E00214999 /* tabbar_discovery_icon_selected@3x.png in Resources */,
+				617C43512080504D0046615A /* WelcomeViewController.xib in Resources */,
 				16190B5C2046386E00214999 /* tabbar_me_icon@2x.png in Resources */,
 				16190B622046386E00214999 /* tabbar_homepage_icon@2x.png in Resources */,
 				16190B652046386E00214999 /* tabbar_homepage_icon@3x.png in Resources */,
@@ -763,14 +763,14 @@
 				16C249592043936B000C4471 /* UIColor+WGColor.m in Sources */,
 				16C2495C2043944D000C4471 /* UIImage+Common.m in Sources */,
 				1646D70720512F20009B2A09 /* KeyboardViewController.m in Sources */,
+				617C434B20804FC50046615A /* WGUser.m in Sources */,
 				610612932079FC01006D333D /* NSObject+Notification.m in Sources */,
-				617C43472080497C0046615A /* WelcomeViewController.m in Sources */,
 				164F64F4203EA14000E14A68 /* main.m in Sources */,
-				6148F725207C54AC002816A0 /* WGUser.m in Sources */,
 				616E86EA207F5DD70042B7AD /* WGWeiBoCaller.m in Sources */,
 				610612902079F553006D333D /* WGResponse.m in Sources */,
 				616E86D0207F4B390042B7AD /* WGAlipayCaller.m in Sources */,
 				616E86B4207F3C9E0042B7AD /* WGWeiXiner.m in Sources */,
+				617C43502080504D0046615A /* WelcomeViewController.m in Sources */,
 				610612962079FF3B006D333D /* WGEnum.m in Sources */,
 				616E86B7207F3CE90042B7AD /* WGWeiXinPay.m in Sources */,
 				164F64E6203EA14000E14A68 /* AppDelegate.m in Sources */,
