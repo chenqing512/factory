@@ -41,12 +41,10 @@
 }
 
 -(void)postHttp:(NSString *)path parameters:(NSDictionary *)parameters completion:(ApiCompletion)response{
-    if ([parameters.allKeys containsObject:@"loading"]) {
-        if ([parameters[@"loading"] integerValue]==1) {
-            [SVProgressHUD dismiss];
-            [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
-            [SVProgressHUD showWithStatus:@"加载中..."];
-        }
+    if ([parameters.allKeys containsObject:kLoading]&&[parameters[kLoading] integerValue]==1) {
+        [SVProgressHUD dismiss];
+        [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
+        [SVProgressHUD showWithStatus:@"加载中..."];
     }
     // 1.初始化单例类
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -55,10 +53,14 @@
     manager.securityPolicy.allowInvalidCertificates = YES;
     [manager.securityPolicy setValidatesDomainName:NO];
     //    添加请求头参数
-    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     [manager.requestSerializer setValue:@"ios" forHTTPHeaderField:@"interfaceSource"];
-    [manager.requestSerializer setValue:version forHTTPHeaderField:@"interfaceVersion"];
-    [manager.requestSerializer setValue: [[UIDevice currentDevice] systemVersion] forHTTPHeaderField:@"interfaceSystemVersion"];
+    [manager.requestSerializer setValue:[WGUtil getAPPVersion] forHTTPHeaderField:@"interfaceVersion"];
+    [manager.requestSerializer setValue: [WGUtil getsystemVersion] forHTTPHeaderField:@"interfaceSystemVersion"];
+    
+    // 设置超时时间
+    [manager.requestSerializer willChangeValueForKey:@"timeoutInterval"];
+    manager.requestSerializer.timeoutInterval = 15.f;
+    [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
     
     [manager POST:[NSString stringWithFormat:@"%@%@",kHttpHost,path] parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [SVProgressHUD dismiss];
@@ -68,11 +70,16 @@
         if (response) {
             response(task, resp, nil);
         }
+        if (!resp.success) {//统一异常提示
+            [[[TAlertView alloc] initWithErrorMsg:resp.errorMsg] showStatusWithDuration:kLoadingTime];
+        }
         [self handleCommonErrorWithResponse:resp withPath:path];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD dismiss];
         if (![[AFNetworkReachabilityManager sharedManager] isReachable]) {
-            [[[TAlertView alloc] initWithErrorMsg:@"网络请求中断，请检查网络"] showStatusWithDuration:1.5];
+            [[[TAlertView alloc] initWithErrorMsg:@"网络请求中断，请检查网络"] showStatusWithDuration:kLoadingTime];
+        }else{
+            [[[TAlertView alloc] initWithErrorMsg:@"网络连接异常，请稍后重试"] showStatusWithDuration:kLoadingTime];
         }
         if (response) {
             response(task, nil, error);

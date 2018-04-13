@@ -11,8 +11,9 @@
 
 
 extern NSString *kHttpHost;
-
 extern NSString *kPUSH_ACCOUNT;
+extern CGFloat kLoadingTime;// 提示框时间
+extern NSString *kLoading;//  网络请求判断是否需要loading
 
 @interface WGUtil : NSObject
 

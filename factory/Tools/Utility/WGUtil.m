@@ -19,6 +19,10 @@ NSString *kPUSH_ACCOUNT = @"smkj_test";
 
 #endif
 
+CGFloat kLoadingTime = 1.5;
+NSString *kLoading = @"kLoading";
+
+
 @implementation WGUtil
 
 +(CGFloat)screenHeight{
@@ -101,7 +105,7 @@ NSString *kPUSH_ACCOUNT = @"smkj_test";
  
  @return 返回值
  */
-- (NSString *)getDeviceName
++ (NSString *)getDeviceName
 {
     // 需要#import "sys/utsname.h"
 
