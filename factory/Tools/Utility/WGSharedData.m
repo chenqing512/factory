@@ -7,8 +7,15 @@
 //
 
 #import "WGSharedData.h"
-
+#import "NSObject+Manager.h"
 @implementation WGSharedData
 DEF_SINGLETON(WGSharedData)
+
+-(void)setUser:(WGUser *)user{
+    _user = user;
+    if (_user) {
+        [_user saveMe];
+    }
+}
 
 @end

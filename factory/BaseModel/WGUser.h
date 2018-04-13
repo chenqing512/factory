@@ -15,5 +15,12 @@
 @property (nonatomic, copy)   NSString    *phoneNumber;//电话
 @property (nonatomic, copy)   NSString    *nickname;//昵称
 
+/**
+ 是否登录（缓存是否有数据）
+
+ @return YES or NO
+ */
++(BOOL)isLoggedIn;
+
 
 @end

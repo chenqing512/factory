@@ -46,6 +46,9 @@
     return YES;
 }
 
+/**
+ 注册通知
+ */
 -(void)registerNotification{
     [self observeNotification:ZZ_BIND_ACCOUNT];
     [self observeNotification:ZZ_UNBIND_ACCOUNT];
@@ -57,8 +60,11 @@
     [self observeNotification:kWebSocketdidReceiveMessageNote];
 }
 
+/**
+ 配置文件接口
+ */
 -(void)configDetail{
-    if (SharedData.isLogin) {
+    if ([WGUser isLoggedIn]) {
         [self.window setRootViewController:self.tabBarController];
     }else{
         WGNavigationController *nav=[[WGNavigationController alloc]initWithRootViewController:[WelcomeViewController new]];

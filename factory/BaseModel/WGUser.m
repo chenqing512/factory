@@ -7,7 +7,13 @@
 //
 
 #import "WGUser.h"
-
+#import "NSObject+Manager.h"
 @implementation WGUser
+
+
++(BOOL)isLoggedIn {
+    WGUser *user = [WGUser loadSavedData];
+    return user != nil;
+}
 
 @end

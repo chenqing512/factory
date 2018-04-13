@@ -80,6 +80,7 @@
 		617C43582080623D0046615A /* WGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 617C43572080623D0046615A /* WGImage.m */; };
 		617C435B208062770046615A /* WGAvatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 617C435A208062770046615A /* WGAvatar.m */; };
 		617C4367208090CE0046615A /* SocketRocketUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 617C4366208090CE0046615A /* SocketRocketUtility.m */; };
+		617C436A2080A4620046615A /* NSObject+Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 617C43692080A4620046615A /* NSObject+Manager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -214,6 +215,8 @@
 		617C435A208062770046615A /* WGAvatar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGAvatar.m; sourceTree = "<group>"; };
 		617C4365208090CE0046615A /* SocketRocketUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketRocketUtility.h; sourceTree = "<group>"; };
 		617C4366208090CE0046615A /* SocketRocketUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketRocketUtility.m; sourceTree = "<group>"; };
+		617C43682080A4620046615A /* NSObject+Manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Manager.h"; sourceTree = "<group>"; };
+		617C43692080A4620046615A /* NSObject+Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Manager.m"; sourceTree = "<group>"; };
 		7AC4E8AB7C837B229B019898 /* Pods-factory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-factory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-factory/Pods-factory.debug.xcconfig"; sourceTree = "<group>"; };
 		D1EF45937BAA5233F3BB9028 /* libPods-factory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-factory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -453,6 +456,8 @@
 				16C2495E2043961D000C4471 /* UIView+Common.m */,
 				610612912079FC01006D333D /* NSObject+Notification.h */,
 				610612922079FC01006D333D /* NSObject+Notification.m */,
+				617C43682080A4620046615A /* NSObject+Manager.h */,
+				617C43692080A4620046615A /* NSObject+Manager.m */,
 			);
 			path = Categorys;
 			sourceTree = "<group>";
@@ -805,6 +810,7 @@
 				16C249622043E83A000C4471 /* AppDelegate+RegisterThirdParty.m in Sources */,
 				610612A1207A0408006D333D /* WGUtil.m in Sources */,
 				16C2495F2043961D000C4471 /* UIView+Common.m in Sources */,
+				617C436A2080A4620046615A /* NSObject+Manager.m in Sources */,
 				6148F728207C56B7002816A0 /* WGSharedMacr.m in Sources */,
 				6148F722207C5453002816A0 /* WGSharedData.m in Sources */,
 				16B22FB6203FDF3600F2037A /* HTTPClient.m in Sources */,
