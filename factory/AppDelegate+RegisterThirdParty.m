@@ -61,10 +61,11 @@
     self.tabBarController = tabBarController;
 }
 
-/*
- *
- 在`-setViewControllers:`之前设置TabBar的属性，
- *
+
+/**
+ 创建tabbar
+
+ @param tabBarController tabbar
  */
 - (void)customizeTabBarForController:(CYLTabBarController *)tabBarController {
     
@@ -85,5 +86,8 @@
     NSArray *tabBarItemsAttributes = @[ dict1, dict2,dict3];
     tabBarController.tabBarItemsAttributes = tabBarItemsAttributes;
 }
+
+
+
 
 @end

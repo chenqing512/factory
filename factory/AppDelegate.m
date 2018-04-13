@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+RegisterThirdParty.h"
-
 #import <CloudPushSDK/CloudPushSDK.h>
 #import "UIImage+Common.h"
 #import <Bugly/Bugly.h>
@@ -30,20 +29,24 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self registerThirdParty:application options:launchOptions];
     [self registerMsg];
-    [self observeNotification:ZZ_BIND_ACCOUNT];
-    [self observeNotification:ZZ_UNBIND_ACCOUNT];
-    [self observeNotification:WG_NOTIFICATION_ACCOUNT_LOGIN_OTHER];
-    [self observeNotification:WG_NOTIFICATION_ACCOUNT_NOT_LOGIN];
-    [self observeNotification:WG_NOTIFICATION_ACCOUNT_DISABLE];
-    [self observeNotification:WG_NOTIFICATION_ACCOUNT_LOGIN_SUCCESS];
-    self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    [self registerNotification];//注册通知
     [self setupViewControllers];//创建tabbarController
+    self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [self.window setRootViewController:self.tabBarController];
     UITabBar *tabbar=[UITabBar appearance];
     [tabbar setBackgroundImage:[UIImage imageWithColor:[UIColor blackColor]]];
     self.window.backgroundColor=[UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+-(void)registerNotification{
+    [self observeNotification:ZZ_BIND_ACCOUNT];
+    [self observeNotification:ZZ_UNBIND_ACCOUNT];
+    [self observeNotification:WG_NOTIFICATION_ACCOUNT_LOGIN_OTHER];
+    [self observeNotification:WG_NOTIFICATION_ACCOUNT_NOT_LOGIN];
+    [self observeNotification:WG_NOTIFICATION_ACCOUNT_DISABLE];
+    [self observeNotification:WG_NOTIFICATION_ACCOUNT_LOGIN_SUCCESS];
 }
 
 

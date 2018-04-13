@@ -15,7 +15,7 @@
 @property(nonatomic,copy) NSString* package;
 @property(nonatomic,copy) NSString* partnerId;//商户号
 @property(nonatomic,copy) NSString* prepayId;//预付单号
-@property(nonatomic,assign) NSInteger timeStamp;
+@property(nonatomic,assign) UInt32 timeStamp;
 @property(nonatomic,copy) NSString* sign;
 
 @end

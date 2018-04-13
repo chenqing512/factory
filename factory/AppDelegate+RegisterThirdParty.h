@@ -11,6 +11,6 @@
 @interface AppDelegate (RegisterThirdParty)
 
 -(void)registerMsg;
-- (void)setupViewControllers;
+-(void)setupViewControllers;
 
 @end
