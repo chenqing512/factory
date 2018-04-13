@@ -31,6 +31,7 @@
     keyboardManager.shouldShowToolbarPlaceholder = YES; // 是否显示占位文字
     keyboardManager.placeholderFont = [UIFont boldSystemFontOfSize:17]; // 设置占位文字的字体
     keyboardManager.keyboardDistanceFromTextField = 10.0f; // 输入框距离键盘的距离
+    keyboardManager.toolbarDoneBarButtonItemText = @"完成";
 }
 
 #pragma mark 创建视图
