@@ -15,4 +15,5 @@
 @property (nonatomic, copy)   NSString    *phoneNumber;//电话
 @property (nonatomic, copy)   NSString    *nickname;//昵称
 
+
 @end

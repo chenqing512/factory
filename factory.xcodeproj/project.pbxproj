@@ -74,6 +74,8 @@
 		616E86E6207F4E9A0042B7AD /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616E86E5207F4E9A0042B7AD /* CoreMotion.framework */; };
 		616E86EA207F5DD70042B7AD /* WGWeiBoCaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 616E86E9207F5DD70042B7AD /* WGWeiBoCaller.m */; };
 		617C43402080444C0046615A /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 617C433F2080444C0046615A /* UMMobClick.framework */; };
+		617C43472080497C0046615A /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 617C43452080497C0046615A /* WelcomeViewController.m */; };
+		617C43482080497C0046615A /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 617C43462080497C0046615A /* WelcomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,6 +199,9 @@
 		616E86E8207F5DD70042B7AD /* WGWeiBoCaller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGWeiBoCaller.h; sourceTree = "<group>"; };
 		616E86E9207F5DD70042B7AD /* WGWeiBoCaller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGWeiBoCaller.m; sourceTree = "<group>"; };
 		617C433F2080444C0046615A /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMMobClick.framework; sourceTree = "<group>"; };
+		617C43442080497C0046615A /* WelcomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		617C43452080497C0046615A /* WelcomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		617C43462080497C0046615A /* WelcomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		7AC4E8AB7C837B229B019898 /* Pods-factory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-factory.debug.xcconfig"; path = "Pods/Target Support Files/Pods-factory/Pods-factory.debug.xcconfig"; sourceTree = "<group>"; };
 		D1EF45937BAA5233F3BB9028 /* libPods-factory.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-factory.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -376,6 +381,9 @@
 				16190B46204636E700214999 /* SecondViewController.m */,
 				16190B48204636F700214999 /* ThirdViewController.h */,
 				16190B49204636F700214999 /* ThirdViewController.m */,
+				617C43442080497C0046615A /* WelcomeViewController.h */,
+				617C43452080497C0046615A /* WelcomeViewController.m */,
+				617C43462080497C0046615A /* WelcomeViewController.xib */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -665,6 +673,7 @@
 				614D2E8B207D9C920049412D /* nav_back_btn@2x.png in Resources */,
 				16190B662046386E00214999 /* tabbar_homepage_icon_selected@2x.png in Resources */,
 				1646D70920512FDE009B2A09 /* KeyboardViewController.xib in Resources */,
+				617C43482080497C0046615A /* WelcomeViewController.xib in Resources */,
 				164F64F1203EA14000E14A68 /* LaunchScreen.storyboard in Resources */,
 				16190B5D2046386E00214999 /* tabbar_discovery_icon@2x.png in Resources */,
 				16190B5F2046386E00214999 /* tabbar_me_icon@3x.png in Resources */,
@@ -755,6 +764,7 @@
 				16C2495C2043944D000C4471 /* UIImage+Common.m in Sources */,
 				1646D70720512F20009B2A09 /* KeyboardViewController.m in Sources */,
 				610612932079FC01006D333D /* NSObject+Notification.m in Sources */,
+				617C43472080497C0046615A /* WelcomeViewController.m in Sources */,
 				164F64F4203EA14000E14A68 /* main.m in Sources */,
 				6148F725207C54AC002816A0 /* WGUser.m in Sources */,
 				616E86EA207F5DD70042B7AD /* WGWeiBoCaller.m in Sources */,

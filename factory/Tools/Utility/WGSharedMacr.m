@@ -10,5 +10,6 @@
 
 
 @implementation WGSharedMacr
+DEF_SINGLETON(WGSharedMacr)
 
 @end

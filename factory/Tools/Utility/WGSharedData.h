@@ -14,6 +14,7 @@
 AS_SINGLETON(WGSharedData)
 
 @property (nonatomic, strong) WGUser        *user;
+@property (nonatomic, assign) BOOL        isLogin;//是否登录
 
 @end
 #define SharedData      ([WGSharedData sharedInstance])

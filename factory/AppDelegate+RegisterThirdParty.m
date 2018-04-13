@@ -16,8 +16,8 @@
 -(void)registerMsg{
     [self setKeyboardProperty];//设置键盘属性
     //设置UITextField和UITextView的默认颜色(光标颜色)
-    [[UITextField appearance] setTintColor:[UIColor whiteColor]];
-    [[UITextView appearance] setTintColor:[UIColor whiteColor]];
+    [[UITextField appearance] setTintColor:[UIColor blackColor]];
+    [[UITextView appearance] setTintColor:[UIColor blackColor]];
 }
 
 #pragma mark 键盘控制

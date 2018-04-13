@@ -9,5 +9,6 @@
 #import "WGSharedData.h"
 
 @implementation WGSharedData
+DEF_SINGLETON(WGSharedData)
 
 @end

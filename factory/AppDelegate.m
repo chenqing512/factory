@@ -20,6 +20,7 @@
 #import "WGAlipayCaller.h"
 #import "WGWeiBoCaller.h"
 #import <BaiduMobStat/BaiduMobStat.h>
+#import "WelcomeViewController.h"
 
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
@@ -34,8 +35,8 @@
     [self registerNotification];//注册通知
     [self setupViewControllers];//创建tabbarController
     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    // [self configDetail];
-    [self.window setRootViewController:self.tabBarController];
+    [self configDetail];
+   // [self.window setRootViewController:self.tabBarController];
     UITabBar *tabbar=[UITabBar appearance];
     [tabbar setBackgroundImage:[UIImage imageWithColor:[UIColor blackColor]]];
     self.window.backgroundColor=[UIColor whiteColor];
@@ -52,6 +53,13 @@
     [self observeNotification:WG_NOTIFICATION_ACCOUNT_LOGIN_SUCCESS];
 }
 
+-(void)configDetail{
+    if (SharedData.isLogin) {
+        [self.window setRootViewController:self.tabBarController];
+    }else{
+        [self.window setRootViewController:[WelcomeViewController new]];
+    }
+}
 
 #pragma mark 第三方统计  微信 微博
 -(void)registerThirdParty:(UIApplication *)application options:(NSDictionary *)launchOptions{
