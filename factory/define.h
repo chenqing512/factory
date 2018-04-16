@@ -68,5 +68,12 @@ return __singleton__; \
 #define kStatusHeight [[UIApplication sharedApplication] statusBarFrame].size.height
 #define kTabBarHeight [UITabBar appearance].frame.size.height
 
+#pragma mark 定义加载方法
+
+#define LoadColor(exp)      [UIColor colorWithHexString:exp]
+#define LoadFont(exp)       [UIFont systemFontOfSize:exp]
+#define LoadFontBold(exp)   [UIFont boldSystemFontOfSize:exp]
+#define LoadImage(exp)      [UIImage imageNamed:exp]
+
 
 #endif /* define_h */

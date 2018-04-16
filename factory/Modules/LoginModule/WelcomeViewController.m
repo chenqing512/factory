@@ -9,13 +9,15 @@
 #import "WelcomeViewController.h"
 #import "WGQQCaller.h"
 #import "WGWeiXinCaller.h"
-@interface WelcomeViewController ()<WGWeixinCallerDelegate>
+#import "WGShareView.h"
+@interface WelcomeViewController ()<WGWeixinCallerDelegate,WGShareViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 @property (weak, nonatomic) IBOutlet UIButton *registerBtn;
 - (IBAction)login:(id)sender;
 - (IBAction)register:(id)sender;
 - (IBAction)loginWechat:(id)sender;
 - (IBAction)loginQQ:(id)sender;
+- (IBAction)shareViewClick:(id)sender;
 
 @end
 
@@ -77,6 +79,31 @@
     }];
 }
 
+- (IBAction)shareViewClick:(id)sender {
+    WGShareView * shareView = [[WGShareView alloc] init];
+  //  shareView.publish = nil;
+    shareView.delegate = self;
+    [shareView show];
+}
+#pragma mark -- ZZShareV2ViewDelegate
+-(void)shareViewWithType:(NSInteger)type withPublish:(NSInteger )publish{
+    DLog(@"share:%ld",(long)type);
+    /*
+    [SVProgressHUD showWithStatus:@"获取分享信息"];
+    [SharedApiClient albumShare:publish.ID completion:^(NSURLSessionDataTask *task, KLApiResponse *aResponse, NSError *anError) {
+        DLog(@"albumShare:%@",aResponse.data);
+        [SVProgressHUD dismiss];
+        if (aResponse.success) {
+            ZZShare *share = [[ZZShare alloc] initWithDictionary:aResponse.data error:nil];
+            share.type = type;
+            share.albumID = publish.ID;
+            [WGUtil shareWithShare:share];
+        }else{
+            [[[TAlertView alloc] initWithErrorMsg:aResponse.errorMsg.length > 0 ? aResponse.errorMsg : @"分享失败"] showStatusWithDuration:1.5];
+        }
+    }];
+     */
+}
 #pragma mark -- 第三方登录代理方法
 -(void)finishAuth:(WGWeiXiner *)weixiner{
     DLog(@"weixiner:%@",weixiner);

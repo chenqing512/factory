@@ -18,6 +18,7 @@
     [super viewDidLoad];
     self.navigationItem.title=@"first";
     [self layoutView];
+    self.view.backgroundColor=LoadColor(@"48c8c2");
     // Do any additional setup after loading the view.
 }
 

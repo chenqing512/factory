@@ -8,6 +8,10 @@
 
 #import "WGUtil.h"
 #import "sys/utsname.h"
+#import "WGShare.h"
+#import "WGWeiXinCaller.h"
+#import "WGWeiBoCaller.h"
+#import "WGQQCaller.h"
 
 #ifdef DEBUG
 NSString *kHttpHost = @"http://www.pairui9.com/";//测试环境
@@ -237,6 +241,51 @@ NSString *kLoading = @"kLoading";
  */
 +(NSString *)getBuild{
     return [[[NSBundle mainBundle]infoDictionary]valueForKey:@"CFBundleVersion"];
+}
+
+#pragma mark 分享
+/**
+ 分享类
+ 
+ @param share share
+ */
++(void)shareWithShare:(WGShare *)share{
+    switch (share.type) {
+        case ZZShareWeixin:{
+            WGWeiXinCaller *weixinCaller = [WGWeiXinCaller sharedInstance];
+            [weixinCaller changeScene:0];
+            [weixinCaller sendLinkContent:share.wechatTitle webUrl:share.wechatBrowseUrl description:share.wechatIntroduction imageUrl:share.imageUrl];
+        }
+            break;
+        case ZZShareWeixinQuest:{
+            WGWeiXinCaller *weixinCaller = [WGWeiXinCaller sharedInstance];
+            [weixinCaller changeScene:1];
+            [weixinCaller sendLinkContent:share.wechatIntroduction webUrl:share.wechatBrowseUrl description:share.wechatTitle imageUrl:share.imageUrl];
+        }
+            break;
+        case ZZShareWeibo:{
+            [[WGWeiBoCaller sharedInstance] sendLinkContent:share.weiboTitle webUrl:share.nonWechatBrowseUrl description:share.weiboIntroduction imageUrl:share.imageUrl];
+        }
+            break;
+        case ZZShareQQ:{
+            [[WGQQCaller sharedInstance] shareToFriend:share.qqTitle webUrl:share.nonWechatBrowseUrl description:share.qqIntroduction imageUrl:share.imageUrl];
+        }
+            break;
+        case ZZShareQQZone:{
+            [[WGQQCaller sharedInstance] shareToQQZone:share.qqTitle webUrl:share.nonWechatBrowseUrl description:share.qqIntroduction imageUrl:share.imageUrl];
+        }
+            break;
+            
+        case ZZShareLink:{
+            UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+            [pasteboard setString:share.wechatBrowseUrl];
+            [[[TAlertView alloc] initWithSuccessMsg:@"成功复制到剪贴板"] showStatusWithDuration:1];
+        }
+            break;
+        default:
+            break;
+    }
+    
 }
 
 @end

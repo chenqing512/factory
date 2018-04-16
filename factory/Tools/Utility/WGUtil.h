@@ -7,13 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-
+@class WGShare;
 
 
 extern NSString *kHttpHost;
 extern NSString *kPUSH_ACCOUNT;
 extern CGFloat kLoadingTime;// 提示框时间
 extern NSString *kLoading;//  网络请求判断是否需要loading
+
+
 
 @interface WGUtil : NSObject
 
@@ -77,5 +79,13 @@ extern NSString *kLoading;//  网络请求判断是否需要loading
  @return Build 号
  */
 +(NSString *)getBuild;
+
+#pragma mark 分享
+/**
+ 分享类
+
+ @param share share
+ */
++(void)shareWithShare:(WGShare *)share;
 
 @end
