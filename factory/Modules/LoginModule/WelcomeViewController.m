@@ -9,7 +9,7 @@
 #import "WelcomeViewController.h"
 #import "WGQQCaller.h"
 #import "WGWeiXinCaller.h"
-@interface WelcomeViewController ()
+@interface WelcomeViewController ()<WGWeixinCallerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 @property (weak, nonatomic) IBOutlet UIButton *registerBtn;
 - (IBAction)login:(id)sender;
@@ -50,6 +50,15 @@
 - (IBAction)register:(id)sender {
 }
 - (IBAction)loginWechat:(id)sender {
+    [WGWeiXinCaller sharedInstance].delegate = self;
+    if(![WXApi isWXAppInstalled]){
+        [[[TAlertView alloc] initWithErrorMsg:@"你未安装微信"] showStatusWithDuration:1];
+        return;
+    }
+    SendAuthReq* req =[[SendAuthReq alloc ] init];
+    req.scope = @"snsapi_userinfo,snsapi_base";
+    req.state = @"0744" ;
+    [WXApi sendReq:req];
 }
 
 - (IBAction)loginQQ:(id)sender {
@@ -62,9 +71,18 @@
                 NSString *nickName = [jsonResponse objectForKey:@"nickname"];
                 NSString *gender = [[jsonResponse objectForKey:@"gender"] isEqualToString:@"男"] ? @"M" : @"F"; // 男, 女
                 NSString *avartarURL = [jsonResponse objectForKey:@"figureurl_qq_2"]; // 100x100 image
-                
+                //调用QQ登录
             }];
         }
     }];
 }
+
+#pragma mark -- 第三方登录代理方法
+-(void)finishAuth:(WGWeiXiner *)weixiner{
+    DLog(@"weixiner:%@",weixiner);
+    //调用微信登录
+    [SVProgressHUD dismiss];
+    
+}
+
 @end
