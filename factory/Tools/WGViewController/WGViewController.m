@@ -99,7 +99,7 @@ const int kRightButtonTag = -1235;
 - (void)updateBackgroundView{
     UINavigationBar *navBar=self.navigationController.navigationBar;
     navBar.backgroundColor = [UIColor clearColor];
-     [navBar setBackgroundImage:[UIImage imageWithColor:[UIColor redColor]] forBarMetrics:UIBarMetricsDefault];
+    [navBar setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forBarMetrics:UIBarMetricsDefault];
 }
 #pragma mark 左右按钮点击事件
 - (void)backButtonClick:(UIButton *)btn{

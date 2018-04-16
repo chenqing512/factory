@@ -35,7 +35,7 @@
     [self registerMsg];
     [self registerNotification];//注册通知
     [self setupViewControllers];//创建tabbarController
-    [[SocketRocketUtility instance] SRWebSocketOpenWithURLString:kHttpHost];// websocket长连
+   // [[SocketRocketUtility instance] SRWebSocketOpenWithURLString:kHttpHost];// websocket长连
     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [self configDetail];
    // [self.window setRootViewController:self.tabBarController];
