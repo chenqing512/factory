@@ -50,11 +50,10 @@
  注册通知
  */
 -(void)registerNotification{
-    [self observeNotification:ZZ_BIND_ACCOUNT];
-    [self observeNotification:ZZ_UNBIND_ACCOUNT];
     [self observeNotification:WG_NOTIFICATION_ACCOUNT_LOGIN_OTHER];
     [self observeNotification:WG_NOTIFICATION_ACCOUNT_NOT_LOGIN];
     [self observeNotification:WG_NOTIFICATION_ACCOUNT_DISABLE];
+    [self observeNotification:WG_NOTIFICATION_ACCOUNT_LOGOUT];
     [self observeNotification:WG_NOTIFICATION_ACCOUNT_LOGIN_SUCCESS];
     [self observeNotification:kWebSocketDidOpenNote];
     [self observeNotification:kWebSocketdidReceiveMessageNote];

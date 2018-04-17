@@ -36,6 +36,10 @@
 		610612A1207A0408006D333D /* WGUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 610612A0207A0408006D333D /* WGUtil.m */; };
 		6148F722207C5453002816A0 /* WGSharedData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6148F721207C5453002816A0 /* WGSharedData.m */; };
 		6148F728207C56B7002816A0 /* WGSharedMacr.m in Sources */ = {isa = PBXBuildFile; fileRef = 6148F727207C56B7002816A0 /* WGSharedMacr.m */; };
+		616548FE20849E28004E2E5E /* WGSharePublishCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 616548FB20849E28004E2E5E /* WGSharePublishCollectionCell.m */; };
+		616548FF20849E28004E2E5E /* WGShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 616548FD20849E28004E2E5E /* WGShareView.m */; };
+		6165490220849E91004E2E5E /* WGNoContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6165490120849E91004E2E5E /* WGNoContentView.m */; };
+		616549052084A00D004E2E5E /* WGBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 616549042084A00D004E2E5E /* WGBaseTableView.m */; };
 		616E86B4207F3C9E0042B7AD /* WGWeiXiner.m in Sources */ = {isa = PBXBuildFile; fileRef = 616E86B3207F3C9E0042B7AD /* WGWeiXiner.m */; };
 		616E86B7207F3CE90042B7AD /* WGWeiXinPay.m in Sources */ = {isa = PBXBuildFile; fileRef = 616E86B6207F3CE90042B7AD /* WGWeiXinPay.m */; };
 		616E86BA207F3D250042B7AD /* WGWeiXinCaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 616E86B9207F3D250042B7AD /* WGWeiXinCaller.m */; };
@@ -66,8 +70,6 @@
 		617C435B208062770046615A /* WGAvatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 617C435A208062770046615A /* WGAvatar.m */; };
 		617C4367208090CE0046615A /* SocketRocketUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 617C4366208090CE0046615A /* SocketRocketUtility.m */; };
 		617C436A2080A4620046615A /* NSObject+Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 617C43692080A4620046615A /* NSObject+Manager.m */; };
-		617DDF6120845609002ED2A4 /* WGShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 617DDF6020845609002ED2A4 /* WGShareView.m */; };
-		617DDF6420847AB3002ED2A4 /* WGSharePublishCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 617DDF6320847AB3002ED2A4 /* WGSharePublishCollectionCell.m */; };
 		617DDF7520847BF4002ED2A4 /* me_manage_account_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 617DDF6620847BF3002ED2A4 /* me_manage_account_bg@3x.png */; };
 		617DDF7620847BF4002ED2A4 /* nav_back_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 617DDF6720847BF3002ED2A4 /* nav_back_btn@2x.png */; };
 		617DDF7720847BF4002ED2A4 /* nav_back_btn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 617DDF6820847BF3002ED2A4 /* nav_back_btn@3x.png */; };
@@ -173,6 +175,14 @@
 		6148F721207C5453002816A0 /* WGSharedData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGSharedData.m; sourceTree = "<group>"; };
 		6148F726207C56B7002816A0 /* WGSharedMacr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGSharedMacr.h; sourceTree = "<group>"; };
 		6148F727207C56B7002816A0 /* WGSharedMacr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGSharedMacr.m; sourceTree = "<group>"; };
+		616548FA20849E28004E2E5E /* WGSharePublishCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGSharePublishCollectionCell.h; sourceTree = "<group>"; };
+		616548FB20849E28004E2E5E /* WGSharePublishCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGSharePublishCollectionCell.m; sourceTree = "<group>"; };
+		616548FC20849E28004E2E5E /* WGShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGShareView.h; sourceTree = "<group>"; };
+		616548FD20849E28004E2E5E /* WGShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGShareView.m; sourceTree = "<group>"; };
+		6165490020849E91004E2E5E /* WGNoContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGNoContentView.h; sourceTree = "<group>"; };
+		6165490120849E91004E2E5E /* WGNoContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGNoContentView.m; sourceTree = "<group>"; };
+		616549032084A00D004E2E5E /* WGBaseTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGBaseTableView.h; sourceTree = "<group>"; };
+		616549042084A00D004E2E5E /* WGBaseTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGBaseTableView.m; sourceTree = "<group>"; };
 		616E86B2207F3C9E0042B7AD /* WGWeiXiner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGWeiXiner.h; sourceTree = "<group>"; };
 		616E86B3207F3C9E0042B7AD /* WGWeiXiner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGWeiXiner.m; sourceTree = "<group>"; };
 		616E86B5207F3CE90042B7AD /* WGWeiXinPay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGWeiXinPay.h; sourceTree = "<group>"; };
@@ -216,10 +226,6 @@
 		617C4366208090CE0046615A /* SocketRocketUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketRocketUtility.m; sourceTree = "<group>"; };
 		617C43682080A4620046615A /* NSObject+Manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Manager.h"; sourceTree = "<group>"; };
 		617C43692080A4620046615A /* NSObject+Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Manager.m"; sourceTree = "<group>"; };
-		617DDF5F20845609002ED2A4 /* WGShareView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WGShareView.h; path = factory/Tools/WGShareView.h; sourceTree = SOURCE_ROOT; };
-		617DDF6020845609002ED2A4 /* WGShareView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WGShareView.m; path = factory/Tools/WGShareView.m; sourceTree = SOURCE_ROOT; };
-		617DDF6220847AB3002ED2A4 /* WGSharePublishCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WGSharePublishCollectionCell.h; path = factory/Tools/WGSharePublishCollectionCell.h; sourceTree = SOURCE_ROOT; };
-		617DDF6320847AB3002ED2A4 /* WGSharePublishCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = WGSharePublishCollectionCell.m; path = factory/Tools/WGSharePublishCollectionCell.m; sourceTree = SOURCE_ROOT; };
 		617DDF6620847BF3002ED2A4 /* me_manage_account_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "me_manage_account_bg@3x.png"; sourceTree = "<group>"; };
 		617DDF6720847BF3002ED2A4 /* nav_back_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_back_btn@2x.png"; sourceTree = "<group>"; };
 		617DDF6820847BF3002ED2A4 /* nav_back_btn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_back_btn@3x.png"; sourceTree = "<group>"; };
@@ -325,7 +331,7 @@
 				164F6519203EB03C00E14A68 /* Modules */,
 				164F6518203EB03300E14A68 /* NetWorkManager */,
 				164F6517203EB02500E14A68 /* Tools */,
-				617DDF5E208455E1002ED2A4 /* Commons */,
+				616548F920849E28004E2E5E /* Commons */,
 				164F64EA203EA14000E14A68 /* Main.storyboard */,
 				164F64ED203EA14000E14A68 /* Assets.xcassets */,
 				164F64EF203EA14000E14A68 /* LaunchScreen.storyboard */,
@@ -513,6 +519,21 @@
 			path = AlertView;
 			sourceTree = "<group>";
 		};
+		616548F920849E28004E2E5E /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				616548FC20849E28004E2E5E /* WGShareView.h */,
+				616548FD20849E28004E2E5E /* WGShareView.m */,
+				616548FA20849E28004E2E5E /* WGSharePublishCollectionCell.h */,
+				616548FB20849E28004E2E5E /* WGSharePublishCollectionCell.m */,
+				6165490020849E91004E2E5E /* WGNoContentView.h */,
+				6165490120849E91004E2E5E /* WGNoContentView.m */,
+				616549032084A00D004E2E5E /* WGBaseTableView.h */,
+				616549042084A00D004E2E5E /* WGBaseTableView.m */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
 		616E86B1207F3C7B0042B7AD /* BaseModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -576,17 +597,6 @@
 				617C434F2080504C0046615A /* WelcomeViewController.xib */,
 			);
 			path = LoginModule;
-			sourceTree = "<group>";
-		};
-		617DDF5E208455E1002ED2A4 /* Commons */ = {
-			isa = PBXGroup;
-			children = (
-				617DDF5F20845609002ED2A4 /* WGShareView.h */,
-				617DDF6020845609002ED2A4 /* WGShareView.m */,
-				617DDF6220847AB3002ED2A4 /* WGSharePublishCollectionCell.h */,
-				617DDF6320847AB3002ED2A4 /* WGSharePublishCollectionCell.m */,
-			);
-			path = Commons;
 			sourceTree = "<group>";
 		};
 		617DDF6520847BF3002ED2A4 /* MainImgs */ = {
@@ -864,25 +874,27 @@
 				616E86EA207F5DD70042B7AD /* WGWeiBoCaller.m in Sources */,
 				610612902079F553006D333D /* WGResponse.m in Sources */,
 				616E86D0207F4B390042B7AD /* WGAlipayCaller.m in Sources */,
-				617DDF6420847AB3002ED2A4 /* WGSharePublishCollectionCell.m in Sources */,
+				616548FF20849E28004E2E5E /* WGShareView.m in Sources */,
 				616E86B4207F3C9E0042B7AD /* WGWeiXiner.m in Sources */,
 				617C43502080504D0046615A /* WelcomeViewController.m in Sources */,
 				610612962079FF3B006D333D /* WGEnum.m in Sources */,
+				616548FE20849E28004E2E5E /* WGSharePublishCollectionCell.m in Sources */,
 				616E86B7207F3CE90042B7AD /* WGWeiXinPay.m in Sources */,
 				164F64E6203EA14000E14A68 /* AppDelegate.m in Sources */,
 				16C2495220439082000C4471 /* WGScrollView.m in Sources */,
-				617DDF6120845609002ED2A4 /* WGShareView.m in Sources */,
 				6106129E207A0296006D333D /* TAlertView.m in Sources */,
 				16190B4A204636F700214999 /* ThirdViewController.m in Sources */,
 				16190B44204636DA00214999 /* FirstViewController.m in Sources */,
 				16C249622043E83A000C4471 /* AppDelegate+RegisterThirdParty.m in Sources */,
 				610612A1207A0408006D333D /* WGUtil.m in Sources */,
 				16C2495F2043961D000C4471 /* UIView+Common.m in Sources */,
+				616549052084A00D004E2E5E /* WGBaseTableView.m in Sources */,
 				617C436A2080A4620046615A /* NSObject+Manager.m in Sources */,
 				6148F728207C56B7002816A0 /* WGSharedMacr.m in Sources */,
 				6148F722207C5453002816A0 /* WGSharedData.m in Sources */,
 				16B22FB6203FDF3600F2037A /* HTTPClient.m in Sources */,
 				616E86BA207F3D250042B7AD /* WGWeiXinCaller.m in Sources */,
+				6165490220849E91004E2E5E /* WGNoContentView.m in Sources */,
 				1646D6FE20511B61009B2A09 /* NextViewController.m in Sources */,
 				616E86C8207F43140042B7AD /* WGQQCaller.m in Sources */,
 				16190B47204636E700214999 /* SecondViewController.m in Sources */,

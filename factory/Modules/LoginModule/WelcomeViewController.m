@@ -85,7 +85,7 @@
     shareView.delegate = self;
     [shareView show];
 }
-#pragma mark -- ZZShareV2ViewDelegate
+#pragma mark -- WGShareV2ViewDelegate
 -(void)shareViewWithType:(NSInteger)type withPublish:(NSInteger )publish{
     DLog(@"share:%ld",(long)type);
     /*
