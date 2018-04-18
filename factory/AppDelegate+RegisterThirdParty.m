@@ -11,6 +11,7 @@
 #import "FirstViewController.h"
 #import "SecondViewController.h"
 #import "ThirdViewController.h"
+#import "WelcomeViewController.h"
 @implementation AppDelegate (RegisterThirdParty)
 
 -(void)registerMsg{
@@ -60,6 +61,9 @@
     
     tabBarController.tabBar.backgroundColor=[UIColor blackColor];
     self.tabBarController = tabBarController;
+    
+    WelcomeViewController *welcomeVC=[WelcomeViewController new];
+    self.welcomeNav=[[WGNavigationController alloc]initWithRootViewController:welcomeVC];    
 }
 
 

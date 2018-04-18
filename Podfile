@@ -19,4 +19,5 @@ pod 'WechatOpenSDK'
 pod 'WeiboSDK'
 pod 'BaiduMobStat'
 pod 'SocketRocket'
+pod 'TZImagePickerController'
 end

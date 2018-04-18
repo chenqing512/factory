@@ -34,6 +34,8 @@
 		610612962079FF3B006D333D /* WGEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 610612952079FF3B006D333D /* WGEnum.m */; };
 		6106129E207A0296006D333D /* TAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6106129D207A0296006D333D /* TAlertView.m */; };
 		610612A1207A0408006D333D /* WGUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 610612A0207A0408006D333D /* WGUtil.m */; };
+		6113CC912085C1A700CC18E1 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6113CC8C2085C1A600CC18E1 /* WelcomeViewController.m */; };
+		6113CC922085C1A700CC18E1 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6113CC8D2085C1A600CC18E1 /* WelcomeViewController.xib */; };
 		6148F722207C5453002816A0 /* WGSharedData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6148F721207C5453002816A0 /* WGSharedData.m */; };
 		6148F728207C56B7002816A0 /* WGSharedMacr.m in Sources */ = {isa = PBXBuildFile; fileRef = 6148F727207C56B7002816A0 /* WGSharedMacr.m */; };
 		616548FE20849E28004E2E5E /* WGSharePublishCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 616548FB20849E28004E2E5E /* WGSharePublishCollectionCell.m */; };
@@ -63,8 +65,6 @@
 		616E86EA207F5DD70042B7AD /* WGWeiBoCaller.m in Sources */ = {isa = PBXBuildFile; fileRef = 616E86E9207F5DD70042B7AD /* WGWeiBoCaller.m */; };
 		617C43402080444C0046615A /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 617C433F2080444C0046615A /* UMMobClick.framework */; };
 		617C434B20804FC50046615A /* WGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 617C434A20804FC50046615A /* WGUser.m */; };
-		617C43502080504D0046615A /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 617C434E2080504C0046615A /* WelcomeViewController.m */; };
-		617C43512080504D0046615A /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 617C434F2080504C0046615A /* WelcomeViewController.xib */; };
 		617C4355208062100046615A /* WGShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 617C4354208062100046615A /* WGShare.m */; };
 		617C43582080623D0046615A /* WGImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 617C43572080623D0046615A /* WGImage.m */; };
 		617C435B208062770046615A /* WGAvatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 617C435A208062770046615A /* WGAvatar.m */; };
@@ -171,6 +171,9 @@
 		6106129D207A0296006D333D /* TAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAlertView.m; sourceTree = "<group>"; };
 		6106129F207A0408006D333D /* WGUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGUtil.h; sourceTree = "<group>"; };
 		610612A0207A0408006D333D /* WGUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGUtil.m; sourceTree = "<group>"; };
+		6113CC8B2085C1A600CC18E1 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		6113CC8C2085C1A600CC18E1 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		6113CC8D2085C1A600CC18E1 /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		6148F720207C5453002816A0 /* WGSharedData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGSharedData.h; sourceTree = "<group>"; };
 		6148F721207C5453002816A0 /* WGSharedData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGSharedData.m; sourceTree = "<group>"; };
 		6148F726207C56B7002816A0 /* WGSharedMacr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGSharedMacr.h; sourceTree = "<group>"; };
@@ -213,9 +216,6 @@
 		617C433F2080444C0046615A /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMMobClick.framework; sourceTree = "<group>"; };
 		617C434920804FC50046615A /* WGUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGUser.h; sourceTree = "<group>"; };
 		617C434A20804FC50046615A /* WGUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WGUser.m; sourceTree = "<group>"; };
-		617C434D2080504C0046615A /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
-		617C434E2080504C0046615A /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
-		617C434F2080504C0046615A /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		617C4353208062100046615A /* WGShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGShare.h; sourceTree = "<group>"; };
 		617C4354208062100046615A /* WGShare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WGShare.m; sourceTree = "<group>"; };
 		617C43562080623D0046615A /* WGImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WGImage.h; sourceTree = "<group>"; };
@@ -519,6 +519,37 @@
 			path = AlertView;
 			sourceTree = "<group>";
 		};
+		6113CC8A2085C1A600CC18E1 /* LoginController */ = {
+			isa = PBXGroup;
+			children = (
+				6113CC8B2085C1A600CC18E1 /* WelcomeViewController.h */,
+				6113CC8C2085C1A600CC18E1 /* WelcomeViewController.m */,
+				6113CC8D2085C1A600CC18E1 /* WelcomeViewController.xib */,
+			);
+			path = LoginController;
+			sourceTree = "<group>";
+		};
+		6113CC8E2085C1A600CC18E1 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		6113CC8F2085C1A600CC18E1 /* LoginPresenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginPresenter;
+			sourceTree = "<group>";
+		};
+		6113CC902085C1A700CC18E1 /* LoginModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoginModel;
+			sourceTree = "<group>";
+		};
 		616548F920849E28004E2E5E /* Commons */ = {
 			isa = PBXGroup;
 			children = (
@@ -592,9 +623,10 @@
 		617C434C2080504C0046615A /* LoginModule */ = {
 			isa = PBXGroup;
 			children = (
-				617C434D2080504C0046615A /* WelcomeViewController.h */,
-				617C434E2080504C0046615A /* WelcomeViewController.m */,
-				617C434F2080504C0046615A /* WelcomeViewController.xib */,
+				6113CC8E2085C1A600CC18E1 /* LoginView */,
+				6113CC8A2085C1A600CC18E1 /* LoginController */,
+				6113CC902085C1A700CC18E1 /* LoginModel */,
+				6113CC8F2085C1A600CC18E1 /* LoginPresenter */,
 			);
 			path = LoginModule;
 			sourceTree = "<group>";
@@ -772,6 +804,7 @@
 				617DDF9620847C04002ED2A4 /* share_qqzone_icon@3x.png in Resources */,
 				617DDF8320847BF4002ED2A4 /* tabbar_me_icon_selected@3x.png in Resources */,
 				616E86C4207F42830042B7AD /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				6113CC922085C1A700CC18E1 /* WelcomeViewController.xib in Resources */,
 				616E86CC207F4AE60042B7AD /* AlipaySDK.bundle in Resources */,
 				617DDF9520847C04002ED2A4 /* share_qqzone_icon@2x.png in Resources */,
 				164F64EE203EA14000E14A68 /* Assets.xcassets in Resources */,
@@ -780,7 +813,6 @@
 				617DDF8020847BF4002ED2A4 /* tabbar_me_icon@2x.png in Resources */,
 				617DDF8220847BF4002ED2A4 /* tabbar_me_icon_selected@2x.png in Resources */,
 				164F64EC203EA14000E14A68 /* Main.storyboard in Resources */,
-				617C43512080504D0046615A /* WelcomeViewController.xib in Resources */,
 				617DDF9B20847C04002ED2A4 /* share_weixinquest_icon@2x.png in Resources */,
 				617DDF9C20847C04002ED2A4 /* share_weixinquest_icon@3x.png in Resources */,
 				617DDF7D20847BF4002ED2A4 /* tabbar_homepage_icon@3x.png in Resources */,
@@ -821,6 +853,7 @@
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
 				"${PODS_ROOT}/WeiboSDK/libWeiboSDK/WeiboSDK.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -828,6 +861,7 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -865,6 +899,7 @@
 				16C249592043936B000C4471 /* UIColor+WGColor.m in Sources */,
 				617C435B208062770046615A /* WGAvatar.m in Sources */,
 				16C2495C2043944D000C4471 /* UIImage+Common.m in Sources */,
+				6113CC912085C1A700CC18E1 /* WelcomeViewController.m in Sources */,
 				1646D70720512F20009B2A09 /* KeyboardViewController.m in Sources */,
 				617C43582080623D0046615A /* WGImage.m in Sources */,
 				617C4367208090CE0046615A /* SocketRocketUtility.m in Sources */,
@@ -876,7 +911,6 @@
 				616E86D0207F4B390042B7AD /* WGAlipayCaller.m in Sources */,
 				616548FF20849E28004E2E5E /* WGShareView.m in Sources */,
 				616E86B4207F3C9E0042B7AD /* WGWeiXiner.m in Sources */,
-				617C43502080504D0046615A /* WelcomeViewController.m in Sources */,
 				610612962079FF3B006D333D /* WGEnum.m in Sources */,
 				616548FE20849E28004E2E5E /* WGSharePublishCollectionCell.m in Sources */,
 				616E86B7207F3CE90042B7AD /* WGWeiXinPay.m in Sources */,

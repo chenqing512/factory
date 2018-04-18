@@ -20,10 +20,11 @@
 #import "WGAlipayCaller.h"
 #import "WGWeiBoCaller.h"
 #import <BaiduMobStat/BaiduMobStat.h>
-#import "WelcomeViewController.h"
 #import "SocketRocketUtility.h"
 
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
+
+
 
 @end
 
@@ -31,14 +32,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self registerThirdParty:application options:launchOptions];
-    [self registerMsg];
+    [self registerThirdParty:application options:launchOptions];//第三方统计 微博 微信
+    [self registerMsg];//添加第三方键盘
     [self registerNotification];//注册通知
     [self setupViewControllers];//创建tabbarController
    // [[SocketRocketUtility instance] SRWebSocketOpenWithURLString:kHttpHost];// websocket长连
     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    [self configDetail];
-   // [self.window setRootViewController:self.tabBarController];
+    [self configDetail];//获取配置信息
     UITabBar *tabbar=[UITabBar appearance];
     [tabbar setBackgroundImage:[UIImage imageWithColor:[UIColor blackColor]]];
     self.window.backgroundColor=[UIColor whiteColor];
@@ -66,8 +66,7 @@
     if ([WGUser isLoggedIn]) {
         [self.window setRootViewController:self.tabBarController];
     }else{
-        WGNavigationController *nav=[[WGNavigationController alloc]initWithRootViewController:[WelcomeViewController new]];
-        [self.window setRootViewController:nav];
+        [self.window setRootViewController:self.welcomeNav];
     }
 }
 
@@ -201,9 +200,7 @@
         DLog(@"%@",res);
     }];
     // 未登录主页面
-    WelcomeViewController *vc = [WelcomeViewController new];
-    WGNavigationController *nc =[[WGNavigationController alloc] initWithRootViewController:vc];
-    [WGUtil setWindowRootVC:nc animated:YES];
+    [WGUtil setWindowRootVC:self.welcomeNav animated:YES];
      
 }
 

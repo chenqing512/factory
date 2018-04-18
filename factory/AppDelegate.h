@@ -15,6 +15,7 @@
 
 @property (strong, nonatomic) CYLTabBarController *tabBarController;
 
+@property (strong, nonatomic) WGNavigationController *welcomeNav;
 
 @end
 
