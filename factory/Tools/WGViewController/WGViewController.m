@@ -55,7 +55,8 @@ const int kRightButtonTag = -1235;
     self.labelTitle.font=[UIFont systemFontOfSize:18];
     self.labelTitle.textAlignment=NSTextAlignmentCenter;
     self.labelTitle.backgroundColor=[UIColor clearColor];
-    self.labelTitle.textColor=[UIColor colorWithHexString:@"48c8c2"];
+   // self.labelTitle.textColor=[UIColor colorWithHexString:@"48c8c2"];
+    self.labelTitle.textColor=[UIColor colorWithHexString:@"ffffff"];
     self.navigationItem.titleView.frame=CGRectMake(0, 0, [WGUtil screenWidth], 44);
     self.navigationItem.titleView=self.labelTitle;
     
@@ -99,7 +100,7 @@ const int kRightButtonTag = -1235;
 - (void)updateBackgroundView{
     UINavigationBar *navBar=self.navigationController.navigationBar;
     navBar.backgroundColor = [UIColor clearColor];
-    [navBar setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forBarMetrics:UIBarMetricsDefault];
+    [navBar setBackgroundImage:[UIImage imageWithColor:[UIColor blackColor]] forBarMetrics:UIBarMetricsDefault];
 }
 #pragma mark 左右按钮点击事件
 - (void)backButtonClick:(UIButton *)btn{
@@ -135,6 +136,10 @@ const int kRightButtonTag = -1235;
     [super didReceiveMemoryWarning];
     
 }
+
+//- (UIStatusBarStyle)preferredStatusBarStyle{
+//    return UIStatusBarStyleLightContent;
+//}
 
 @end
 

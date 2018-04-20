@@ -32,6 +32,7 @@ static void *const CYLTabBarContext = (void*)&CYLTabBarContext;
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.backgroundColor=[UIColor clearColor];
         self = [self sharedInit];
     }
     return self;
@@ -40,6 +41,7 @@ static void *const CYLTabBarContext = (void*)&CYLTabBarContext;
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
+        self.backgroundColor=[UIColor clearColor];
         self = [self sharedInit];
     }
     return self;
