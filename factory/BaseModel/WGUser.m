@@ -10,6 +10,9 @@
 #import "NSObject+Manager.h"
 @implementation WGUser
 
++(NSDictionary *)mj_replacedKeyFromPropertyName{
+    return @{@"userId":@"ID"};
+}
 
 +(BOOL)isLoggedIn {
     WGUser *user = [WGUser loadSavedData];

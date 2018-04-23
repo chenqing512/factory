@@ -36,6 +36,7 @@
 		610612A1207A0408006D333D /* WGUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 610612A0207A0408006D333D /* WGUtil.m */; };
 		6113CC912085C1A700CC18E1 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6113CC8C2085C1A600CC18E1 /* WelcomeViewController.m */; };
 		6113CC922085C1A700CC18E1 /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6113CC8D2085C1A600CC18E1 /* WelcomeViewController.xib */; };
+		611A73B4208DA7F700D0D14B /* RegisterPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 611A73B3208DA7F700D0D14B /* RegisterPresenter.m */; };
 		613669852088673000EEB481 /* up_welcome_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 613669842088673000EEB481 /* up_welcome_bg.png */; };
 		6136699320886B3600EEB481 /* ProtalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6136699120886B3600EEB481 /* ProtalViewController.m */; };
 		6136699420886B3600EEB481 /* ProtalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6136699220886B3600EEB481 /* ProtalViewController.xib */; };
@@ -190,6 +191,8 @@
 		6113CC8B2085C1A600CC18E1 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		6113CC8C2085C1A600CC18E1 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		6113CC8D2085C1A600CC18E1 /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
+		611A73B2208DA7F700D0D14B /* RegisterPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterPresenter.h; sourceTree = "<group>"; };
+		611A73B3208DA7F700D0D14B /* RegisterPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterPresenter.m; sourceTree = "<group>"; };
 		613669842088673000EEB481 /* up_welcome_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up_welcome_bg.png; sourceTree = "<group>"; };
 		6136699020886B3600EEB481 /* ProtalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProtalViewController.h; sourceTree = "<group>"; };
 		6136699120886B3600EEB481 /* ProtalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProtalViewController.m; sourceTree = "<group>"; };
@@ -587,6 +590,8 @@
 			children = (
 				613669AF2088964A00EEB481 /* LoginPresenter.h */,
 				613669B02088964A00EEB481 /* LoginPresenter.m */,
+				611A73B2208DA7F700D0D14B /* RegisterPresenter.h */,
+				611A73B3208DA7F700D0D14B /* RegisterPresenter.m */,
 			);
 			path = LoginPresenter;
 			sourceTree = "<group>";
@@ -973,6 +978,7 @@
 				16C2495520439144000C4471 /* WGViewController.m in Sources */,
 				617C4355208062100046615A /* WGShare.m in Sources */,
 				16C249592043936B000C4471 /* UIColor+WGColor.m in Sources */,
+				611A73B4208DA7F700D0D14B /* RegisterPresenter.m in Sources */,
 				617C435B208062770046615A /* WGAvatar.m in Sources */,
 				16C2495C2043944D000C4471 /* UIImage+Common.m in Sources */,
 				6113CC912085C1A700CC18E1 /* WelcomeViewController.m in Sources */,
