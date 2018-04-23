@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-#import "RegisterViewController.h"
+#import "LoginPresenter.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneTF;//手机输入框
@@ -27,6 +27,11 @@
     [super viewDidLoad];
     self.labelTitle.text=@"手机号登录";
     self.leftButton.hidden=NO;
+    LoginPresenter *loginPresenter=[LoginPresenter new];
+    loginPresenter.phoneTF=self.phoneTF;
+    loginPresenter.pwdTF=self.passwordTF;
+    loginPresenter.loginBtn=self.loginBtn;
+    [loginPresenter updateLoginBtn];
     UIView *phoneView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, 70, 40)];
     phoneView.backgroundColor=LoadColor(@"f2f2f2");
     UIImageView *phoneLeftImg=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 60, 40)];
@@ -60,10 +65,6 @@
     
     
 }
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    RegisterViewController *vc=[RegisterViewController new];
-    [self.navigationController pushViewController:vc animated:YES];
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -84,5 +85,11 @@
 }
 
 - (IBAction)login:(id)sender {
+    NSDictionary *dict=@{@"phoneNumber":_phoneTF.text,
+                         @"password":_passwordTF.text
+                         };
+    [[HTTPClient defaultManager] postHttp:@"showmay/login" parameters:dict completion:^(NSURLSessionDataTask *task, WGResponse *aResponse, NSError *anError) {
+        NSLog(@"response");
+    }];
 }
 @end

@@ -20,4 +20,5 @@ pod 'WeiboSDK'
 pod 'BaiduMobStat'
 pod 'SocketRocket'
 pod 'TZImagePickerController'
+pod 'ReactiveObjC'
 end

@@ -14,11 +14,11 @@
 #import "WGQQCaller.h"
 
 #ifdef DEBUG
-NSString *kHttpHost = @"http://www.pairui9.com/";//测试环境
+NSString *kHttpHost = @"http://sh.pairui6.com/";//测试环境
 NSString *kPUSH_ACCOUNT = @"smkj_test";  //PUSH COUNT
 
 #else
-NSString *kHttpHost = @"http://www.pairui9.com/";//正式环境
+NSString *kHttpHost = @"http://sh.pairui6.com/";//正式环境
 NSString *kPUSH_ACCOUNT = @"smkj_test";
 
 #endif
