@@ -88,4 +88,18 @@ extern NSString *kLoading;//  网络请求判断是否需要loading
  */
 +(void)shareWithShare:(WGShare *)share;
 
+/**
+ 检查是否有网络
+
+ @return nil
+ */
++ (void)checkNetWorkWithCompelet:(void (^)())compelet;
+
+/**
+ 检查是否第一次登陆
+
+ @return 是否
+ */
++(BOOL)isFirstLoad;
+
 @end

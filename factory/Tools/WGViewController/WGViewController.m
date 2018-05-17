@@ -23,11 +23,13 @@ const int kRightButtonTag = -1235;
 #pragma mark 视图生命周期方法
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    [self setNeedsStatusBarAppearanceUpdate];
     self.automaticallyAdjustsScrollViewInsets=NO;
-    //添加背景图
-    [self updateLabel];
-    [self updateButton];
-    [self updateBackgroundView];
+    
+    [self updateLabel];//添加titleview
+    [self updateButton];//添加导航栏按钮
+    [self updateBackgroundView];//更新navigation背景颜色
     self.leftButton.hidden=YES;
     self.rightButton.hidden=YES;
 }
@@ -104,7 +106,12 @@ const int kRightButtonTag = -1235;
 }
 #pragma mark 左右按钮点击事件
 - (void)backButtonClick:(UIButton *)btn{
-    [SVProgressHUD dismiss];
+    [SVProgressHUD dismiss];// 影藏loading
+    //退出输入框
+    UIView *responder=[self.view findFirstResponder];
+    if ([responder isKindOfClass:[UITextField class]]||[responder isKindOfClass:[UITextView class]]||[responder isKindOfClass:[UISearchBar class]]) {
+        [responder resignFirstResponder];
+    }
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)otherButtonClick:(UIButton *)btn{
@@ -114,6 +121,7 @@ const int kRightButtonTag = -1235;
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [super touchesBegan:touches withEvent:event];
+    //退出输入框
     UIView *responder=[self.view findFirstResponder];
     if ([responder isKindOfClass:[UITextField class]]||[responder isKindOfClass:[UITextView class]]||[responder isKindOfClass:[UISearchBar class]]) {
         [responder resignFirstResponder];

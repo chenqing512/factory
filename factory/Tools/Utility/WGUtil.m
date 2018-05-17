@@ -12,6 +12,7 @@
 #import "WGWeiXinCaller.h"
 #import "WGWeiBoCaller.h"
 #import "WGQQCaller.h"
+#import <AFNetworking/AFNetworking.h>
 
 #ifdef DEBUG
 NSString *kHttpHost = @"http://sh.pairui6.com/";//测试环境
@@ -286,6 +287,41 @@ NSString *kLoading = @"kLoading";
             break;
     }
     
+}
+
+#pragma mark - 检测是否有网络
++ (void)checkNetWorkWithCompelet:(void (^)())compelet{
+    [[NSOperationQueue currentQueue] addOperationWithBlock:^{
+        if (![[AFNetworkReachabilityManager sharedManager] isReachable]){
+            TAlertView *checkNetWorkAlert = [[TAlertView alloc] initWithTitle:@"网络异常" tipContent:@"请检测网络是否正常或是否开启网络权限" OKTitle:@"重试" onOK:^{
+                [self checkNetWorkWithCompelet:compelet];
+            } cancelTitle:@"取消" onCancel:^{
+                exit(0);
+            }];
+            
+            [checkNetWorkAlert show];
+        }else{
+            compelet();
+        }
+    }];
+}
+
+#pragma mark - 判断是否为第一次打开APP,用于主页面提示开启权限.
+#define LAST_RUN_ISFIRST @"last_run_is_first_time"
++ (BOOL)isFirstLoad{
+    
+    NSUserDefaults *firstLoad = [NSUserDefaults standardUserDefaults];
+    
+    NSString *lastRun = [firstLoad objectForKey:LAST_RUN_ISFIRST];
+    
+    if (!lastRun) {
+        [firstLoad setObject:@"isFirstLoad" forKey:LAST_RUN_ISFIRST];
+        return YES;
+    }else if (![lastRun isEqualToString:@"isFirstLoad"]) {
+        [firstLoad setObject:@"isFirstLoad" forKey:LAST_RUN_ISFIRST];
+        return NO;
+    }
+    return NO;
 }
 
 @end

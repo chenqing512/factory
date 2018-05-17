@@ -41,10 +41,12 @@
 }
 
 -(void)postHttp:(NSString *)path parameters:(NSDictionary *)parameters completion:(ApiCompletion)response{
+    [SVProgressHUD dismiss];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
+    NSMutableDictionary *mutaParameters = [parameters mutableCopy];
     if ([parameters.allKeys containsObject:kLoading]&&[parameters[kLoading] integerValue]==1) {
-        [SVProgressHUD dismiss];
-        [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
         [SVProgressHUD showWithStatus:@"加载中..."];
+        [mutaParameters removeObjectForKey:kLoading];
     }
     // 1.初始化单例类
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
@@ -62,7 +64,7 @@
     manager.requestSerializer.timeoutInterval = 15.f;
     [manager.requestSerializer didChangeValueForKey:@"timeoutInterval"];
     
-    [manager POST:[NSString stringWithFormat:@"%@%@",kHttpHost,path] parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [manager POST:[NSString stringWithFormat:@"%@%@",kHttpHost,path] parameters:mutaParameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [SVProgressHUD dismiss];
         
         NSLog(@"域名:%@\n路径:%@\n返回值:%@",kHttpHost,path,responseObject);
@@ -92,10 +94,6 @@
     DLog(@"aresponse errorcode is %ld",(long)aResponse.errorCode);
     if (aResponse.errorCode == ERR_USER_OTHER_LOGIN) {
         [self postNotification:WG_NOTIFICATION_ACCOUNT_LOGIN_OTHER];
-    }else if (aResponse.errorCode == ERR_USER_NOT_LOGIN) {
-        [self postNotification:WG_NOTIFICATION_ACCOUNT_NOT_LOGIN];
-    }else if (aResponse.errorCode == ERR_USER_DISABLED){
-        [self postNotification:WG_NOTIFICATION_ACCOUNT_DISABLE];
     }
 }
 

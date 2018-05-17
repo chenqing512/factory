@@ -25,23 +25,27 @@
 @interface AppDelegate ()<UNUserNotificationCenterDelegate>
 
 
-
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self registerThirdParty:application options:launchOptions];//第三方统计 微博 微信
+   
     [self registerMsg];//添加第三方键盘
-    [self registerNotification];//注册通知
     [self setupViewControllers];//创建tabbarController
    // [[SocketRocketUtility instance] SRWebSocketOpenWithURLString:kHttpHost];// websocket长连
     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    [self configDetail];//获取配置信息
+    //摇动以撤销关闭
+    [UIApplication sharedApplication].applicationSupportsShakeToEdit = NO;
+    [WGUtil checkNetWorkWithCompelet:^{
+        [self registerThirdParty:application options:launchOptions];//第三方统计 微博 微信
+        [self registerNotification];//注册通知
+        [self configDetail];//获取配置信息
+    }];
     UITabBar *tabbar=[UITabBar appearance];
     [tabbar setBackgroundImage:[UIImage imageWithColor:[UIColor blackColor]]];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+    [UIApplication sharedApplication].statusBarStyle=UIStatusBarStyleLightContent;
     self.window.backgroundColor=[UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
@@ -52,8 +56,6 @@
  */
 -(void)registerNotification{
     [self observeNotification:WG_NOTIFICATION_ACCOUNT_LOGIN_OTHER];
-    [self observeNotification:WG_NOTIFICATION_ACCOUNT_NOT_LOGIN];
-    [self observeNotification:WG_NOTIFICATION_ACCOUNT_DISABLE];
     [self observeNotification:WG_NOTIFICATION_ACCOUNT_LOGOUT];
     [self observeNotification:WG_NOTIFICATION_ACCOUNT_LOGIN_SUCCESS];
     [self observeNotification:kWebSocketDidOpenNote];
@@ -140,7 +142,6 @@
 - (void)receiveNotificationByLaunchingOptions:(NSDictionary *)launchOptions
 {
     if (!launchOptions) return;
-    
     /*
      通过“远程推送”启动APP
      UIApplicationLaunchOptionsRemoteNotificationKey 远程推送Key
@@ -161,16 +162,6 @@
         
     }else if ([notification.name isEqualToString:WG_NOTIFICATION_ACCOUNT_LOGIN_OTHER]){
         [[[TAlertView alloc] initWithErrorMsg:@"您的账号在其它地方登录，您被挤下线"] showStatusWithDuration:1.5];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self logout];
-        });
-    }else if ([notification.name isEqualToString:WG_NOTIFICATION_ACCOUNT_NOT_LOGIN]){
-        [[[TAlertView alloc] initWithErrorMsg:@"您的账号在其它地方登录，您被挤下线"] showStatusWithDuration:1.5];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self logout];
-        });
-    }else if ([notification.name isEqualToString:WG_NOTIFICATION_ACCOUNT_DISABLE]){
-        [[[TAlertView alloc] initWithErrorMsg:@"您的账号已经被系统禁止使用"] showStatusWithDuration:1.5];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [self logout];
         });
